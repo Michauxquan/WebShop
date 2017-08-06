@@ -7,11 +7,10 @@ using ProBusiness;
 
 namespace CPiao.Controllers
 {
-    public class ProductController : Controller
+    public class ProductController : BaseController
     {
         //
-        // GET: /Product/
-        protected Dictionary<string, object> JsonDictionary = new Dictionary<string, object>();
+        // GET: /Product/ 
         public ActionResult Index(string id="",string pname="")
         {
             ViewBag.ID = id;
@@ -26,6 +25,10 @@ namespace CPiao.Controllers
 
         public ActionResult BalanceOrder(string baseinfo)
         {
+            if (CurrentUser != null)
+            {
+                return Redirect("/Home/Login");
+            }
             ViewBag.BaseInfo = baseinfo;
             return View();
         }
