@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "租友图片审核";
+}
+
+@section css{
+    <link href="/modules/plug/daterangepicker/daterangepicker.css" rel="stylesheet"/>
+     <link href="/modules/css/faudit.css" rel="stylesheet" />
+}
+@section scripts{
+    <script type="text/javascript">
+        seajs.use(["scripts/faudit/imgaudit"], function (obj) {
+            obj.init('@ViewBag.Url');
+        });
+    </script>
+}
+
+<div class="header-box">
+    <span class="header-title left">图片列表</span>  
+</div>
+<div class="search-header">
+    <div class="left mTop5" title="创建时间">
+        <input type="text" id="iptCreateTime" placeholder="创建时间" class="ipt-date"  />
+    </div>
+    <div class="left searth-module mLeft20 mTop3" data-text="输入用户昵称" data-width="160"> </div>
+</div>
+<div class="content-body">
+    <ul class="productlist">
+
+    </ul>
+   <ul class="left batch-operate mTop20">
+        <li class="width100 mTop5">
+            <span class="ico-check pLeft5" id="checkAll">批量操作</span>
+       </li>
+       <li  class="width60">
+           <a href="javascript:void(0);" class="btn mulitImgOk" data-type="1">通过</a>
+       </li>
+       <li class="width60">
+            <a href="javascript:void(0);" class="btn mulitImgOk" data-type="9">驳回</a>
+        </li>
+   </ul>
+    <div id="pager" class="mTop20"></div>
+    <div class="clear"></div>
+</div> 
+<div id="popup">
+    <div class="bg"><img src="" alt=""/></div>
+</div>

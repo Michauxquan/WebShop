@@ -1,0 +1,15 @@
+﻿body,html{padding:0;margin:0;font-family:'微软雅黑';font-size:14px;color:#666;background-color:#e1eaf0}.header .current-location{font-family:'微软雅黑',arial;font-size:12px;background:#e1eaf0;color:#666;padding:0 30px;height:32px;line-height:32px;border-bottom:1px solid #d0dae4}.header .current-location a{text-decoration:none}
+.ui-keyboard{
+    width: auto !important;
+    bottom: auto !important;
+    top: 170px !important;
+    left: 375px !important;
+}
+.ui-keyboard-actionkey:not(.ui-keyboard-dec):not(.ui-keyboard-combo) span{
+    top: 0 !important;
+    left: 0 !important;
+}
+.ui-keyboard-meta1,
+.ui-keyboard-default{
+    width: 20em !important;
+}

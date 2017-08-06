@@ -1,0 +1,224 @@
+﻿@using System.Activities.Statements
+@using ProEntity.Manage
+@{
+    var modelist = (List<M_UserRelation>)ViewBag.Childs;
+    Layout = null;
+}
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<meta http-equiv="Pragma" content="no-cache" /> 
+		<link rel="stylesheet" type="text/css" href="/modules/css/message.css" />
+		<link type="text/css" rel="stylesheet" href="/modules/assets/styles.css">
+	    <link type="text/css" rel="stylesheet" href="/modules/assets/jquery.pwstabs.min.css">
+	    <link rel="stylesheet" type="text/css" href="/modules/datapager/style.css"/>
+          <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet"/>
+	    <script src="/Scripts/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="/modules/scripts/userinfo/usermsg.js"></script>
+	    <script src="/modules/assets/jquery.pwstabs-1.1.3.js"></script>
+	    <script type="text/javascript" src="/modules/datapager/paginate.js"></script> 
+        <script  type="text/javascript" src="/Scripts/DateForm.js"></script>
+		<style>
+			div,p,span,dl,dt,dd,a,table,tr,td,thead,th,tbody{margin: 0;padding: 0;list-style: none;}
+		    body{margin: 10px 0 0 0;color: #444 !important; }
+			a{text-decoration: none;color: black;}
+
+            .box {padding: 15px;background-color: #fff;}
+            .details {background-color: #fff;font-size: 12px;font-family: '微软雅黑', arial;position: absolute; margin-top: 78px;padding-bottom: 10px; }  
+            .check-message-detail .message-scribe {
+	            color: #999;
+	            height: 106px;
+	            padding: 0 20px;
+	            background-color: #f5f5f5
+            }
+            .check-message-detail .message-scribe .scribe-title {
+	            padding: 15px 0;
+	            font-size: 14px;
+	            color: #333
+            }
+            .check-message-detail .message-scribe .padding-bottom-10 {
+	            padding-bottom: 10px
+            }
+            .check-message-detail .message-scribe .padding-bottom-15 {
+	            padding-bottom: 15px
+            }
+            .check-message-detail .message-content {
+	            font-size: 14px;
+	            padding: 20px;
+	            border-bottom: 1px solid #f1f1f1
+            }
+            .check-message-detail .quick-reply {
+	            font-size: 14px;
+                padding: 20px;
+                width: 975px;
+            }
+            .check-message-detail .quick-reply textarea {
+	            vertical-align: top;
+	            width: 880px;
+	            padding: 15px;
+	            border-color: #ddd;
+	            border-radius: 2px;
+	            max-height: 500px;
+	            resize: none
+            } 
+            .check-message-detail .quick-reply .reply-message {
+	            display: inline-block;
+                margin: 15px 20px 0 0;
+	            color: #fff;
+	            padding: 0 15px;
+                float: right;
+	            height: 30px;
+	            line-height: 30px;
+	            border-radius: 2px;
+	            cursor: pointer;
+	            background-color: #D64242
+            }
+            .check-message-detail .quick-reply .reply-message:hover {
+	            background-color: #AC1716
+            }
+            .check-message-detail .quick-reply .back:hover {
+                background-color: #777 !important;
+            }  
+            .color-333 {color: #333}
+            .c-yellow {color: #ff7e00}
+		</style>
+		<script type="text/javascript">
+		    jQuery(document).ready(function($) {
+		        $('.tabset1').pwstabs({
+		            effect: 'scale',
+		            defaultTab: 1,
+		            containerWidth: '940px',
+		            lifunction: function () {
+		                var _this = $('.pws_tabs_controll a.pws_tab_active'); 
+		                if (_this.data('tab-id') < 2) {
+		                    Params.type = _this.data('tab-id');
+		                    Params.pageIndex = 1;
+		                    GetReplay();
+		                } else {
+		                    $('#receivediv').html('');
+		                }
+		                $('#replaydetail').hide();
+		                $('.pws_tabs_scale_show').show();
+		            }
+		        });
+		        GetReplay();
+		    });
+		</script>
+	</head>
+	<body>
+		<div class="p-header" style="margin-bottom: 20px;">
+			<p class="current-location">
+				<span>当前位置：</span><span> &gt; 私信箱</span>
+			</p>
+		</div>
+	<div class="Tabs">
+	    <div class="tabset1">
+	        <div data-pws-tab="0" data-pws-tab-name="私信箱">
+	            <table class="sx">
+	                <thead class="sThead">
+	                <tr>
+	                    <td style="width: 40px; text-align: center;"><input type="checkbox" class="checkAll" name="checkAll"/><span class="checkP">全选</span></td>
+	                    <td style="width: 250px; text-align: left;">标题</td>
+	                    <td style="width: 120px;">发送人</td>
+	                    <td style="width: 120px">发送时间</td>
+	                </tr>
+	                </thead>
+	                <tbody id="sxmsg0"> </tbody>
+	            </table>
+	            <div class="sx" data-type="sxmsg0" style="padding: 10px 0 0 0;">
+	                <div class="btn1" style="padding: 3px 8px; height: 20px; line-height: 20px; width: 60px; float: left;">标记已读</div>
+	                <div class="btn2" style="padding: 3px 8px; height: 20px; line-height: 20px; width: 60px; float: left; margin-left: 10px;">删除</div>
+	                <div class="spana" id="pager0"></div>
+	            </div>
+	        </div>
+	        <div data-pws-tab="1" data-pws-tab-name="系统消息">
+	            <table class="sx">
+	                <thead class="sThead">
+	                <tr>
+	                    <td style="width: 40px; text-align: center;"><input type="checkbox" class="checkAll" name="checkAll"/><span class="checkP">全选</span></td>
+	                    <td style="width: 250px; text-align: left;">类型</td>
+	                    <td style="width: 120px;">发送人</td>
+	                    <td style="width: 120px">发送时间</td>
+	                </tr>
+	                </thead>
+	                <tbody id="sxmsg1"> </tbody>
+	            </table>
+	            <div class="sx" data-type="sxmsg1" style="padding: 10px 0 0 0;">
+	                <div class="btn1" style="padding: 3px 8px; height: 20px; line-height: 20px; width: 60px; float: left;">标记已读</div>
+	                <div class="btn2" style="padding: 3px 8px; height: 20px; line-height: 20px; width: 60px; float: left; margin-left: 10px;">删除</div>
+	                <div class="spana" id="pager1"></div>
+	            </div>
+	        </div>
+	        <div data-pws-tab="2" data-pws-tab-name="写私信">
+	            <div class="write-box">
+	                <form method="post" name="sendmsg">
+	                    <div class="write-message-box">
+	                        <div class="left-side">
+	                            <span>从下边列表中双击添加收信人</span>
+	                            <select size="10" id="receivelist">
+	                                <option value="@ViewBag.ParentID" style="display: @(string.IsNullOrEmpty(ViewBag.ParentID) ? "none" : "block")">上级代理</option>
+	                                <option value="ZSXJ">所有直属下级</option>
+	                                @if (modelist != null)
+	                                {
+	                                    foreach (M_UserRelation it in modelist)
+	                                    {
+	                                        <option value="@it.UserID">@it.UserName</option>
+	                                    }
+	                                }
+	                            </select>
+	                        </div>
+	                        <div class="right-side">
+	                            <div class="item-box" style="z-index: 1;">
+	                                <span>收信人：</span>
+	                                <div class="receives" id="receivediv">
+	                                </div>
+	                            </div>
+	                            <div class="item-box">
+	                                <input type="text" id="receive_name" name="receive_title" style="margin-top: 10px;" maxlength="50"/>
+	                                <span style="margin-top: 10px;">私信标题：</span>
+	                            </div>
+	                            <div class="item-box">
+	                                <span>私信内容：</span><textarea class="receive_content" id="write-content" cols="30" rows="10"></textarea>
+	                                <div class="send-message" id="send-message"style="width: 60px; padding: 3px 8px; line-height: 30px; border-radius: 3px; height: 30px; font-weight: bold;">发送消息</div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="pws_tabs_scale_hide pws_tab_single" id="replaydetail" style="opacity:1;filter: alpha(opacity=100);-ms-filter: 'alpha(Opacity=100)';margin-top:20px; display: none;">
+
+            <div class="details">  
+				<div class="box check-message-detail">
+					<div class="message-scribe">
+						<div class="scribe-title"> </div>
+						<div class="padding-bottom-10">
+							发件人：<span class="color-333" id="sendusername"> </span>
+						</div>
+						<div class="padding-bottom-15">
+							时间：<span id="sendtime"> </span>
+						</div>
+					</div>
+
+				    <div class="message-content"> 
+				       @* <div style="margin-top: 10px; color: #666666; width: 80%; border-top: 1px #666666 dotted;">
+				            <font color="#FF3300">2016-11-21 10:39:41 写：</font><br>ganma
+				        </div>
+				        <div style="margin-top: 10px; color: #666666; width: 80%; border-top: 1px #666666 dotted;">
+				            <font color="#FF3300">2016-11-21 10:39:25 写：</font><br>a
+				        </div>*@
+				    </div>
+
+					<div class="quick-reply">
+						<span>快速回复：</span>
+						<textarea name="recontent" id="recontent"></textarea>
+						<div class="reply-message" id="save">发送</div> <div class="reply-message back" style="background: #ccc;" id="back">返回</div> 
+					</div> 
+				</div> 
+			</div>
+	    </div>
+	</div>
+	
+	</body>
+</html>

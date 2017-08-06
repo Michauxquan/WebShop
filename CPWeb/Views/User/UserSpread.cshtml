@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "UserSpread";
+    Layout = null;
+}
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:esun>
+<head>
+    <title>娱乐平台  - 自动注册设置</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <link rel="stylesheet" href="/modules/css/usershared.css"/>
+    @*<link href="http://d7oui9ennz649.cloudfront.net/css/shijue/all.css?modidate=20160413001" rel="stylesheet" type="text/css"/>*@
+</head>
+<body>
+<div class="p-header">
+    <p class="current-location">
+        <span>当前位置：</span><span> &gt; 用户列表</span>
+    </p>
+</div>
+<div id="rightcon">
+
+    <div class="rc_con betting">
+        <div class="rc_con_lt"></div>
+        <div class="rc_con_rt"></div>
+        <div class="rc_con_lb"></div>
+        <div class="rc_con_rb"></div>
+        <div class="rc_con_to">
+            <div class="rc_con_ti">
+                <div class="rc_list">
+                    <div class="rl_list">
+                        <div class='bd2' id="general_txt_0">
+                            <div class="user_ts">
+                                <span class="user_ts_title">&nbsp;&nbsp;一、自动注册设置说明:</span><BR/>
+                                &nbsp;&nbsp;<span class="c_bl">1.请选择自动注册用户时,你自身希望保留的返点值。</span><BR/>
+                                <span class="user_ts_title">&nbsp;&nbsp;&nbsp;&nbsp;例如</span>：<span class="c_bl">您当前的直选返点为 0.8% 并且您的不定位返点为 0.6%， 而您在下面 <font color='#F00'>“保留返点”</font>处填写 0.5</span><BR/>
+                                <span class="user_ts_title">&nbsp;&nbsp;&nbsp;&nbsp;那么</span>：<span class="c_bl">您自动注册的新账户的直选返点即为  0.3%,  不定位返点为 0.1%</span><BR/>
+                                &nbsp;&nbsp;<span class="c_bl">2.自动注册用户最大返点级别为<font color='#F00'><b>@(ViewBag.UsableRebate)</b></font>,不需要开户配额。</span><BR/>
+                                &nbsp;&nbsp;<span class="c_bl"><font color="red">3.自动注册设置完成之后，页面下方将会显示自动注册链接地址。</font></span><BR/>
+                                &nbsp;&nbsp;<span class="c_bl"><font color="red">4.可用返点使用完成之后，用户将不能注册通过链接注册。</font></span><BR/>
+                                <span class="user_ts_title">&nbsp;&nbsp;二、您的返点级别：</span>
+                                <font color="#F00"><b>@(ViewBag.Rebate)</b></font>&nbsp;
+                                <font color="#F00"><b>[可用返点:@(ViewBag.UsableRebate)]</b></font><BR/>
+                                &nbsp;&nbsp;<span class="c_bl"><font color='#F00'><b>注意：如果自身已经升点，请重新设置自动注册相关保留返点的参数。<b></font></span><BR/>
+                                <span class="user_ts_title">&nbsp;&nbsp;三、请选择以下相关的设置信息：</span>
+                            </div>
+
+                            <div class="user_ts">
+                                <span class="user_ts_title">&nbsp;&nbsp;自动注册地址0： </span><a href="http://120.25.225.161:8833/home/register/@(ViewBag.ID)" target="_blank" style="text-decoration: underline;"><font color="blue">http://120.25.225.161:8833/home/register/@(ViewBag.ID)</font></a><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">
+        <p>温馨提示：为你账户的安全，建议定期修改登录密码和资金密码。</p>
+    </div>
+</div>
+</body>
+</html>

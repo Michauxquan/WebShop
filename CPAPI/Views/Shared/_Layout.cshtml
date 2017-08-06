@@ -1,0 +1,118 @@
+﻿@using ProEntity
+@using ProEntity.Manage
+@using ProTools
+<!DOCTYPE html>
+   @{
+       M_Users CurrentUser = (M_Users)Session["CPAPIManager"];
+       string controller = Url.RequestContext.RouteData.Values["controller"].ToString().ToLower();
+       string action = Url.RequestContext.RouteData.Values["action"].ToString().ToLower();
+       Menu controllerMenu = ExpandClass.GetController(HttpContext.Current, controller);
+       string baseurl = Common.GetKeyValue("Url");
+    }
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/layout.css" rel="stylesheet" />
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/modules/images/logo.ico">
+    @RenderSection("css", false)
+</head>
+
+<body>
+ 
+    <header>
+        <div class="logo left">
+            <a href="/Home/Index"><img src="/modules/images/logo-withe.ico" style="width: 20px; height: 20px;"/></a>
+        </div>
+        <div class="left companyname long" title="CP管理后台">
+           CPAPI管理后台
+        </div>
+        <ul id="modulesMenu" class="menu left">
+             <li  class="@(controller == "home" ? "select left" : "left")">
+                <a href="/home/index" >
+                    首页
+                </a> 
+             </li>          
+            @foreach (Menu model in ExpandClass.GetChildMenuByCode(HttpContext.Current, ExpandClass.CLIENT_TOP_CODE))
+            {                   
+                <li class="@(model.MenuCode.ToUpper() == (controllerMenu != null ? controllerMenu.PCode.ToUpper() : "") ? "select left" : "left")"  data-code="@(model.MenuCode)">            
+                    <a  href="/@(model.Controller)/@(model.View)">
+                        @(model.Name)
+                    </a> 
+                </li> 
+            }
+        </ul>
+        <div id="currentUser" class="currentuser right">
+            <span>
+                <img src="@(string.IsNullOrEmpty(CurrentUser.Avatar) ? baseurl + "/modules/images/defaultavatar.png" : baseurl + CurrentUser.Avatar)" class="avatar" />
+            </span>
+            <span class="username">
+                @(CurrentUser.UserName)
+            </span>
+            <span class="dropdown">
+                <span class="dropdown-top"></span>
+                <span class="dropdown-bottom"></span>
+            </span>
+        </div>
+    </header>
+
+    <div class="main-body">
+        <nav> 
+           
+            @if (controllerMenu != null)
+            {
+                foreach (Menu model in ExpandClass.GetChildMenuByCode(HttpContext.Current, controllerMenu.PCode))
+                {
+                    <div  class="controller-box @(model.View.ToLower() == action ? "select" : "")" data-code="@(model.MenuCode)">
+                        <div class="controller-box">
+                            <div class="controller-name">
+                               <a  href="/@(model.Controller)/@(model.View)"> @(model.Name)</a> 
+                            </div>
+                        </div>
+                    </div>  
+                }
+            }
+            else
+            {
+                foreach (Menu model in ExpandClass.GetChildMenuByCode(HttpContext.Current, ExpandClass.CLIENT_TOP_CODE))
+                {        
+                    <div class="controller @(model.Controller.ToLower() == controller ? "select" : "")" data-code="@(model.MenuCode)">
+                        <div class="controller-box">
+                            <div class="controller-name">
+                               <a  href="/@(model.Controller)/@(model.View)"> @(model.Name)</a> 
+                            </div>
+                        </div>
+                    </div> 
+                }
+            }
+          
+        </nav>
+
+        <div class="main-content">
+            @RenderBody()
+        </div>
+    </div>
+
+
+    @*点击头像展开下拉列表*@
+    <div class="dropdown-userinfo hide">
+        <div class="top-lump"></div>
+        <ul class="items-list">
+            <li class="item"><a href="/Home/Logout">安全退出</a></li>
+        </ul>
+    </div>
+
+    <input type="hidden" value="@controller" id="page-controller" />
+    <script src="/Scripts/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/layout"], function (layout) {
+            layout.init();
+        });
+    </script>
+
+    @RenderSection("scripts", false)
+</body>
+</html>

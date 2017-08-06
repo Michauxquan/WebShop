@@ -1,0 +1,22 @@
+﻿{%
+	for(var i=0, j=$data.length; i < j; i++){
+	var item = $data[i];
+%}
+<tr class="list-item">
+    <td class="name">
+         <a href="javascript:void(0);" target="_blank">
+            <img onerror="$(this).attr('src', '/modules/images/img-noimg.png')" alt="略缩图" src="{%=item.Img%}"/>
+        </a>
+    </td>
+    <td class="name">{%=item.Title%}</td>
+    <td class="desc">{%=item.Tips%}</td>
+    <td class="desc">{%=item.Type==1?"公告":"活动"%}</td>
+    <td class="desc">{%=item.BTime.toDate("yyyy-MM-dd")+"至"+item.ETime.toDate("yyyy-MM-dd")%}</td>
+    <td class='center'>{%=item.CreateTime.toDate("yyyy-MM-dd hh:mm:ss")%}</td>
+    <td class='center'>{%=(item.CreateUser ? item.CreateUser:"--")%}</td>
+<!--    <td class='center'><a href="/SysSet/ActiveDetail/{%=item.AutoID%}" class="setpermission"   data-id="{%=item.AutoID%}">设置权限</a></td>-->
+    <td class="center dropdown"  data-id="{%=item.AutoID%}">
+        <span  class="ico-dropdown"></span>
+    </td>
+</tr>
+{% } %}

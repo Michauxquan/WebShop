@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "权限设置";
+    Layout = null;
+    var menus = (List<ProEntity.Menu>)ViewBag.Menus;
+    var model = (ProEntity.Manage.M_Role)ViewBag.Model;
+}
+
+<html>
+<head>
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/layout.css" rel="stylesheet" />
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/modules/css/system/role.css" />
+    <script src="/Scripts/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/sysset/roles"], function (obj) {
+            obj.initPermission('@(model.RoleID)', '@Html.ToJSONString(menus)', '@Html.ToJSONString(model.Menus)');
+        });
+    </script>
+</head>
+<body>
+    <div class="main-body">
+        <div class="main-content">
+            <div class="header-box">
+                <span class="header-title left">当前位置-权限设置</span>
+                <a class="back right" href="javascript:if(history.length>1){ history.go(-1);} else{}">
+                    <i class="iconfont blue">&#xe62d;</i> 返回
+                </a>
+            </div>
+            <div class="content-body">
+                <h1 class="font16">@(model.Name)-权限设置</h1>
+                <div id="rolePermission" class="menulist mTop10">
+                </div>
+                <div class="mTop20">
+                    <div class="btn " id="savePermission">保存</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

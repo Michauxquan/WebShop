@@ -1,0 +1,72 @@
+﻿@charset "utf-8";
+*{list-style: none;outline: none;padding: 0;margin: 0;font-family: "微软雅黑",arial,helvetica,sans-serif;}
+
+body, html {font-family: 微软雅黑;padding: 0;margin: 0;font-size: 13px;color: #444;}
+body{background-color: #e1eaf0;padding: 0;overflow-x: hidden;}
+html{min-width: 1000px;overflow-x: auto;}
+* input:focus,textarea:focus{ border:solid 1px rgb(207, 27, 28) !important;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+/*消息中心*/
+.p-header{padding: 0;margin: 0;}
+.p-header .current-location{font-family: "微软雅黑",arial;font-size: 12px;background: #eee;color: #666;padding:  0 30px;height: 32px;line-height: 32px;border-bottom: 1px solid #fff;}
+.content * {color: #333;font-size: 14px;width: 1000px;margin: 6px auto 0px;}
+.content .tabs-details{width: 100%;color: rgb(102,102,102);font-family: "微软雅黑",arial;}
+.content .tabs-details .tabs {width: 100%;height: 50px;line-height: 50px;}
+.content .tabs-details .tabs ul {list-style: none;}
+ /*#1a9ff3;*/
+.content .tabs-details .tabs ul li.on {border-color: rgb(207, 27, 28);background-color: #fff !important; color:rgb(207, 27, 28);}
+.content .tabs-details .tabs ul li {font-weight: bold;position: relative;float: left;width: 120px;text-align: center;height: 50px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border-top: 3px solid transparent;cursor: pointer;}
+.content .tabs-details .details {background-color: rgb(255, 255, 255);font-size: 12px;font-family: 微软雅黑, arial;}
+
+/*修改昵称*/
+table {display: table;border-collapse: separate;border-spacing: 2px;border-color: grey;}
+.showtime{width: 800px;height: 120px;margin: 0 auto;background: #fff;margin-top: 20px;display: block;color: #666;}
+.showtime .stable{width: 700px;height: 120px;margin: 0 auto;padding: 5px 0;}
+.user-head{border-radius: 50%;}
+.define{width: 800px;height: 300px;margin: 20px auto 0 auto;background: #fff;color: #999;}
+.c-ef3552{color: #ef3552;font-weight: 600;}
+.save{margin: 0px 10px 0 0 ;color: #fff;padding: 0 15px ;cursor: pointer;line-height: 1px;border-radius: 3px;border: 1px solid #ddd;width: 90px;font-size: 16px;}
+.btn1{background-color: #D64242;height: 36px;cursor: pointer;border-radius: 2px;color: #fff0f5;text-align: center;}
+.btn1:hover{ background-color: #AC1716 !important;}
+.btn2{background: #D64242;height: 30px;cursor: pointer;border-radius: 2px;color: #fff0f5;text-align: center;}
+.btn2:hover{background-color: #AC1716;}
+.input {width: 108px;height: 30px;padding: 0 5px;line-height: 30px;vertical-align: middle;color: #333;border: 1px solid #ddd;border-radius: 2px;margin-bottom: 0;outline: 0;}
+.score{font-size: 40px;color: #EF3552;font-weight: bold;}
+.receive_content:focus{ border:solid 1px rgb(207, 27, 28) !important;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.receive_content{ color: #777;font-size: 10px;}
+/*账户安全*/
+.h{height: auto;}
+.mima,.shouji,.email{display: none;}
+.po,.po1,.po2{ cursor: pointer;display:inline-block;}
+.head{display: inline-block;width: 195px;margin-left: 40px;margin-right: 0 !important;font-size: 18px;color: #333;position: relative;padding-left: 75px;}
+.head i{position: absolute;}
+.head .locked-img{display: inline-block;top: 0px;left: -40px;}
+.stable label,.stable img{cursor: pointer;}
+.stable img{display: inline-block;}
+.stable label{font-style: initial;color: #333;font-weight: 500;}
+.head .size{line-height: 80px;}
+.mid{position: absolute;font-size: 14px;}
+.mid .ifseted{line-height: 20px;vertical-align: middle;}
+.action{cursor: pointer;margin-right: 0;padding: 0;float: right;font-size: 18px;}
+.mid,.action{margin-top:40px;}
+.cl-ef3552{color: #EF3552;}
+.state-unedit,.state-unlock,.default,.state-set{display: none;}
+.expand-info {padding: 20px 20px 20px 40px;}
+.expand-info>* {margin-bottom: 15px;height: 36px;}
+/*#1E8ECE;*/
+.pre-actions{width: 90px;height: 30px;border: solid 1px rgb(207, 27, 28);box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box; color: rgb(207, 27, 28);float: left;
+             text-align: center;line-height: 30px;border-radius: 2px;cursor: pointer;}
+/*.pre-actions:hover{background:rgb(207, 27, 28);color: #fff;}*/
+.pre-actions.hover{background:rgb(207, 27, 28);color: #fff;}
+.input-box { position: relative;}
+.input-box .label-name {display: block;position: absolute;left: 0;height: 36px;line-height: 36px;color: #666;font-size: 14px;}
+.expand-info>.input-box label input {height: 30px;line-height: 30px;border: 1px solid #ddd;border-radius: 2px;width: 217px;outline: 0;padding: 0 10px;margin-left: 70px;}
+.clear1{padding: 0 30px;margin-right: 17px;float: left;height: 30px;border: none; line-height: 30px; border-radius: 2px; cursor: pointer;margin-left: -8px;color: #fff;background-color: #ccc;}
+.clear1:hover{background-color: #bbb;}
+.get-code{cursor: pointer;display: inline-block;height:20px;padding: 2px 8px;line-height: 20px;color:rgb(207, 27, 28);background-color: #fff;margin-left: 10px;border-radius: 2px;text-align: center;border: 1px solid rgb(207, 27, 28);}
+.inprogress {display: none;}
+.blue {color: #D64242;}
+
+
+
+.basebtn{padding: 5px 30px;background-color: #D64242;color: #fff;margin-right: 17px;float: left;height: 20px;border: none; line-height: 20px; border-radius: 2px; cursor: pointer;}
+.basebtn:hover{background-color: #AC1716;}

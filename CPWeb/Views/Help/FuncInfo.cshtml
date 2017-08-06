@@ -1,0 +1,240 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<meta http-equiv="Pragma" content="no-cache" />  
+	    <link rel="stylesheet" type="text/css" href="/modules/css/message.css" />
+		<link type="text/css" rel="stylesheet" href="/modules/assets/styles.css">
+	   <link type="text/css" rel="stylesheet" href="/modules/assets/jquery.pwstabs.min.css">
+	   <script src="/Scripts/jquery-1.11.3.min.js"></script>
+	   <script src="/modules/assets/jquery.pwstabs-1.1.3.min.js"></script> 
+	   <script src="/modules/scripts/message.js" type="text/javascript"></script>
+
+		<style>
+			div,p,span,dl,dt,dd,a,table,tr,td,thead,th,tbody{margin: 0;padding: 0;list-style: none;}
+		    body{margin: 10px 0 0 0;font-family: "微软雅黑",arial;}
+			a{text-decoration: none;color: black;}
+		</style>
+		<script type="text/javascript">
+		      jQuery(document).ready(function ($) {
+		         $('.tabset1').pwstabs({
+		            effect: 'scale',
+		            defaultTab: 1,
+		            containerWidth: '1000px'
+		         });
+		       })
+		</script>
+	</head>
+	<body>
+		<div class="p-header" style="margin-bottom: 20px;">
+			<p class="current-location">
+				<span>当前位置：</span><span> &gt; 功能介绍</span>
+			</p>
+		</div>
+		<div class="help-Tabs">
+			<div class="tabset1">
+	         <div data-pws-tab="开始游戏" data-pws-tab-name="开始游戏">
+                  <div class="tf">
+                  	<dl>
+                  		<p>一切平台的游戏从这里开始，选择一个游戏，然后进入到游戏界面，在同一个游戏中，所有玩法可以来回切换。</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>第一步 : </strong></font>
+                  			首先选择玩法组和玩法，玩法组标签可以来回相互切换，然后选择不同的玩法。
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>第二步 : </strong></font>
+                  			根据各个玩法规则，选择或者输入要购买的号码。
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>第三步 : </strong></font>
+                  			然后根据需要选择投注倍数、元角模式和动态奖金返点设置。
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>第四步 : </strong></font>
+                  			确认选择的号码，然后点击“添加投注”，把当前投注内容加入到投注项中，然后可以重复"第一步"到"第四步"，以添加不同玩法的不同投注内容到投注项中。
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>第五步 : </strong></font>
+                  		如果是投注，则选择要投注的期号，然后点击“立即投注”。如果是追号，则点击“发起追号”，以展开追号计划表，根据自己的需要填写好追号计划以后，再点击“立即投注”。
+                  		</p>
+                  	</dl>
+                  </div>
+	         </div>
+	         <div data-pws-tab="游戏记录" data-pws-tab-name="游戏记录">
+	         	 <div class="tf">
+                  	<dl>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>一 : 投注记录</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			默认不显示任何投注记录，需要在选择查询条件以后，点击搜索才能查询投注记录，在查询出的投注记
+							录结果里，点击投注内容栏的“详细号码”，可以在当页浮动显示出该投注记录所选择投注号码，点击
+							注单编号则会在弹出注单详情信息，在注单详情弹出框里可以针对在撤单时间范围内的注单进行撤单。
+							如果是追号的注单，则在玩法后面会有“查看追号详情”的功能，点击可以切换到追号详情界面。
+							<font color="#FF0000">（注意：注单详情中的撤单操作，只能在注单购买的那期停止销售前对注单进行撤单）</font>
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>二 : 追号记录</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			和投注记录类似，默认不显示任何追号记录，需要在选择查询条件以后，点击搜索才能查询追号记录，
+							在查询出的记录结果里，点击追号内容栏的“详细号码”，可以在当页浮动显示出该追号记录所选择的
+							号码，点击追号编号会新打开一个追号详情窗口，在追号详情中可以对销售未截止或者未开始的奖期进
+							行撤消追号处理。
+                  		</p>
+                  	</dl>
+                  </div>
+	         </div>
+	         <div data-pws-tab="用户管理" data-pws-tab-name="用户管理">
+		         <div class="tf">
+	                  	<dl>
+	                  		<p>用来管理自己的下级用户和针对自己本人信息的查看和修改</p>
+	                  		<p style="margin-left: 20px;">
+	                  			<font size="+1"><strong>一 : 用户列表</strong></font>
+	                  		</p>
+	                  		<p style="margin-left: 35px;">
+	                  			管理自己的下级用户。进入该功能以后，分为左边的用户树和用户信息列表两部分。默认情况下只显示所有直接下级的信息，在用户树里的用户名右边会有数字显示，这些数字表示该用户下的直接下级用户的数量，可以点击数字已展开下级的用户树。用户信息列表包括了用户名、所属组、当前余额和注册时间等信息，可以针对用户名，余额范围，以及用户组进行综合搜索，另外还可以按用户名和余额进行排序。
+	                  		</p>
+	                  		<p style="margin-left: 35px;"><strong>a)调点：</strong>可通过选择“升点”或“降点”并填写相应数值，完成对下级调点的操作。（可参照页面的详细说明来更好的了解相关操作）。</p>
+	                  		<p style="margin-left: 35px;"><strong>b) 帐变：</strong>可查询用户账变详情，默认情况可以查看用户当天的所有账变记录。</p>
+	                  		<p style="margin-left: 35px;"><strong>c) 开户额：</strong> 可增加用户不同点位的开户额数量。</p>
+	                  		<p style="margin-left: 35px;"><strong>d) 用户详情：</strong>可具体查询用户各彩种玩法的对应奖金与返点。</p>
+	                  		<p style="margin-left: 35px;"><strong>e) 团队余额：</strong> 点击“团队余额”会在该用户的下方显示该用户下的所有用户的余额的总和，即团队余额的信息。</p>
+	                  		<p style="margin-left: 20px;">
+	                  			<font size="+1"><strong>二 : 增加用户</strong></font>
+	                  		</p>
+	                  		<p style="margin-left: 35px;">
+	                  			增加用户时，首先要选择用户级别，（代理用户：有游戏功能和发展下级功能/会员用户：仅有游戏功能，无发展下级功能），然后填写登陆账号、登陆密码和用户昵称三个基本信息。最后在快速设置中，填写保留返点，点击“开户”即可。 
+	                  		</p>
+	                  		<p style="margin-left: 35px;">
+							<font color="#FF0000">（注：新开通下级的返点=您的返点-保留返点，您可以参考“可填范围”选值填写保留返点。为了您的长远发展，建议您填写适当的保留返点值。）</font>
+	                  		</p>
+	                  		<p style="margin-left: 20px;">
+	                  			<font size="+1"><strong>三 : 修改昵称</strong></font>
+	                  		</p>
+	                  		<p style="margin-left: 35px;">
+	                  			修改自己在平台中的昵称信息。
+	                  		</p>
+	                  		<p style="margin-left: 20px;">
+	                  			<font size="+1"><strong>四 : 消息中心</strong></font>
+	                  		</p>
+	                  		<p style="margin-left: 35px;">
+	                  			“私信箱”：查看和管理来自上级代理或者下级的私信消息<br />
+								“系统消息”：查看和管理自身的系统消息<br />
+								“写私信”：收信人--从左侧列表中双击添加收信人，点击已添加的收信人可以移除该收信人<br />
+								     <p style="margin-left: 129px;">私信标题-私信主题</p>
+								    <p style="margin-left: 129px;"> 私信内容-内容信息，为了账户安全，请勿透漏账户信息</p>
+	                  		</p>
+	                  		<p style="margin-left: 20px;">
+	                  			<font size="+1"><strong>五 : 奖金详情</strong></font>
+	                  		</p>
+	                  		<p style="margin-left: 35px;">
+	                  			可以查看本人所有彩种玩法对应的奖金和返点。
+	                  		</p>
+	                  	</dl>
+	                  </div>
+	         </div>
+	         <div data-pws-tab="报表管理" data-pws-tab-name="报表管理">
+	         	<div class="tf">
+                  	<dl>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>一 : 帐变列表</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			在账务方面，平台会记录用户每笔资金操作的去向，包括充值，提现和游戏等，即帐变。在帐变列表可以查询自身和所有下级的近期的帐变情况， 平台提供了一系列的搜索选项，帮助用户快速找到想要的信息，包括：帐变类型（比如，充值，提现，游戏，或者其他），帐变时间范围，指定用户，范围（自身，直接下级或者所有下级），帐变编号、注单编号和追号编号查询，如果是针对游戏帐变，还可以根据具体游戏，玩法，甚至奖期进行查询。另外系统还提供了几个自身的快捷查询：我充值的，我提现的，我投注的，我追号的，我的奖金，我的返点。在查询结果里显示信息包括，帐变的编号、用户名、帐变时间、帐变类型、对应游戏，玩法，奖期，变动金额（收入还是支出），以及该帐变后的账户余额等信息。
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>二 : 报表查询</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			根据时间和游戏查询下级每条用户树的游戏投注统计结果，显示信息包括：用户名，所属组，总代购费，返点，实际总代购费，中奖金额，总结算。点击“查看下级”可以查看每一级的统计结果，点击“游戏明细”可以查看针对具体游戏和玩法的统计。
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>三 : 今日报表</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			统计当天的团队余额，投注金额和中奖金额等信息
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>四 : 盈亏报表</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			查询指定时间内，本人团队的盈亏情况。
+                  		</p>
+                  	</dl>
+                  </div>
+	         </div>
+	         <div data-pws-tab="账户管理" data-pws-tab-name="账户管理">
+	             <div class="tf">
+                  	<dl>
+                  		<p style="margin-left: 20px;margin-bottom: 10px;">
+                  			<font size="+1"><strong>一 : 账户安全</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;"><strong>a) 修改密码： </strong>可以修改自己的登录密码和资金密码，在修改的时候需要提供原始密码，以确保账户的安全。</p>
+	                  		<p style="margin-left: 35px;"><strong>b) 登录问候语：</strong> 可设置/修改登录问候语。（在登录界面输入用户名后，您会看到此处设置的登录问候语，若非本平台则不会出现，请谨防钓鱼网站）</p>
+	                  		<p style="margin-left: 35px;"><strong>c) 邮箱绑定：</strong>  可绑定本人邮箱，以进一步确保账户资金安全。输入资金密码后，添加要绑定的邮箱地址，然后点击“发送验证码”，同时登陆所添加邮箱，等待查收邮件。待收取对应验证码后进行填写，点击提交即可查看到邮箱绑定成功。</p>
+	                  		<p style="margin-left: 35px;"><strong>d) 手机绑定：</strong>可绑定本人手机，以进一步确保账号资金安全。输入资金密码后，添加要绑定的手机号码，然后点击“发送验证码”，同时等待手机信息收取，待收取对应验证码后进行填写，点击提交即可查看到手机绑定成功。</p>
+	                  		<p style="margin-left: 35px;"><strong>e) 安全验证：</strong> 可选择设置不同的验证方式以进一步确保账户资金安全。可根据本人设置条件，勾选“邮箱验证”或“手机验证”，然后点击“提交”即可。若想修改其他验证方式，需要先获取相应验证码，正确填写后方可修改。 为进一步确保您的账户资金安全，平台建议您采用邮箱/手机验证功能。 </p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>二 : 充值申请</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			进入充值申请，选择充值方式（推荐银行充值方式），选择充值银行，填写充值金额，获取最新收款人信息，然后按照步骤提示进行操作。关于充值的详细说明，
+                  			可以查看“<font color="#FF0000">常见问题->充值说明</font>”。
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>三 : 提现申请</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			进入提现申请之前，为保障玩家的资金安全，需要验证资金密码（如果设置了邮箱或者手机验证，则需要填写验证码）。进入以后可以填写提现申请或者查看历史提现记录以及提现申请的跟踪情况。关于提现的详细说明，
+                  			请查看“<font color="#FF0000">常见问题->充值说明</font>”。
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>四 : 我的银行卡</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			对自己绑定在平台的银行卡进行管理，包括增加，锁定，解绑等。在进入管理之前同样需要检查资金密码。
+                  		</p>
+                  	</dl>
+                  </div>
+	         </div>
+	         <div data-pws-tab="帮助中心" data-pws-tab-name="帮助中心">
+	              <div class="tf">
+                  	<dl>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>一 : 信息中心</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			综合信息区，可以查看系统对于自己账户安全的一个评分，以及一些对账户安全性提高的建议。还可以查看系统的公告信息，点击公告标题可以在右边显示公告内容。
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>二 : 功能介绍</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			针对平台的所有功能进行介绍，让您更快的熟悉本平台。
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>三 : 玩法介绍</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			平台所有彩种及玩法的定义与举例说明，帮助您更加清楚的了解平台的每一种玩法。
+                  		</p>
+                  		<p style="margin-left: 20px;">
+                  			<font size="+1"><strong>四 : 常见问题</strong></font>
+                  		</p>
+                  		<p style="margin-left: 35px;">
+                  			以问答方式，解答用户在使用中的一些常见问题，包括<font style="color:#FF0000 ;">“充值说明”</font>、<font style="color:#FF0000 ;">“提现说明”</font>。
+                  		</p>
+                  	</dl>
+                  </div>
+	         </div>
+	      </div><!-- tabset1 -->
+		</div>
+	</body>
+</html>
+

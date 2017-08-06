@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Users";
+    var roelslist = (List<ProEntity.Manage.M_Role>)ViewBag.Roles;
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/layout.css" rel="stylesheet" />
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/sysset/users"], function (obj) {
+            obj.init('@Html.ToJSONString(roelslist)');
+        });
+    </script>
+</head>
+<body>
+    <div class="main-body">
+        <div class="main-content">
+            <div class="header-box">
+                <span class="header-title left">当前位置-用户管理</span>
+                <div class="btn-add right " id="createModel">新建用户</div>
+            </div>
+            <div class="content-body">
+                <table class="table-list">
+                    <tr class="tr-header">
+                        <td class="tLeft">管理员名称</td>
+                        <td class="tLeft">角色</td>
+                        <td class="tLeft">描述</td>
+                        <td class="width150">创建时间</td>
+                        <td class="width150">创建人</td>
+                        <td class="width80">操作</td>
+                    </tr>
+                </table>
+                <div id="pager" class="mTop20"></div>
+            </div>
+            <ul class="dropdown-ul hide" style="width: 65px;">
+                <li class=" " id="updateObject">编辑</li>
+                <li class=" " id="deleteObject">删除</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

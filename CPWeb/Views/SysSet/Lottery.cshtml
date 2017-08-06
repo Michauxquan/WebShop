@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+
+ 
+<html>
+<head>
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/layout.css" rel="stylesheet" />
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/modules/css/system/role.css" />
+    <script src="/Scripts/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js"></script>
+    <script type="text/javascript" src="/modules/plug/laydate/laydate.js"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/sysset/lottery"], function (obj) {
+            obj.init();
+        });
+    </script>
+</head>
+<body>
+    <div class="main-body">
+        <div class="main-content">
+            <div class="header-box">
+                <span class="header-title left">当前位置-彩种管理</span>
+                <div class="btn-add right" id="createModel">新建彩种</div>
+            </div>
+            <div class="content-body">
+                <table class="table-list">
+                    <tr class="tr-header">
+                        <td class="tLeft">彩票编号</td>
+                        <td class="tLeft">彩票名称</td>
+                        <td class="tLeft">标签</td>
+                        <td class="tLeft">排序</td>
+                        <td class="tLeft">销售状态</td>
+                        <td class="tLeft">开奖地址</td>
+                        <td class="tLeft">期数</td>
+                        <td class="tLeft">开奖间隔/秒</td>
+                        <td class="tLeft" title="相对开奖间隔设置">封盘间隔/秒</td>
+                        <td class="tLeft">营业时间</td>
+                     @*   <td class="center">创建时间</td>
+                        <td class="center">创建人</td>*@
+                        <td class="center">设置玩法</td>
+                        <td class="center">操作</td>
+                    </tr>
+                </table>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>

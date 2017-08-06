@@ -1,0 +1,250 @@
+﻿ 
+
+<!-- start slider -->
+@{
+    ViewBag.Title = "首页";
+}
+
+@section css{
+    <link href="/webshop/css/slider.css" rel="stylesheet" type="text/css" media="all"> 
+}
+@section scripts{
+  
+ <script src="/webshop/js/responsive.menu.js"></script> 
+    <script type="text/javascript" src="/webshop/js/modernizr.custom.28468.js"></script>
+    <script type="text/javascript" src="/webshop/js/jquery.cslider.js"></script>
+	<script type="text/javascript">
+	    $(function () {
+	        $('#da-slider').cslider();
+	    });
+	</script> 
+	<script src="/webshop/js/owl.carousel.js"></script>
+	<script>
+	    $(document).ready(function () {
+	        $("#owl-demo").owlCarousel({
+	            items: 4,
+	            lazyLoad: true,
+	            autoPlay: true,
+	            navigation: true,
+	            navigationText: ["", ""],
+	            rewindNav: false,
+	            scrollPerPage: false,
+	            pagination: false,
+	            paginationNumbers: false,
+	        });
+
+	    });
+    </script>  
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event) {
+            event.preventDefault();
+            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+        });
+    });
+</script>
+    
+}
+
+
+ 
+		
+ 
+<!-- start slider -->
+<div id="da-slider" class="da-slider">
+    <div class="da-slide da-slide-current">
+        <h2><font><font>欢迎来到aditii</font></font>
+        </h2>
+        <p><font><font>当她到达意大利山脉的第一个山丘时，她最后的视图回到了她家乡书店红树林的天际线，字母T恤的标题和她自己的名称LEVI'S。</font></font>
+        </p>
+        <a href="/product/detail" class="da-link"><font><font>SHOP NOW</font></font></a>
+        <div class="da-img"><img src="/webshop/images/slider1.png" alt="image01">
+        </div>
+    </div>
+    <div class="da-slide">
+        <h2><font><font>舒适轻盈</font></font>
+        </h2>
+        <p><font><font>舒适美感，发挥弹性、轻盈举步、透气、不疲勞的功能，正符合了现代人对鞋子的要求。</font><font>让脚部舒服抗菌，举步轻鬆，走起路來舒坦有劲，神气活现。</font></font>
+        </p>
+        <a href="/product/detail" class="da-link"><font><font>SHOP NOW</font></font></a>
+        <div class="da-img"><img src="/webshop/images/slider2.png" alt="image01">
+        </div>
+    </div>
+    <div class="da-slide">
+        <h2><font><font>革命</font></font>
+        </h2>
+        <p><font><font>一个名叫Duden的小河流在他们的地方，并提供必要的reelialia。</font><font>这是一个矛盾的国家，其中烤的部分句子飞入你的嘴里。</font></font>
+        </p>
+        <a href="/product/detail" class="da-link"><font><font>SHOP NOW</font></font></a>
+        <div class="da-img"><img src="/webshop/images/slider3.png" alt="image01">
+        </div>
+    </div>
+    <div class="da-slide">
+        <h2>黑白配</h2>
+        <p>即使是全能的指点也不能控制盲文，这是一个几乎是非平行的生活，但有一天，Lorem Ipsum的一小段盲文决定离开了远方的语法世界。</p>
+        <a href="/product/detail" class="da-link"><font><font>SHOP NOW</font></font></a>
+        <div class="da-img"><img src="/webshop/images/slider4.png" alt="image01">
+        </div>
+    </div>
+    <nav class="da-arrows">
+        <span class="da-arrows-prev"></span>
+        <span class="da-arrows-next"></span>
+    </nav>
+    <nav class="da-dots"><span class="da-dots-current"></span><span></span><span></span><span></span></nav>
+</div>
+
+<!----start-cursual---->
+<div class="wrap">
+<!----start-img-cursual---->
+	<div id="owl-demo" class="owl-carousel">
+		<div class="item" onClick="location.href='/product/detail';">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="/webshop/images/c1.jpg" alt="Lazy Owl Image">
+			</div>
+			<div class="cau_left">
+				<h4><a href="/product/detail">branded shoes</a></h4>
+				<a href="/product/detail" class="btn">shop</a>
+			</div>
+		</div>	
+		<div class="item" onClick="location.href='/product/detail';">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="/webshop/images/c2.jpg" alt="Lazy Owl Image">
+			</div>
+			<div class="cau_left">
+				<h4><a href="/product/detail">branded tees</a></h4>
+				<a href="/product/detail" class="btn">shop</a>
+			</div>
+		</div>	
+		<div class="item" onClick="location.href='/product/detail';">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="/webshop/images/c3.jpg" alt="Lazy Owl Image">
+			</div>
+			<div class="cau_left">
+				<h4><a href="/product/detail">branded jeens</a></h4>
+				<a href="/product/detail" class="btn">shop</a>
+			</div>
+		</div>	
+		<div class="item" onClick="location.href='/product/detail';">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="/webshop/images/c2.jpg" alt="Lazy Owl Image">
+			</div>
+			<div class="cau_left">
+				<h4><a href="/product/detail">branded tees</a></h4>
+				<a href="/product/detail" class="btn">shop</a>
+			</div>
+		</div>	
+		<div class="item" onClick="location.href='/product/detail';">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="/webshop/images/c1.jpg" alt="Lazy Owl Image">
+			</div>
+			<div class="cau_left">
+				<h4><a href="/product/detail">branded shoes</a></h4>
+				<a href="/product/detail" class="btn">shop</a>
+			</div>
+		</div>	
+		<div class="item" onClick="location.href='/product/detail';">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="/webshop/images/c2.jpg" alt="Lazy Owl Image">
+			</div>
+			<div class="cau_left">
+				<h4><a href="/product/detail">branded tees</a></h4>
+				<a href="/product/detail" class="btn">shop</a>
+			</div>
+		</div>	
+		<div class="item" onClick="location.href='/product/detail';">
+			<div class="cau_left">
+				<img class="lazyOwl" data-src="/webshop/images/c3.jpg" alt="Lazy Owl Image">
+			</div>
+			<div class="cau_left">
+				<h4><a href="/product/detail">branded jeens</a></h4>
+				<a href="/product/detail" class="btn">shop</a>
+			</div>
+		</div>	
+	</div>
+	<!----//End-img-cursual---->
+</div>  
+<div class="main_bg1">
+<div class="wrap">	
+	<div class="main1">
+		<h2>特色产品</h2>
+	</div>
+</div>
+</div>
+<!-- start main -->
+<div class="main_bg">
+<div class="wrap">	
+	<div class="main">
+		<!-- start grids_of_3 -->
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+				<a href="/product/detail">
+					<img src="/webshop/images/pic1.jpg" alt=""/>
+					<h3>品牌鞋</h3>
+					<div class="price">
+						<h4>$300<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="grid1_of_3">
+				<a href="/product/detail">
+					<img src="/webshop/images/pic2.jpg" alt=""/>
+					<h3>品牌T-桖</h3>
+					<div class="price">
+						<h4>$300<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="grid1_of_3">
+				<a href="/product/detail">
+					<img src="/webshop/images/pic3.jpg" alt=""/>
+					<h3>品牌T恤</h3>
+					<div class="price">
+						<h4>$300<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+				<a href="/product/detail">
+					<img src="/webshop/images/pic4.jpg" alt=""/>
+					<h3>品牌包</h3>
+					<div class="price">
+						<h4>$300<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="grid1_of_3">
+				<a href="/product/detail">
+					<img src="/webshop/images/pic5.jpg" alt=""/>
+					<h3>EMS女包</h3>
+					<div class="price">
+						<h4>$300<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="grid1_of_3">
+				<a href="/product/detail">
+					<img src="/webshop/images/pic6.jpg" alt=""/>
+					<h3>品牌货物</h3>
+					<div class="price">
+						<h4>$300<span>indulge</span></h4>
+					</div>
+					<span class="b_btm"></span>
+				</a>
+			</div>
+			<div class="clear"></div>
+		</div>	
+		<!-- end grids_of_3 -->
+	</div>
+</div>
+</div>	 
+
+
+      

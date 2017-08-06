@@ -1,0 +1,181 @@
+﻿@using ProEntity
+@{
+    ViewBag.Title = "ReportList";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<meta charset="UTF-8">
+		<title>游戏平台 - 账变列表</title>
+		<link rel="stylesheet" type="text/css" href="/modules/css/help.css" />
+		<link rel="stylesheet" type="text/css" href="/modules/css/active.css" />
+		<link rel="stylesheet" type="text/css" href="/modules/css/need/laydate.css" />
+	    <link rel="stylesheet" type="text/css" href="/modules/css/skins/dahong/laydate.css"/>
+	    <link rel="stylesheet" type="text/css" href="/modules/datapager/style.css"/>
+         <script type="text/javascript" src="/Scripts/jquery-1.11.3.min.js"></script> 
+		<script type="text/javascript" src="/Scripts/laydate.js"></script>
+	    <script type="text/javascript" src="/Scripts/date.js"></script>
+        <script type="text/javascript" src="/modules/datapager/paginate.js"></script>
+	    <script type="text/javascript" src="/Scripts/DateForm.js"></script>
+        <script  type="text/javascript" src="/modules/scripts/report/reportlist.js"></script>
+		<style>
+			div,p,span,dl,dt,dd,a,table,tr,td,thead,th,tbody{margin: 0;padding: 0;list-style: none;} 
+		</style>
+	</head>
+	<body>
+		<div class="p-header">
+			<p class="current-location">
+				<span>当前位置：</span><span> &gt; 账变列表</span>
+			</p>
+		</div>
+		<div class="chooseRecords">
+			<div class="filter">
+					<table>
+						<form action="#" method="get"></form>
+				     	<input type="hidden" name="isgetdate" value="1" />
+						<tbody>
+							<tr>
+								<td rowspan="5">
+									<label for="gamemodel">
+										<span class="text-middle-input">类型：</span>
+										<select class="input gamemodel" id="playtype"  size="10" style="width: 130px;height: 150px;">
+											<option value="-1">所有类型</option>
+											<option value="1" selected>账户充值</option>
+											<option value="2">账户提现</option>
+											<option value="3">提现失效</option>
+											<option value="4">投注扣款</option>
+											<option value="5">追号扣款</option> 
+											<option value="8">奖金派送</option>   
+											<option value="14">活动礼金</option>
+											<option value="16">其他</option>
+										</select>
+									</label>
+								</td>
+							</tr>
+						    <tr>
+						    	<td>
+						    		<div class="gameuser" style="margin-bottom: 15px;"></div>
+						    		<label for="starttime">
+										<span class="text-middle-input">账变时间：</span>
+										<input type="text" class="start-time input laydate-icon" value="" id="btime" style="width: 210px;" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" /> 
+										<span class="text-middle-input">&nbsp;至&nbsp;</span>
+										<input type="text" class="endtime input laydate-icon"  value="" id="etime" style="width: 200px;" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/> 
+									</label>
+									<label for="gamesaction">
+										<span class="text-middle-input">奖金：</span>
+										<select class="input state" name="isfree" id="winType">
+											<option value="-1" selected="selected">全部</option>
+											<option value="0">现金</option>
+											<option value="1">优惠券</option>
+										</select>
+									</label>
+									<label for="gamesaction">
+										<span class="text-middle-input">
+											<select class="input state" name="stype" style="width: 90px;">
+												<option value="" selected="selected">编号查询</option>
+												<option value="LCode">注单编号</option>
+												<option value="BCode">追单编号</option> 
+											</select>
+										</span>
+										<input class="input gameuser" name="lcode" id="lcode" value="" />
+									</label>
+						    	</td>
+						    </tr>
+						    <tr>
+						        <td>
+						            <label for="lotteryslt">
+										<span class="text-middle-input">游戏名称：</span>
+										<select class="input gamemodel" id="lotteryslt"  style="width: 130px;">
+											<option value="">所有游戏</option>
+											@foreach (Lottery model in ExpandClass.GetLottery(HttpContext.Current))
+                                            {
+                                                <option value="@(model.CPCode)">@(model.CPName)</option>
+                                            }
+										</select>
+									</label>
+						            <label for="lotteryplays">
+						                <span class="text-middle-input">游戏玩法：</span>
+						                <select class="input gametype" name="lotteryplays" id="lotteryplays">
+						                    <option value="">所有玩法</option>
+						                </select>
+						            </label>
+						            <label for="issueslt">
+						                <span class="text-middle-input">游戏奖期：</span>
+						                <select class="input gametype" name="issueslt"  id="issueslt">
+						                    <option value="">所有奖期</option>
+						                </select>
+						            </label>
+                                    <label for="selfrange">
+										<span class="text-middle-input">范围：</span>
+										<select class="input gameuser" id="selfrange">
+						                    <option  value="-1">全部</option>
+						                    <option value="0">自己</option>
+						                    <option value="1">直接下级</option>
+						                    <option value="2">所有下级</option>
+					                    </select>
+									</label>
+						        </td>
+						    </tr> 
+						    <tr>
+						    	<td>
+						    		<div>
+						    			<input type="hidden" name="lntype" id="lntype" value />快速查询：
+						    			<input class="button1" type="button" value="我充值的..."  data-playtype="1" />
+						    			&nbsp;<input class="button1" type="button" value="我提现的..." data-playtype="2"/>
+						    			&nbsp;<input class="button1" type="button" value="我投注的..." data-playtype="4" />
+						    			&nbsp;<input class="button1" type="button" value="我追号的..." data-playtype="5"/>
+						    			&nbsp;<input class="button1" type="button" value="我的奖金..." data-playtype="8"/> 
+						    		</div>
+						    		<div class="filter-button-box" style="margin-top: 14px;">
+										<div class="search" id="search">搜索</div>
+										<a href="/Report/ReportList" target="_self" style="color: white;">
+											<div class="clear">清空</div>
+										</a>
+									</div>
+							    </td>
+						    </tr>
+						</tbody>
+					</table>
+			</div>
+			<div class="content">
+			    <div class="data">
+			    	<table class="data-table" cellspacing="0">
+			    		<thead>
+			    			<tr>
+			    				<th class="th-1" style="width: 10%;">帐变编号</th>
+			    				<th class="th-2" style="width: 8%;">用户名</th>
+			    				<th class="th-3" style="width: 8%;">时间</th>
+			    				<th class="th-4" style="width: 8%;">类型</th>
+			    				<th class="th-5" style="width: 8%;">游戏</th>
+			    				<th class="th-6" style="width: 8%;">玩法</th>
+			    				<th class="th-7" style="width: 10%;">期号</th>
+			    				<th class="th-8" style="width: 8%;">模式</th>
+			    				<th class="th-9" style="width: 8%;">收入</th>
+			    				<th class="th-10" style="width: 8%;">支出</th>
+			    				<th class="th-11" style="width: 8%;">余额</th>
+			    				<th class="th-12" style="width: 8%;">备注</th>
+			    			</tr>
+			    		</thead>
+			    		<tbody>			    			
+			    			<tr>
+			    				<td height="37" colspan="13" style="text-align: center;" class="needq">
+			    					<span>请选择查询条件之后进行查询</span>
+			    				</td>
+			    			</tr>
+			    		</tbody>
+			    		<tfoot>
+			    			<tr>
+						        <td colspan="13" style="text-align: center;">
+						             <div class="spana" id="pager"></div>
+						        </td>
+			    			</tr>
+			    		</tfoot>
+			    	</table>
+			    </div>	
+			</div>
+		</div>
+	</body>
+</html>

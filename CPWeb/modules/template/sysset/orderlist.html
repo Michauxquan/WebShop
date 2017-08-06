@@ -1,0 +1,19 @@
+﻿{%
+	for(var i=0, j=$data.length; i < j; i++){
+	var item = $data[i];
+%}
+<tr class="list-item">
+    <td class="tLeft width30"><span data-id="{%=item.AutoID%}" data-userid="{%=item.UserID%}"  data-ordercode="{%=item.OrderCode%}" class="ico-check check"></span></td>
+    <td class='tLeft width150'>{%= item.OrderCode %}</td>
+    <td class='tLeft minwidth70'>{%= item.BankName %}</td>
+    <td class="tLeft minwidth70">{%=item.Sku%}</td> 
+    <td class="tLeft width80 ">{%=item.TotalFee.toFixed(2)%}</td>
+    <td class='center width80' >{%=item.PayType==0?'支付宝':(item.PayType==1?'线下汇款':(item.PayType==2?'银行卡':(item.PayType==3?'微信':'其他')))%}</td>
+    <td class='center width80'>{%=item.Status==0?'待审核':item.Status==1?'支付成功':item.Status==2?'支付失败':'作废'%}</td>
+    <td class='center width150'>{%=item.CreateTime.toDate("yyyy-MM-dd hh:mm:ss")%}</td>
+    <td class='center width100'>{%=item.UserName%}</td> 
+     <td class="center width60 dropdown" data-ordercode="{%=item.OrderCode%}" data-id="{%=item.AutoID%}">
+        <span data-ordercode="{%=item.OrderCode%}" class="ico-dropdown"></span>
+    </td>
+</tr>
+{% } %}

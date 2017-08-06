@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+* {list-style: none;}
+html{overflow-x:auto ;overflow-y: hidden;}
+body,div,ul,ol,li,a,h1,h2,h3,h4,h5,h6,span,p {margin: 0;padding: 0;list-style: none;outline: none;text-decoration: none;font-weight: 500;}
+body {width: 100%;height: 100%;font-family: "微软雅黑", arial, sans-serif, helvetica;overflow: hidden;font-size: 14px;}
+ul,li {list-style-type: none;}
+/* 头部导航栏 */
+.header {left: 0;width: 100%;min-width: 1200px;z-index: 1999;background: url(../img/header-bg.png) repeat-x;color: white;
+        position:fixed; top:0; z-index:5; }
+body>.header .nav-box {height: 50px;position: absolute;top: 0px;}
+/** input{border:solid 1px red; border-radius:2px;}*/
+* input[type="text"]:focus { border:solid 1px rgb(207, 27, 28) !important; }
+.header>div {float: left;}
+.header .on2 {background: rgb(175, 23, 22);}
+.logo {width: 25%;height: 34px;margin: 7px 15px;}
+.nav-box {width: 70%;float: right !important;height: 50px;left: 30%;}
+.nav-box ul {display: block;width: 800px;height: 50px;position: absolute;}
+.nav-box ul li {display: block;float: left;line-height: 50px;width: 100px;height: 50px;color: white;text-align: center;}
+.nav-box ul li a {color: #fff;display: block}
+.nav-box ul li:hover {background-color: rgb(175, 23, 22);}
+
+#sddm div {position: absolute;display: none;width: 100px;min-height: 30px;padding: 5px 0;background: rgb(241, 48, 49);z-index: 1000;border-radius: 4px;}
+#sddm div a {position: relative;display: block !important;height: 30px;line-height: 30px;border-radius: 2px;text-decoration: none;background: rgb(241, 48, 49);}
+#sddm div a:hover {background: rgb(175, 23, 22);color: #FFF}
+/*content*/
+
+.main-content {width: 100%;min-height: 776px;margin: 0;padding: 0;font-size: 12px;}
+
+/* 左侧导航栏 */
+.left-header {width: 175px;position: absolute; bottom:0px; float: left;left: 0;top: 50px;background-color: rgb(175, 23, 22);overflow-y: auto;}
+.left-info {clear: left;width: 100%;height: 200px;margin: 0;padding: 0;display: block;}
+.left-info ul {width: 100%;height: 200px;color: white;    display: block;   list-style-type: disc;}
+.left-info ul li {text-align: center;height: 24px;line-height: 24px;font-size: 10px;overflow: hidden;position: relative;text-overflow: ellipsis; white-space: nowrap;}
+.left-info ul li span:nth-child(1){line-height: 24px;height: 24px;left: 10px;position:absolute;width: 20px;overflow:hidden;text-overflow: ellipsis;}
+.left-info ul li span:nth-child(2){left: 32px;position: absolute;text-overflow: ellipsis;overflow:hidden;}
+.left-info ul li span:nth-child(3){position: absolute;left: 66px;text-overflow: ellipsis;overflow:hidden;}
+.left-info ul div .picture {border-radius: 50%;width: 60px;text-align: center;height: 60px;padding: 5px 0;}
+.left-info-with {margin-left: 15px;float: left;margin-top: 20px;}
+.left-info ul div .recharge,.left-info ul div .withdraw {display: block;width: 60px;height: 26px;text-align: center;line-height: 26px;border-radius: 4px;margin: 0 auto;}
+.left-info ul div .recharge {background-color: rgb(30, 143, 206);}
+.left-info ul div .withdraw {background-color: rgb(206, 97, 32);}
+.left-info ul div .recharge a,.left-info ul div .withdraw a {color: white;display: block;}
+
+.up{background: #6A0D0D;color: #fff;font-weight: 700;height: 30px;}
+.menu summary {height: 30px;line-height: 30px;text-indent: 10px;outline: 0;color: white;border-top: 1px solid #9E1617;background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #af1716), color-stop(1, #9e1617));cursor: pointer;border-bottom: 1px solid #999407;}
+.menu summary::-webkit-details-marker {display: none}
+.menu summary:after {content: "+";display: inline-block;width: 16px;height: 16px;margin-right: 10px;font-size: 12px;font-weight: 700;float: right;}
+.menu[open] summary:after {content: "-";}.menu dl {padding: 0px 0;margin: 0;}
+.menu dl a  {list-style: none;height: 30px;line-height: 30px;border-bottom: 1px solid rgb(154, 22, 22);}
+.menu dl a {display: block;color: #fff;}
+.menu dl a:hover {display: block;background: #6A0D0D;}
+
+/* 右侧 内容*/
+.right {min-width: 1000px;min-height: 776px;background-color: #eee;margin-top: 50px;}
+.right-header {min-width: 1000px;height: 40px;position: fixed;left: 175px;top: 50px;right: 0;background-color: rgb(207, 27, 28);}
+.winning {width: 80px;height: 30px;line-height: 30px;background-color: #fff;text-align: center;font-size: 12px;float: left;color: rgb(43, 146, 208);border-radius: 4px;margin: 5px 20px;font-weight: bold;}
+.msg {width: 500px;height: 30px;float: left;line-height: 30px;font-size: 12px;margin: 5px 0;color: white;}
+.msg .blod {font-weight: 700;}
+.msg .amount {color: #ff0;}
+.right-main {position: absolute;top: 90px;left: 175px;bottom: 0;right: 0;background: #e1eaf0;min-height: 500px;}
+
+.incontent{ margin: 10px 0 0 20px;}
+
+
+.alert {background-color: #333;opacity:0.8; font-size: 13px; position: fixed; top:35%; z-index: 99999; 
+         padding:20px;padding-left:40px;  overflow:auto; border-radius:5px;min-width:140px;max-width:260px;}
+.alert .alert-wrap { word-wrap: break-word;  word-break:break-all;color:#fff;font-size:14px;}
+.alert-wrap .alert-icon-right:before {content:"\e613";}
+.alert-wrap .alert-icon-right {color:#fefefe;font-size:20px;float:left;}
+.alert-wrap .alert-icon-warn:before {content:"\e64a";}
+.alert-wrap .alert-icon-warn {color:#fefefe;font-size:20px;float:left;}
+.alert-wrap .alert-msg {float:left;color:#fff;font-size:16px;line-height:24px; padding:0 20px 0 15px;max-width:160px;}
+.alert-wrap .alert-close:before {content:"\e628";}
+.alert-wrap .alert-close {float:left;color:#ddd;font-size:20px;padding-top:0px;cursor:pointer;}
+.alert-wrap .alert-close:hover {color:#fff;}
+/*confirm样式*/
+.confirm-layer {position: fixed; z-index:99998; top:0; left:0;right:0; bottom:0; background-color:#000; opacity:0.7;}
+.confirm { border: 1px solid #ccc; background-color: #fff; font-size: 13px; position: fixed; top:35%; z-index: 99999; width:260px; overflow:auto;padding:20px;border-radius:3px; }
+.confirm .confirm-wrap { word-wrap: break-word;  word-break:break-all;font-size:16px;  }
+.confirm .confirm-bottom { margin-top:20px; text-align:right; }
+.confirm-bottom .sure { padding:10px 24px; background-color:#D64242; color:#fff; border:none; cursor:pointer; display:inline-block; border-radius:3px; }
+.confirm-bottom .sure:hover {  background-color:#AC1716;  }
+.confirm-bottom .close { padding:5px 40px; color:#999; border:none; cursor:pointer; display:inline-block; }
+.confirm-bottom .close:hover {color:#AC1716; }

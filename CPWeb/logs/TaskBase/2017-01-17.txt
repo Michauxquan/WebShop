@@ -1,0 +1,781 @@
+﻿[2017/1/17 星期二 上午 9:56:34]结果:UpdateLotteryStatus Begin
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult SD11X5 Begin
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult SHSSL End
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult TJSSC Begin
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult XJSSC Begin
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult HLJSSC Begin
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult FC3D Begin
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult CQSSC Begin
+[2017/1/17 星期二 上午 9:56:34]结果:CheckResult 漏开奖检测 Begin
+[2017/1/17 星期二 上午 9:56:34]结果:BeetAuto 自动投注 Begin
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult SD11X5:2017011706开奖失败 End
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult GD11X5:2017011705开奖失败  End
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult HLJSSC:0226755开奖失败  End
+[2017/1/17 星期二 上午 9:56:34]结果:UpdateResult XJSSC:20170116096开奖失败  End
+[2017/1/17 星期二 上午 9:56:35]结果:UpdateResult CQSSC:20170117023开奖失败  End
+[2017/1/17 星期二 上午 9:56:35]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011706开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011705开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011704开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011703开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011702开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011701开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011678开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011677开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011676开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011675开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011674开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011673开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011672开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011671开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011670开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011669开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011668开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011667开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011666开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult SD11X5漏开奖检测 2017011665开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117023开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117022开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117021开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117020开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117019开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117018开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117017开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117016开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117015开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117014开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117013开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117012开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117011开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117010开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117009开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117008开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117007开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117006开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117005开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult CQSSC漏开奖检测 20170117004开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226755开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226754开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226753开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226752开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226751开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226750开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226749开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226748开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226747开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226746开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226745开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226744开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226743开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226742开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226741开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226740开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226739开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226738开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226737开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult HLJSSC漏开奖检测 0226736开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116096开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116095开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116094开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116093开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116092开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116091开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116090开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116089开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116088开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116087开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116086开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116085开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116084开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116083开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116082开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116081开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116080开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116079开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116078开奖失败 End
+[2017/1/17 星期二 上午 9:57:30]结果:CheckResult XJSSC漏开奖检测 20170116077开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170117005开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170117004开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170117003开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170117002开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170117001开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116084开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116083开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116082开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116081开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116080开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116079开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116078开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116077开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116076开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116075开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116074开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116073开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116072开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116071开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult TJSSC漏开奖检测 20170116070开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011623开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011622开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011621开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011620开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011619开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011618开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011617开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011616开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011615开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011614开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011613开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011612开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011611开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011610开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011609开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011608开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011607开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011606开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011605开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult SHSSL漏开奖检测 2017011604开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011705开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011704开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011703开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011702开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011701开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011684开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011683开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011682开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011681开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011680开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011679开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011678开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011677开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011676开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011675开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011674开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011673开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011672开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011671开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult JX11X5漏开奖检测 2017011670开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011705开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011704开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011703开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011702开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011701开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011684开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011683开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011682开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011681开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011680开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011679开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011678开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011677开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011676开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011675开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011674开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011673开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011672开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011671开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult GD11X5漏开奖检测 2017011670开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017016开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017015开奖成功! End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017014开奖成功! End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017013开奖成功! End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017012开奖成功! End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017011开奖成功! End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017010开奖成功! End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017009开奖成功! End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017008开奖成功! End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017007开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017006开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017005开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017004开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017003开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017002开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2017001开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2016359开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2016358开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2016357开奖失败 End
+[2017/1/17 星期二 上午 9:57:31]结果:CheckResult FC3D漏开奖检测 2016356开奖失败 End
+[2017/1/17 星期二 上午 9:57:34]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 9:57:34]结果:UpdateResult SD11X5:2017011706开奖失败 End
+[2017/1/17 星期二 上午 9:57:34]结果:UpdateResult GD11X5:2017011705开奖失败  End
+[2017/1/17 星期二 上午 9:57:34]结果:UpdateResult JX11X5:2017011705开奖失败  End
+[2017/1/17 星期二 上午 9:57:34]结果:UpdateResult TJSSC:20170117005开奖失败  End
+[2017/1/17 星期二 上午 9:57:34]结果:UpdateResult CQSSC:20170117023开奖失败  End
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateLotteryStatus Begin
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateResult SD11X5 Begin
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateResult SHSSL End
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateResult TJSSC Begin
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateResult XJSSC Begin
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateResult HLJSSC Begin
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateResult FC3D Begin
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateResult CQSSC Begin
+[2017/1/17 星期二 上午 10:21:39]结果:CheckResult 漏开奖检测 Begin
+[2017/1/17 星期二 上午 10:21:39]结果:BeetAuto 自动投注 Begin
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateResult JX11X5:2017011708开奖失败  End
+[2017/1/17 星期二 上午 10:21:39]结果:UpdateResult TJSSC:20170117008开奖失败  End
+[2017/1/17 星期二 上午 10:21:40]结果:UpdateResult SD11X5:2017011708开奖失败 End
+[2017/1/17 星期二 上午 10:21:40]结果:UpdateResult GD11X5:2017011707开奖失败  End
+[2017/1/17 星期二 上午 10:21:40]结果:UpdateResult XJSSC:20170117002开奖失败  End
+[2017/1/17 星期二 上午 10:21:40]结果:UpdateResult CQSSC:20170117026开奖失败  End
+[2017/1/17 星期二 上午 10:21:40]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:21:40]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:23:48]结果:UpdateResult XJSSC:20170117002开奖失败  End
+[2017/1/17 星期二 上午 10:23:48]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:23:48]结果:UpdateStatus SD11X5 End
+[2017/1/17 星期二 上午 10:23:51]结果:UpdateResult JX11X5:2017011708开奖失败  End
+[2017/1/17 星期二 上午 10:24:19]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:24:19]结果:UpdateResult GD11X5:2017011708开奖失败  End
+[2017/1/17 星期二 上午 10:24:19]结果:UpdateResult CQSSC End
+[2017/1/17 星期二 上午 10:24:46]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:24:46]结果:UpdateResult GD11X5:2017011708开奖失败  End
+[2017/1/17 星期二 上午 10:24:46]结果:UpdateResult XJSSC:20170117002开奖失败  End
+[2017/1/17 星期二 上午 10:24:46]结果:UpdateResult JX11X5:2017011708开奖失败  End
+[2017/1/17 星期二 上午 10:24:46]结果:UpdateResult SD11X5:2017011708开奖失败 End
+[2017/1/17 星期二 上午 10:24:47]结果:UpdateResult CQSSC:20170117026开奖失败  End
+[2017/1/17 星期二 上午 10:24:47]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:24:47]结果:UpdateResult TJSSC:20170117008开奖失败  End
+[2017/1/17 星期二 上午 10:33:33]结果:UpdateLotteryStatus Begin
+[2017/1/17 星期二 上午 10:33:33]结果:UpdateResult SD11X5 Begin
+[2017/1/17 星期二 上午 10:33:33]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:33:33]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:33:33]结果:UpdateResult SHSSL End
+[2017/1/17 星期二 上午 10:33:33]结果:UpdateResult TJSSC Begin
+[2017/1/17 星期二 上午 10:33:33]结果:UpdateResult XJSSC Begin
+[2017/1/17 星期二 上午 10:33:33]结果:UpdateResult HLJSSC Begin
+[2017/1/17 星期二 上午 10:33:33]结果:UpdateResult FC3D Begin
+[2017/1/17 星期二 上午 10:33:33]结果:UpdateResult CQSSC Begin
+[2017/1/17 星期二 上午 10:33:33]结果:CheckResult 漏开奖检测 Begin
+[2017/1/17 星期二 上午 10:33:33]结果:BeetAuto 自动投注 Begin
+[2017/1/17 星期二 上午 10:33:33]结果:UpdateStatus SD11X5 End
+[2017/1/17 星期二 上午 10:33:34]结果:UpdateResult SD11X5:2017011709开奖失败 End
+[2017/1/17 星期二 上午 10:33:34]结果:UpdateResult GD11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:33:34]结果:UpdateResult JX11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:33:34]结果:UpdateResult TJSSC:20170117009开奖失败  End
+[2017/1/17 星期二 上午 10:33:34]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:33:34]结果:UpdateResult CQSSC:20170117027开奖失败  End
+[2017/1/17 星期二 上午 10:33:34]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:33:34]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011709开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011708开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011707开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011706开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011705开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011704开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011703开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011702开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011701开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011678开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011677开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011676开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011675开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011674开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011673开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011672开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011671开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011670开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011669开奖失败 End
+[2017/1/17 星期二 上午 10:33:35]结果:CheckResult SD11X5漏开奖检测 2017011668开奖失败 End
+[2017/1/17 星期二 上午 10:34:33]结果:UpdateResult XJSSC:20170117003开奖失败  End
+[2017/1/17 星期二 上午 10:34:33]结果:UpdateResult SD11X5:2017011709开奖失败 End
+[2017/1/17 星期二 上午 10:34:33]结果:UpdateResult JX11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:34:33]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:34:33]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:34:33]结果:UpdateResult GD11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:34:33]结果:UpdateResult CQSSC:20170117027开奖失败  End
+[2017/1/17 星期二 上午 10:35:33]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:35:33]结果:UpdateResult XJSSC:20170117002开奖失败  End
+[2017/1/17 星期二 上午 10:35:33]结果:UpdateResult JX11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:35:33]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:35:33]结果:UpdateResult TJSSC:20170117009开奖失败  End
+[2017/1/17 星期二 上午 10:35:33]结果:UpdateResult SD11X5:2017011709开奖失败 End
+[2017/1/17 星期二 上午 10:35:33]结果:UpdateResult CQSSC:20170117027开奖失败  End
+[2017/1/17 星期二 上午 10:35:33]结果:UpdateResult GD11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:35:33]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:36:33]结果:UpdateResult JX11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:36:33]结果:UpdateResult XJSSC:20170117003开奖失败  End
+[2017/1/17 星期二 上午 10:36:33]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:36:33]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:36:33]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:36:33]结果:UpdateResult SD11X5:2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:36:33]结果:UpdateResult GD11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:36:33]结果:UpdateResult CQSSC:20170117027开奖失败  End
+[2017/1/17 星期二 上午 10:36:33]结果:UpdateResult TJSSC:20170117009开奖失败  End
+[2017/1/17 星期二 上午 10:37:33]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:37:33]结果:UpdateResult CQSSC:20170117027开奖失败  End
+[2017/1/17 星期二 上午 10:37:33]结果:UpdateResult GD11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:37:33]结果:UpdateResult XJSSC:20170117003开奖失败  End
+[2017/1/17 星期二 上午 10:37:33]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:37:33]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:37:33]结果:UpdateResult SD11X5:2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:37:33]结果:UpdateResult JX11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:37:33]结果:UpdateResult TJSSC:20170117009开奖失败  End
+[2017/1/17 星期二 上午 10:38:33]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:38:33]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:38:33]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:38:33]结果:UpdateResult SD11X5:2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:38:33]结果:UpdateResult TJSSC:20170117009开奖失败  End
+[2017/1/17 星期二 上午 10:38:33]结果:UpdateResult JX11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:38:33]结果:UpdateResult GD11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:38:33]结果:UpdateResult CQSSC:20170117027开奖失败  End
+[2017/1/17 星期二 上午 10:39:33]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:39:33]结果:UpdateStatus GD11X5,JX11X5,HLJSSC,XJSSC,TJSSC,CQSSC End
+[2017/1/17 星期二 上午 10:39:33]结果:UpdateResult XJSSC:20170117003开奖失败  End
+[2017/1/17 星期二 上午 10:39:33]结果:UpdateResult JX11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:39:33]结果:UpdateResult GD11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:39:33]结果:UpdateResult SD11X5:2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:39:33]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:39:33]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:39:33]结果:UpdateResult TJSSC:20170117009开奖失败  End
+[2017/1/17 星期二 上午 10:39:33]结果:UpdateResult CQSSC:20170117027开奖失败  End
+[2017/1/17 星期二 上午 10:40:33]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:40:33]结果:UpdateResult TJSSC:20170117009开奖失败  End
+[2017/1/17 星期二 上午 10:40:33]结果:UpdateResult XJSSC:20170117004开奖失败  End
+[2017/1/17 星期二 上午 10:40:33]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:40:33]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:40:33]结果:UpdateResult JX11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:40:33]结果:UpdateResult GD11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:40:33]结果:UpdateResult CQSSC:20170117027开奖失败  End
+[2017/1/17 星期二 上午 10:40:33]结果:UpdateResult SD11X5:2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:41:33]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:41:33]结果:UpdateResult TJSSC:20170117010开奖失败  End
+[2017/1/17 星期二 上午 10:41:33]结果:UpdateResult XJSSC:20170117004开奖失败  End
+[2017/1/17 星期二 上午 10:41:33]结果:UpdateResult CQSSC:20170117028开奖失败  End
+[2017/1/17 星期二 上午 10:41:34]结果:UpdateResult JX11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:41:34]结果:UpdateResult SD11X5:2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:41:34]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:41:34]结果:UpdateResult GD11X5:2017011709开奖失败  End
+[2017/1/17 星期二 上午 10:42:33]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:42:33]结果:UpdateResult XJSSC:20170117004开奖失败  End
+[2017/1/17 星期二 上午 10:42:33]结果:UpdateResult GD11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:42:33]结果:UpdateResult JX11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:42:33]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:42:33]结果:UpdateResult CQSSC:20170117028开奖失败  End
+[2017/1/17 星期二 上午 10:42:33]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:42:33]结果:UpdateResult SD11X5:2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateLotteryStatus Begin
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult SD11X5 Begin
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult SHSSL End
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult TJSSC Begin
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult XJSSC Begin
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult HLJSSC Begin
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult FC3D Begin
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult CQSSC Begin
+[2017/1/17 星期二 上午 10:43:43]结果:CheckResult 漏开奖检测 Begin
+[2017/1/17 星期二 上午 10:43:43]结果:BeetAuto 自动投注 Begin
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateStatus SD11X5 End
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult JX11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult SD11X5:2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult GD11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult TJSSC:20170117010开奖失败  End
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult XJSSC:20170117004开奖失败  End
+[2017/1/17 星期二 上午 10:43:43]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:43:43]结果:UpdateResult CQSSC:20170117028开奖失败  End
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateLotteryStatus Begin
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult SD11X5 Begin
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult SHSSL End
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult TJSSC Begin
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult XJSSC Begin
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult HLJSSC Begin
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult FC3D Begin
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult CQSSC Begin
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult 漏开奖检测 Begin
+[2017/1/17 星期二 上午 10:43:49]结果:BeetAuto 自动投注 Begin
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateStatus SD11X5 End
+[2017/1/17 星期二 上午 10:43:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult SD11X5:2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult GD11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult XJSSC:20170117004开奖失败  End
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult TJSSC:20170117010开奖失败  End
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult CQSSC:20170117028开奖失败  End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011709开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:UpdateResult JX11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011708开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011707开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011706开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011705开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011704开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011703开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011702开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011701开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011678开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011677开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011676开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011675开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011674开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011673开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011672开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011671开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011670开奖失败 End
+[2017/1/17 星期二 上午 10:43:49]结果:CheckResult SD11X5漏开奖检测 2017011669开奖失败 End
+[2017/1/17 星期二 上午 10:44:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:44:49]结果:UpdateResult GD11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:44:49]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:44:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:44:49]结果:UpdateResult SD11X5:2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:44:49]结果:UpdateResult CQSSC:20170117028开奖失败  End
+[2017/1/17 星期二 上午 10:44:49]结果:UpdateResult JX11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:44:49]结果:UpdateResult TJSSC:20170117010开奖失败  End
+[2017/1/17 星期二 上午 10:45:49]结果:UpdateResult SD11X5:2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:45:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:45:49]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:45:49]结果:UpdateResult TJSSC:20170117010开奖失败  End
+[2017/1/17 星期二 上午 10:45:49]结果:UpdateResult GD11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:45:49]结果:UpdateResult JX11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:45:49]结果:UpdateResult CQSSC:20170117028开奖失败  End
+[2017/1/17 星期二 上午 10:45:49]结果:UpdateResult XJSSC:20170117004开奖失败  End
+[2017/1/17 星期二 上午 10:45:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:46:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:46:49]结果:UpdateResult TJSSC:20170117010开奖失败  End
+[2017/1/17 星期二 上午 10:46:49]结果:UpdateResult XJSSC:20170117004开奖失败  End
+[2017/1/17 星期二 上午 10:46:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:46:49]结果:UpdateResult JX11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:46:49]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:46:49]结果:UpdateResult GD11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:46:49]结果:UpdateResult CQSSC:20170117028开奖失败  End
+[2017/1/17 星期二 上午 10:46:49]结果:UpdateResult SD11X5:2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:47:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:47:49]结果:UpdateResult GD11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:47:49]结果:UpdateResult SD11X5:2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:47:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:47:49]结果:UpdateResult CQSSC:20170117028开奖失败  End
+[2017/1/17 星期二 上午 10:47:49]结果:UpdateResult JX11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:47:49]结果:UpdateResult XJSSC:20170117004开奖失败  End
+[2017/1/17 星期二 上午 10:47:49]结果:UpdateResult TJSSC:20170117010开奖失败  End
+[2017/1/17 星期二 上午 10:48:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:48:49]结果:UpdateResult XJSSC:20170117004开奖失败  End
+[2017/1/17 星期二 上午 10:48:49]结果:UpdateResult SD11X5:2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:48:49]结果:UpdateResult CQSSC:20170117028开奖失败  End
+[2017/1/17 星期二 上午 10:48:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:48:49]结果:UpdateResult JX11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:48:49]结果:UpdateResult TJSSC:20170117010开奖失败  End
+[2017/1/17 星期二 上午 10:48:49]结果:UpdateResult GD11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:49:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:49:49]结果:UpdateStatus GD11X5,JX11X5,HLJSSC,XJSSC,TJSSC,CQSSC End
+[2017/1/17 星期二 上午 10:49:49]结果:UpdateResult XJSSC:20170117004开奖失败  End
+[2017/1/17 星期二 上午 10:49:49]结果:UpdateResult TJSSC:20170117010开奖失败  End
+[2017/1/17 星期二 上午 10:49:49]结果:UpdateResult SD11X5:2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:49:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:49:49]结果:UpdateResult JX11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:49:49]结果:UpdateResult GD11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:49:49]结果:UpdateResult CQSSC:20170117028开奖失败  End
+[2017/1/17 星期二 上午 10:50:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:50:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:50:49]结果:UpdateResult XJSSC:20170117005开奖失败  End
+[2017/1/17 星期二 上午 10:50:49]结果:UpdateResult TJSSC:20170117011开奖失败  End
+[2017/1/17 星期二 上午 10:50:49]结果:UpdateResult JX11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:50:49]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:50:49]结果:UpdateResult CQSSC:20170117029开奖失败  End
+[2017/1/17 星期二 上午 10:50:49]结果:UpdateResult GD11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:50:49]结果:UpdateResult SD11X5:2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:51:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:51:49]结果:UpdateResult TJSSC:20170117011开奖失败  End
+[2017/1/17 星期二 上午 10:51:49]结果:UpdateResult SD11X5:2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:51:49]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:51:49]结果:UpdateResult XJSSC:20170117005开奖失败  End
+[2017/1/17 星期二 上午 10:51:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:51:49]结果:UpdateResult GD11X5:2017011710开奖失败  End
+[2017/1/17 星期二 上午 10:51:49]结果:UpdateResult CQSSC:20170117029开奖失败  End
+[2017/1/17 星期二 上午 10:52:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:52:49]结果:UpdateResult CQSSC:20170117029开奖失败  End
+[2017/1/17 星期二 上午 10:52:49]结果:UpdateResult GD11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:52:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:52:49]结果:UpdateResult SD11X5:2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:52:49]结果:UpdateResult XJSSC:20170117005开奖失败  End
+[2017/1/17 星期二 上午 10:52:49]结果:UpdateResult TJSSC:20170117011开奖失败  End
+[2017/1/17 星期二 上午 10:52:49]结果:UpdateResult JX11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:52:49]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:53:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:53:49]结果:UpdateStatus SD11X5 End
+[2017/1/17 星期二 上午 10:53:49]结果:UpdateResult SD11X5:2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:53:49]结果:UpdateResult CQSSC:20170117029开奖失败  End
+[2017/1/17 星期二 上午 10:53:49]结果:UpdateResult TJSSC:20170117011开奖失败  End
+[2017/1/17 星期二 上午 10:53:49]结果:UpdateResult JX11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:53:49]结果:UpdateResult XJSSC:20170117005开奖失败  End
+[2017/1/17 星期二 上午 10:53:49]结果:UpdateResult GD11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:53:49]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:53:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:54:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:54:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:54:49]结果:UpdateResult GD11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:54:49]结果:UpdateResult JX11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:54:49]结果:UpdateResult XJSSC:20170117005开奖失败  End
+[2017/1/17 星期二 上午 10:54:49]结果:UpdateResult SD11X5:2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:54:49]结果:UpdateResult TJSSC:20170117011开奖失败  End
+[2017/1/17 星期二 上午 10:54:49]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:54:49]结果:UpdateResult CQSSC:20170117029开奖失败  End
+[2017/1/17 星期二 上午 10:55:49]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:55:49]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:55:49]结果:UpdateResult TJSSC:20170117011开奖失败  End
+[2017/1/17 星期二 上午 10:55:49]结果:UpdateResult XJSSC:20170117005开奖失败  End
+[2017/1/17 星期二 上午 10:55:49]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:55:49]结果:UpdateResult SD11X5:2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:55:49]结果:UpdateResult CQSSC:20170117029开奖失败  End
+[2017/1/17 星期二 上午 10:55:49]结果:UpdateResult GD11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:55:49]结果:UpdateResult JX11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:56:19]结果:UpdateLotteryStatus Begin
+[2017/1/17 星期二 上午 10:56:19]结果:UpdateResult SD11X5 Begin
+[2017/1/17 星期二 上午 10:56:19]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:56:19]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:56:19]结果:UpdateResult SHSSL End
+[2017/1/17 星期二 上午 10:56:19]结果:UpdateResult TJSSC Begin
+[2017/1/17 星期二 上午 10:56:19]结果:UpdateResult XJSSC Begin
+[2017/1/17 星期二 上午 10:56:19]结果:UpdateResult HLJSSC Begin
+[2017/1/17 星期二 上午 10:56:19]结果:UpdateResult FC3D Begin
+[2017/1/17 星期二 上午 10:56:19]结果:UpdateResult CQSSC Begin
+[2017/1/17 星期二 上午 10:56:19]结果:CheckResult 漏开奖检测 Begin
+[2017/1/17 星期二 上午 10:56:19]结果:BeetAuto 自动投注 Begin
+[2017/1/17 星期二 上午 10:56:19]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:56:20]结果:UpdateResult JX11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:56:20]结果:UpdateResult TJSSC:20170117011开奖失败  End
+[2017/1/17 星期二 上午 10:56:20]结果:UpdateResult CQSSC:20170117029开奖失败  End
+[2017/1/17 星期二 上午 10:56:20]结果:UpdateResult GD11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:56:20]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011712开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011709开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011708开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011707开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011706开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011705开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011704开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011703开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011702开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011701开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011678开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011677开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011676开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011675开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011674开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011673开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011672开奖失败 End
+[2017/1/17 星期二 上午 10:56:20]结果:CheckResult SD11X5漏开奖检测 2017011671开奖失败 End
+[2017/1/17 星期二 上午 10:56:26]结果:UpdateLotteryStatus Begin
+[2017/1/17 星期二 上午 10:56:26]结果:UpdateResult SD11X5 Begin
+[2017/1/17 星期二 上午 10:56:26]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:56:26]结果:UpdateResult JX11X5 Begin
+[2017/1/17 星期二 上午 10:56:26]结果:UpdateResult SHSSL End
+[2017/1/17 星期二 上午 10:56:26]结果:UpdateResult TJSSC Begin
+[2017/1/17 星期二 上午 10:56:26]结果:UpdateResult XJSSC Begin
+[2017/1/17 星期二 上午 10:56:26]结果:UpdateResult HLJSSC Begin
+[2017/1/17 星期二 上午 10:56:26]结果:UpdateResult FC3D Begin
+[2017/1/17 星期二 上午 10:56:26]结果:UpdateResult CQSSC Begin
+[2017/1/17 星期二 上午 10:56:26]结果:CheckResult 漏开奖检测 Begin
+[2017/1/17 星期二 上午 10:56:26]结果:BeetAuto 自动投注 Begin
+[2017/1/17 星期二 上午 10:56:27]结果:UpdateResult SD11X5:2017011712开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:56:27]结果:UpdateResult JX11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:56:27]结果:UpdateResult GD11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:56:27]结果:UpdateResult TJSSC:20170117011开奖失败  End
+[2017/1/17 星期二 上午 10:56:27]结果:UpdateResult XJSSC:20170117005开奖失败  End
+[2017/1/17 星期二 上午 10:56:27]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:56:27]结果:UpdateResult CQSSC:20170117029开奖失败  End
+[2017/1/17 星期二 上午 10:56:27]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011712开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011709开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011708开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011707开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011706开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011705开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011704开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011703开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011702开奖失败 End
+[2017/1/17 星期二 上午 10:56:27]结果:CheckResult SD11X5漏开奖检测 2017011701开奖失败 End
+[2017/1/17 星期二 上午 10:56:28]结果:CheckResult SD11X5漏开奖检测 2017011678开奖失败 End
+[2017/1/17 星期二 上午 10:56:28]结果:CheckResult SD11X5漏开奖检测 2017011677开奖失败 End
+[2017/1/17 星期二 上午 10:56:28]结果:CheckResult SD11X5漏开奖检测 2017011676开奖失败 End
+[2017/1/17 星期二 上午 10:56:28]结果:CheckResult SD11X5漏开奖检测 2017011675开奖失败 End
+[2017/1/17 星期二 上午 10:56:28]结果:CheckResult SD11X5漏开奖检测 2017011674开奖失败 End
+[2017/1/17 星期二 上午 10:56:28]结果:CheckResult SD11X5漏开奖检测 2017011673开奖失败 End
+[2017/1/17 星期二 上午 10:56:28]结果:CheckResult SD11X5漏开奖检测 2017011672开奖失败 End
+[2017/1/17 星期二 上午 10:56:28]结果:CheckResult SD11X5漏开奖检测 2017011671开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117029开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117028开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117027开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117026开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117025开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117024开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117023开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117022开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117021开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117020开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117019开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117018开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117017开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117016开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117015开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117014开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117013开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117012开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117011开奖失败 End
+[2017/1/17 星期二 上午 10:56:38]结果:CheckResult CQSSC漏开奖检测 20170117010开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226758开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226757开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226756开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226755开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226754开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226753开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226752开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226751开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226750开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226749开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226748开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226747开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226746开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226745开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226744开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226743开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226742开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226741开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226740开奖失败 End
+[2017/1/17 星期二 上午 10:56:48]结果:CheckResult HLJSSC漏开奖检测 0226739开奖失败 End
+[2017/1/17 星期二 上午 10:56:58]结果:CheckResult XJSSC漏开奖检测 20170117005开奖失败 End
+[2017/1/17 星期二 上午 10:56:58]结果:CheckResult XJSSC漏开奖检测 20170117004开奖失败 End
+[2017/1/17 星期二 上午 10:56:58]结果:CheckResult XJSSC漏开奖检测 20170117003开奖失败 End
+[2017/1/17 星期二 上午 10:56:58]结果:CheckResult XJSSC漏开奖检测 20170117002开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170117001开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116096开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116095开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116094开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116093开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116092开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116091开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116090开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116089开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116088开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116087开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116086开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116085开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116084开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116083开奖失败 End
+[2017/1/17 星期二 上午 10:56:59]结果:CheckResult XJSSC漏开奖检测 20170116082开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170117011开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170117010开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170117009开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170117008开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170117007开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170117006开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170117005开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170117004开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170117003开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170117002开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170117001开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170116084开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170116083开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170116082开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170116081开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170116080开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170116079开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170116078开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170116077开奖失败 End
+[2017/1/17 星期二 上午 10:57:09]结果:CheckResult TJSSC漏开奖检测 20170116076开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011701开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011623开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011622开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011621开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011620开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011619开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011618开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011617开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011616开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011615开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011614开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011613开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011612开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011611开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011610开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011609开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011608开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011607开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011606开奖失败 End
+[2017/1/17 星期二 上午 10:57:19]结果:CheckResult SHSSL漏开奖检测 2017011605开奖失败 End
+[2017/1/17 星期二 上午 10:57:26]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 10:57:26]结果:UpdateResult XJSSC:20170117005开奖失败  End
+[2017/1/17 星期二 上午 10:57:26]结果:UpdateResult TJSSC:20170117011开奖失败  End
+[2017/1/17 星期二 上午 10:57:26]结果:UpdateResult JX11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:57:26]结果:UpdateResult GD11X5:2017011711开奖失败  End
+[2017/1/17 星期二 上午 10:57:26]结果:UpdateResult SD11X5:2017011712开奖失败 End
+[2017/1/17 星期二 上午 10:57:26]结果:UpdateResult SHSSL:2017011701开奖失败  End
+[2017/1/17 星期二 上午 10:57:26]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011709开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011708开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011707开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011706开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011705开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011704开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011703开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011702开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011701开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011684开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011683开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011682开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011681开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011680开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011679开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011678开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011677开奖失败 End
+[2017/1/17 星期二 上午 10:57:30]结果:CheckResult JX11X5漏开奖检测 2017011676开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011711开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011710开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011709开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011708开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011707开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011706开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011705开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011704开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011703开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011702开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011701开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011684开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011683开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011682开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011681开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011680开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011679开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011678开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011677开奖失败 End
+[2017/1/17 星期二 上午 10:57:40]结果:CheckResult GD11X5漏开奖检测 2017011676开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017016开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017015开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017014开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017013开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017012开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017011开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017010开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017009开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017008开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017007开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017006开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017005开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017004开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017003开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017002开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2017001开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2016359开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2016358开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2016357开奖失败 End
+[2017/1/17 星期二 上午 10:57:50]结果:CheckResult FC3D漏开奖检测 2016356开奖失败 End
+[2017/1/17 星期二 上午 11:21:44]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 11:21:44]结果:UpdateResult HLJSSC:0226758开奖失败  End
+[2017/1/17 星期二 上午 11:21:44]结果:UpdateResult SD11X5:2017011714开奖失败 End
+[2017/1/17 星期二 上午 11:21:44]结果:UpdateResult CQSSC:20170117032开奖失败  End
+[2017/1/17 星期二 上午 11:21:44]结果:BeetAuto 自动投注 End
+[2017/1/17 星期二 上午 11:21:44]结果:UpdateResult GD11X5:2017011713开奖失败  End
+[2017/1/17 星期二 上午 11:21:44]结果:UpdateResult XJSSC:20170117008开奖失败  End
+[2017/1/17 星期二 上午 11:21:44]结果:UpdateResult SHSSL:2017011702开奖失败  End
+[2017/1/17 星期二 上午 11:21:44]结果:UpdateResult JX11X5:2017011714开奖失败  End

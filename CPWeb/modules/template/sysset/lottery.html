@@ -1,0 +1,24 @@
+﻿{%
+	for(var i=0, j=$data.length; i < j; i++){
+	var item = $data[i];
+%}
+<tr class="list-item">
+    <td class="tLeft">{%=item.CPCode%}</td>
+    <td class="tLeft">{%=item.CPName%}</td>
+    <td class="tLeft">{%=item.IconType%}</td>
+    <td class="tLeft">{%=item.Sort%}</td>
+    <td class="tLeft">
+        <div class="status" data-id="{%=item.AutoID%}" data-value="{%=item.Status==1%}"></div></td>
+    <td class="tLeft">{%=item.ResultUrl%}</td>
+    <td class="tLeft">{%=item.PeriodsNum%}</td>
+    <td class="tLeft">{%=item.OpenTimes%}</td>
+    <td class="tLeft" title="相对开奖间隔设置">{%=item.SealTimes%}</td>
+    <td class="tLeft">{%=item.OnSaleTime%}-{%=item.CloseTime%}</td>
+<!--    <td class='center'>{%=item.CreateTime.toDate("yyyy-MM-dd hh:mm:ss")%}</td>
+    <td class='center'>{%=(item.CreateUser ? item.CreateUser.Name:"--")%}</td>-->
+    <td class='center'><a href="/SysSet/LotteryPlays?cpCode={%=item.CPCode%}&cpName={%=item.CPName%}" class="setpermission" data-id="{%=item.CPCode%}">设置玩法</a></td>
+    <td class="center">
+        <div class="btn editObject" data-id="{%=item.AutoID%}">编辑</div>
+    </td>
+</tr>
+{% } %}

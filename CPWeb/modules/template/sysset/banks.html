@@ -1,0 +1,13 @@
+﻿{%
+	for(var i=0, j=$data.length; i < j; i++){
+	var item = $data[i];
+%}
+<tr class="list-item">
+    <td class="name">{%=item.BankName%}</td> 
+    <td class="desc">{%=item.CardCode%}</td>
+    <td class='center'>{%=item.CreateTime.toDate("yyyy-MM-dd hh:mm:ss")%}</td> 
+    <td class="center">
+        <a class="delete"  data-id="{%=item.AutoID%}" href="javascript:void(0);"> 解绑</a>
+    </td>
+</tr>
+{% } %}

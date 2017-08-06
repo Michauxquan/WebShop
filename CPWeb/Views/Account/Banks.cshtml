@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Banks";
+    Layout = null;
+}
+<html>
+<head>
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/layout.css" rel="stylesheet" />
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet"/> 
+    <script src="/Scripts/jquery-1.11.1.js"></script> 
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js"></script>
+    <script type="text/javascript" src="/Scripts/PCASClass.js"></script>
+
+    <script type="text/javascript">
+        seajs.use(["scripts/sysset/banks"], function(obj) {
+            obj.init();
+        });
+    </script>
+    <style type="text/css">
+        .boundbankcard {
+            padding: 15px 15px 15px 15px;  
+            border: 1px solid #ede9ba;
+        }
+        .bg-light-orange {
+            background-color: #fffde8;
+        }
+        span.labeltext { 
+            left: 15px;
+            top: 15px;
+        }
+        .co-orange {color: #AC1716;font-weight: bold;/*#ff7e00;*/}
+    </style>
+</head>
+<body>
+    <div class="main-body">
+        <div class="main-content">
+            <div class="header-box">
+                <span class="header-title left">当前位置-我的银行卡</span>
+                <div class="btn right" id="lockCards">锁定全部</div>
+                <div class="btn-add right mRight10" id="createModel">添加银行卡</div>
+            </div> 
+            <div class="content-body">
+                 <div class="boundbankcard bg-light-orange">
+			        <span class="labeltext">使用提示：</span>
+                    <span > 每个游戏账户最多绑定 <span class="co-orange">@ViewBag.Max</span> 张银行卡, 您已成功绑定 <span class="co-orange">@ViewBag.HasCount</span> 张。</span><br>
+			        <span class="co-orange mLeft60">银行卡锁定以后，不能增加新的银行卡绑定，同时也不能解绑已绑定的银行卡 </span> <br>
+                    <span class="mLeft60">新绑定的提款银行卡需要绑定时间超过 <span class="co-orange">@ViewBag.Hour</span> 小时才能正常提款。</span>
+		        </div>
+                <table class="table-list">
+                    <tr class="tr-header">
+                        <td class="tLeft">银行名称</td>
+                        <td class="tLeft">卡号</td>
+                        <td class="center">绑定时间</td>
+                        <td class="center">操作</td>
+                    </tr>
+                </table>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>
+

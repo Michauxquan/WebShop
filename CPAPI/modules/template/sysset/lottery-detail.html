@@ -1,0 +1,22 @@
+﻿
+<ul class="easydialog-create">
+    <li><span class="left width80">彩种代码：</span><input type="text" id="modelCPCode" maxlength="20" class="input verify " data-empty="必填"/>
+        <input type="text" id="modelAutoID" maxlength="20" style="display: none !important;" class="input verify " data-empty="必填"/>
+    </li>
+    <li><span class="left width80">彩种名称：</span><input type="text" id="modelCPName" maxlength="20" class="input verify " data-empty="必填"/></li>
+    <li><span class="left width80">彩种标签：</span><select id="modelIconType">
+        <option value="1" title="新品">新品</option>
+        <option value="2" title="热门">热门</option>
+        <option value="0">无</option>
+    </select></li>
+    <li><span class="left width80">开奖地址：</span><input type="text" id="modelResultUrl" maxlength="100" class="input "/></li>
+
+    <li><span class="left width80">营业时间：</span>
+        <input type="text" id="modelOnSaleTime" onclick="laydate({ istime: true, format: 'YYYY-MM-DD hh:mm:ss' })" maxlength="40" class="input  width120 verify"  data-empty="必填"/>-
+        <input type="text" id="modelCloseTime" onclick=" laydate({ istime: true, format: 'YYYY-MM-DD hh:mm:ss' })" maxlength="40" class="input  width120 verify"  data-empty="必填"/>
+
+    </li>
+    <li><span class="left width80">开奖间隔：</span><input type="text" id="modelOpenTimes" maxlength="10" class="input width60 verify"  data-empty="必填"/> &nbsp;秒</li>
+    <li><span class="left width80"  title="相对开奖间隔设置">封盘间隔：</span><input type="text" id="modelSealTimes" maxlength="10" class="input width60 verify"  data-empty="必填"/> &nbsp;秒</li>
+    <li><span class="left width80">每天期数：</span><input type="text" id="modelPeriodsNum" maxlength="10" class="input width60 verify"   data-empty="必填"/></li>
+</ul>

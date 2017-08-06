@@ -1,0 +1,379 @@
+﻿@{
+    ViewBag.Title = "CQLottery";
+    Layout = null;
+    var model = (ProEntity.Lottery)ViewBag.Model;
+}
+
+ 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>重庆时时彩</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1"> 
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="/modules/css/chongqingssc.css">
+    <!--[if lt IE 9]>      
+	    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <div class="open-num">
+        <div class="left next-open">
+             <p>第<span id="cpissue"></span>期<br/>剩余开奖时间</p>
+             <p><span>00</span>:<span id="lotterymin">00</span>:<span id="lotterysec">00</span></p>
+        </div>
+        <div class="left last-num">
+             <p>第<span id="lotterypnum"></span>期</p>
+             <p id="lotteryp"><span></span><span></span><span></span><span></span><span></span></p>
+              <p>今日已开<span id="openlottery">0</span>期，共<span>@(model.PeriodsNum)</span>期
+        </div>
+        <div class="left open-history">
+            <p>开奖历史记录</p>
+            <ul id="prizeul"> </ul>
+        </div>
+    </div>
+    <div class="select-nums">
+        <ul class="navs">
+            <li class="navs-cur" data-id="n-star">五星</li><li data-id="n-star">四星</li><li data-id="n-star">后三</li>
+            <li data-id="n-star">中三</li><li data-id="n-star">前三</li><li data-id='n-star'>二星</li><li data-id="fixed">定位胆</li>
+            <li data-id="non-fixed">不定位</li><li data-id="optional">任选</li><li data-id="interests">趣味型</li>
+        </ul>
+
+        <div class="all-ways">
+            <div class="zhixuan">
+                <span>直选</span>
+                <ul>
+                    <li class="all-ways-cur" data-type="zhifu-sanxing">直选复式</li><li data-type="handin-sanxingd">直选单式</li><li data-type="zhi-hezhi">五星组合</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="n-star">
+            <div class="play-section">
+                <!--start- 五星，四星，三星和二星直选复式和五星组合，四星组合公用 -->
+                <div class="zhifu">
+                    <p>从万位、千位、百位、十位、个位中选择一个5位数号码组成一注。</p>
+                    <ul class="num-select">
+                        <li>
+                            <p>万位</p><div class="numbers">
+                                <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                            </div><div class="sel-actions">
+                                <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>千位</p><div class="numbers">
+                                <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                            </div><div class="sel-actions">
+                                <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>百位</p><div class="numbers">
+                                <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                            </div><div class="sel-actions">
+                                <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>十位</p><div class="numbers">
+                                <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                            </div><div class="sel-actions">
+                                <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>个位</p><div class="numbers">
+                                <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                            </div><div class="sel-actions">
+                                <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 五星、四星、三星、二星单式和混合组选公用：10个 -->
+                <div class="handin">
+                    <p>手动输入号码，至少输入1个三位数号码组成一注。</p>
+                    <textarea></textarea>
+                    <input type="button" value="删除重复号"/>
+                    <input type="button" value="导入文件"/>
+                    <input type="button" value="清空"/>
+                    <p>每注号码之间请使用英文逗号（,）隔开。</p> 
+                </div>
+                <!-- end -->
+                <!-- 三星（后三）和前三的  和值 公用：4个-->
+                <div class="hezhi">
+                    <p>从0-27中任意选择1个或1个以上号码</p>
+                    <ul class="num-select">
+                        <li>
+                            <p>和值</p>
+                            <div class="numbers zh-hezhi">
+                                <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><br/><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span>
+                            </div>
+                            <div class="numbers zu-hezhi">
+                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><br/><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end -->
+                <!-- 三星（后三）和前三的  组三、组六，二星的组选复式 -->
+                <div class="zuxuans">
+                    <p>从0-9中任意选择2个或2个以上号码。</p>
+                    <ul class="num-select">
+                        <li>
+                            <p>组三</p>
+                            <div class="numbers">
+                                <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                            </div>
+                            <div class="sel-actions">
+                                <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fixed">
+            <div class="play-section">
+                <p>在万位，千位，百位，十位，个位任意位置上任意选择1个或1个以上号码。</p>
+                <ul class="num-select">
+                    <li>
+                        <p>万位</p>
+                        <div class="numbers">
+                            <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                        </div>
+                        <div class="sel-actions">
+                            <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>千位</p>
+                        <div class="numbers">
+                            <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                        </div>
+                        <div class="sel-actions">
+                            <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>百位</p>
+                        <div class="numbers">
+                            <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                        </div>
+                        <div class="sel-actions">
+                            <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>十位</p>
+                        <div class="numbers">
+                            <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                        </div>
+                        <div class="sel-actions">
+                            <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>个位</p>
+                        <div class="numbers">
+                            <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                        </div>
+                        <div class="sel-actions">
+                            <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="non-fixed">
+            <div class="play-section">
+                <p>从0-9中任意选择1个或1个以上号码。</p>
+                <ul class="num-select">
+                    <li>
+                        <p>一码</p>
+                        <div class="numbers">
+                            <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                        </div>
+                        <div class="sel-actions">
+                            <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="optional">
+            <div class="play-section">
+                <div class="renzu">
+                    <p class="tip33 tip">从0-9中任意选择1个或1个以上号码。</p>
+                    <p class="tip44 tip"><label><input type="checkbox"/>万位</label><label><input type="checkbox"/>千位</label><label><input type="checkbox"/>百位</label><label><input type="checkbox"/>十位</label><label><input type="checkbox"/>个位</label><span>温馨提示：</span>你选择了<strong>2</strong>个位置，系统自动根据位置组合成<strong>1</strong>个方案。</p>
+                    <ul class="num-select">
+                        <li>
+                            <p>任二组选</p>
+                            <div class="numbers">
+                                <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                            </div>
+                            <div class="sel-actions">
+                                <span>全</span><span>大</span><span>小</span><span>奇</span><span>偶</span><span>清</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="shoudong">
+                    <p class="tip11 tip">从0-9中任意选择1个或1个以上号码。</p>
+                    <p class="tip22 tip"><label><input type="checkbox"/>万位</label><label><input type="checkbox"/>千位</label><label><input type="checkbox"/>百位</label><label><input type="checkbox"/>十位</label><label><input type="checkbox"/>个位</label><span>温馨提示：</span>你选择了<strong>2</strong>个位置，系统自动根据位置组合成<strong>1</strong>个方案。</p>
+                    <textarea></textarea>
+                    <input type="button" value="删除重复号"/>
+                    <input type="button" value="导入文件"/>
+                    <input type="button" value="清空"/>
+                    <p>每注号码之间请使用英文逗号（,）隔开。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="interests">
+            <div class="play-section">
+                <p>从万位、千位中的“大、小、单、双”中至少各选一个组成一注。</p>
+                <ul class="num-select">
+                    <li>
+                        <p>万位</p>
+                        <div class="numbers">
+                            <span>大</span><span>小</span><span>单</span><span>双</span>
+                        </div>
+                        <div class="sel-actions">
+                            <span>全</span><span>清</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>千位</p>
+                        <div class="numbers">
+                            <span>大</span><span>小</span><span>单</span><span>双</span>
+                        </div>
+                        <div class="sel-actions">
+                            <span>全</span><span>清</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>百位</p>
+                        <div class="numbers">
+                            <span>大</span><span>小</span><span>单</span><span>双</span>
+                        </div>
+                        <div class="sel-actions">
+                            <span>全</span><span>清</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>十位</p>
+                        <div class="numbers">
+                            <span>大</span><span>小</span><span>单</span><span>双</span>
+                        </div>
+                        <div class="sel-actions">
+                            <span>全</span><span>清</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>个位</p>
+                        <div class="numbers">
+                            <span>大</span><span>小</span><span>单</span><span>双</span>
+                        </div>
+                        <div class="sel-actions">
+                            <span>全</span><span>清</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="play-action">
+        <img src="/modules/images/minus.png" alt="minus" width="27"><input type="text" class="times" value="1" /><img src="/modules/images/plus.png" alt="plus" width="27">倍
+        <span class="select-fan">选择奖金返点：</span><select><option>1782-4%</option><option>1861.2-0%</option></select><input type="button" class='additems' value="添加投注" data-type=""/><p>您选择了<span>0</span>注，共<span>0</span>元</p>
+    </div>
+
+    <div class="num-selected">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr><th width="130">玩法</th><th width="200">投注号码</th><!-- <th>模式</th> --><th width="73.3">注数</th><th width="73.3">倍投</th><th width="73.3">金额</th><th width="73.3">奖金</th><th width="73.3">返点</th><th width="73.3">操作</th></tr>
+            </thead>
+            <tbody>
+                <tr><td width='96.25'></td><td width='96.25'></td><!-- <td></td> --><td width='96.5'></td><td width='193' title='暂无投注项'>暂无投注项</td><td width='96.5'></td><td width='96.5'></td><td width='96.5'></td></tr>
+            </tbody>
+            <tfoot><tr><td colspan="8"><a href="javascript:void(0);">清空所有</a></td></tr></tfoot>
+        </table>
+        <div class="alert1">
+            <h3>温馨提示<img src="/modules/images/close.png"></h3>
+            <p><img src="/modules/images/tips.png" width="40"><span>是否清空确认区中所有投注内容？</span></p>
+            <p><input type="button" class="btn" style="margin-left: 45px;" value="确定"><input value="取消" class="btn" type="button"/></p>
+        </div>
+        <div class="add-bet">
+            <p>起始期：</p>
+            <select id="issueslt"> </select>
+            <p>总注数：<span id="totalnum">0</span>注</p>
+            <p>总金额：<span id="totalfee">0.00</span>元
+            </p>
+             <p><input type="checkbox" style="width: 14px; height: 14px;" id="isusedic"/>&nbsp;<label for="isusedic" >是否使用优惠券</label>
+            </p>
+            <input type="button" id="btnSave" value="立即投注"/>
+        </div>
+        <div class="clear"></div>
+        <div class="chase-num">
+            <input type="button" value="发起追号"/><label><input type="checkbox">中奖后停止追号</label>
+        </div>
+        <div id="basic-dialog-ok" style="display: none;">
+            <!-- 普通弹出层 [[ -->  
+            <div class="box-title"><h3>温馨提示</h3><button type="button" class="simplemodal-close"></button></div>  
+            <div class="box-main">
+                <div class="tips">      
+                    <span class="tips-ico">
+                        <span class="ico-ok"><!-- 图标class可以为： ico-ok , ico-error , ico-info , ico-question , ico-warn , ico-wait --></span>
+                    </span>      
+                    <div class="tips-content">        
+                        <div class="tips-title">
+                            <img src="/modules/images/tips.png" width="40"><span class="tip1"></span>
+                            <button type="button" class="simplemodal-close">确定</button>
+                        </div>           
+                    </div>    
+                </div>
+            </div>  
+            <!-- 普通弹出层 ]] -->
+        </div>
+    </div> 
+    <div class="chase-action">
+        <ul><li class="chase-action-cur">利润率追号</li><li>同倍追号</li><li>翻倍追号</li></ul>
+        <div class="lrl-chase">
+            <p>追号期数：<select><option>请选择</option><option>5期</option><option>10期</option><option>15期</option><option>20期</option><option>25期</option></select></p>
+            <p>起始倍数：<img src="/modules/images/minus.png" alt="minus" width="27"><input type="text" value="1" id="bmuch" class="times" /><img src="/modules/images/plus.png" alt="plus" width="27">倍<span>最低收益率：<input type="text" value="50" id="profits" />%</span><span>追号期数：</span><input type="text" value="0" id="bettNum" /></p>
+            <p><input type="button" value="生成追号单" id="saveBett" /><span class="totle">追号总期数：<em>0</em>期，追号总金额：<em>0</em>元</span></p>
+        </div>
+        <div class="select-table">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <thead><tr><th></th><th>投注编号</th><th>倍数</th><th>金额</th><th>开奖时间</th></tr></thead>
+                <tbody>  </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="bet-record">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <thead><tr><th class="width140">投注编号</th><th class="width120">投注时间</th><th class="width130">玩法</th><th class="width85">期号</th><th class="width200">投注内容</th><th class="width60">倍数</th><th class="width40">模式</th><th class="width65">金额</th><th class="width85">奖金</th><th class="width40">状态</th></tr></thead>
+            <tbody> </tbody>
+        </table>
+    </div>
+    <div class="footer">
+        <img src="" alt="logo">    <p>浏览器建议：首选谷歌浏览器，其次为火狐浏览器。</p>
+    </div>
+</div>
+<input id="sumlottery" hidden="hidden" style="display: none;" type="text" value="@(model.PeriodsNum)"/>
+<script type="text/javascript" src="/Scripts/jquery-1.11.3.min.js"></script> 
+<script  type="text/javascript" src="/Scripts/DateForm.js"></script>
+<script src="/Scripts/jquery.simplemodal.js" type="text/javascript"></script>
+<script type="text/javascript" src="/modules/scripts/lottery/chongqingssc.js"></script>
+<script type="text/javascript">
+    lottery.bindEvent('@ViewBag.CPCode', '@(string.IsNullOrEmpty(model.CPName)?"":model.CPName)'); 
+</script>
+</body>
+</html>
+

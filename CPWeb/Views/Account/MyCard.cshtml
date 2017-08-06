@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "MyCard";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+	    <title>游戏平台 - 账户安全</title>
+        <link  type="text/css" href="/modules/css/keycommon.css" rel="stylesheet" />
+	    <link rel="stylesheet" type="text/css" href="/modules/css/keyboard.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="/modules/css/keyboard-dark.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/modules/css/account.css" />
+		<script type="text/javascript" src="/Scripts/jquery-1.11.3.min.js"></script>
+	    <script type="text/javascript" src="/Scripts/jquery.keyboard.min.js"></script>
+        <script type="text/javascript" src="/Scripts/jquery.mousewheel.min.js"></script>
+        <script type="text/javascript" src="/Scripts/jquery.keyboard.extension-scramble.min.js"></script>
+		<style>
+		     html{overflow-x: auto;}
+		    body{margin: 10px 0 0 0;} 
+		</style>
+	</head>
+<body>
+    <script>
+        $(function () { 
+            // 输入键盘
+            $('#secpass').keyboard({ 
+                layout: 'custom',
+                acceptValid: true,
+                validate: function (keyboard, value, isClosing) {
+                    //console.log(value);
+
+                    // *** closing and not valid ***
+                    // add an indicator/popup here to tell the user the input is not valid
+                    keyboard.$preview.addClass('red-border') // needs css: .red-border {border: #f00 1px solid;}
+                    // fire off a canceled event
+                    keyboard.$el.trigger('canceled', [keyboard, keyboard.el]);
+
+                    // *** not closing ***
+                    // continuous checking during input, so don't go nuts here
+                    // accept button is enabled/disabled automatically if "acceptValid" is true
+                    return true;
+                },
+                customLayout: {
+                    'default': [
+                        '{clear!!} 0 1 2 3 4 5 6 7 8 9 {bksp} ',
+                        'a b c d e f g h i j k l m',
+                        'n o p q r s t u v w x y z',
+                        '{accept} {meta1}  {cancel}'
+                    ],
+                    'meta1': [
+                        '{clear!!} 0 1 2 3 4 5 6 7 8 9 {bksp} ',
+                        'A B C D E F G H I J K L M',
+                        'N O P Q R S T U V W X Y Z',
+                        '{accept} {default} {cancel}'
+                    ]
+
+                },
+                display: {
+                    'clear': '清空',
+                    'bksp': '删除',
+                    'accept': '确定',
+                    'default': '大写',
+                    'meta1': '小写',
+                    'cancel': '取消'
+                }
+            }).addScramble({
+                targetKeys: /[a-z]/i, // keys to randomize
+                byRow: true,       // randomize by row, otherwise randomize all keys
+                randomizeOnce: false        // if false, randomize every time the keyboard opens
+            });
+        });
+    </script> 
+<style type="text/css">
+body{font-size:12px;}
+  .input { 
+    width: 108px; 
+    height: 30px; 
+    padding: 0 5px; 
+    line-height: 30px; 
+    vertical-align: middle; 
+    color: #333; 
+    border: 1px solid #ddd; 
+    border-radius: 2px; 
+    margin-bottom: 0; 
+    outline: 0;
+  }
+  .save{
+    text-align: center;
+    color: #fff;
+    padding: 5px 8px;
+    height: 20px;
+    cursor: pointer;
+    background-color: #D64242;
+    line-height: 20px;
+    border-radius: 3px;
+    border:1px solid #ddd;
+    width:55px;
+      font-size: 12px;
+    font-family: '微软雅黑', arial;
+  }
+  .save:hover{background-color: #AC1716;}
+  .other{
+    border:4px solid #efefef;
+  }
+  tr{
+    margin-left: 300px;
+  }
+</style> 
+  <input type="hidden" name="flag" value="check" />
+  <input type="hidden" name="nextcon" value="account" />
+  <input type="hidden" name="nextact" value="banks" />
+  <div class="chooseRecords " style="margin:0 auto;width:1000px;">
+      <div class="con other" style="margin:0px;height:400px">
+        <div class="data"></div>
+          <table style="text-align: right;margin-left:23%;margin-top:15%">
+            <tr>
+              <td style="font-weight: bold">输入资金密码：</td>
+              <td><input id='secpass' type="password" name="secpass" value="" class="input" autocomplete="off" /> </td>
+              <td><div class="save" >提交</div></td>
+            </tr>
+          </table>
+      </div>
+</div>
+<script>
+    $(function(){
+        $('.save').click(function()  {
+            $.post('/Account/BankCards', { accountpwd: $('#secpass').val() }, function (data) {
+                console.log(data);
+                if (data.result) {
+                    window.location.href = '/Account/Banks';
+                } else {
+                    alert(data.ErrMsg);
+                }
+            },'json');
+        });
+    });
+</script>
+
+
+</body>
+</html>

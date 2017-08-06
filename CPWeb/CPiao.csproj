@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB3C794B-5A6A-494B-8E2B-A0662ACC3084}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CPiao</RootNamespace>
+    <AssemblyName>CPiao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentScheduler, Version=5.1.0.0, Culture=neutral, PublicKeyToken=b76503528a14ebd1, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentScheduler.5.1.0\lib\net40\FluentScheduler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fresh, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fresh.2.0.0\lib\Fresh.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="L, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\L.3.0.0\lib\L.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LogClass">
+      <HintPath>DLL\LogClass.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\net40\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\net40\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\net40\System.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.3.0.20105.1\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.1.0.20105.408\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ExpandClass.cs" />
+    <Compile Include="Common\UserAuthorize.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HelpController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LotteryController.cs" />
+    <Compile Include="Controllers\PlugController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\SysSetController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="modules\assets\jquery.pwstabs-1.1.3.js" />
+    <Content Include="modules\assets\jquery.pwstabs-1.1.3.min.js" />
+    <Content Include="modules\assets\jquery.pwstabs.css" />
+    <Content Include="modules\assets\jquery.pwstabs.min.css" />
+    <Content Include="modules\assets\styles.css" />
+    <Content Include="modules\css\base.css" />
+    <Content Include="modules\css\diyUpload.css" />
+    <Content Include="modules\css\head.css" />
+    <Content Include="modules\css\iconfont\demo.css" />
+    <Content Include="modules\css\iconfont\demo.html" />
+    <Content Include="modules\css\iconfont\iconfont.css" />
+    <Content Include="modules\css\iconfont\iconfont.svg" />
+    <Content Include="modules\css\keyboard-dark.min.css" />
+    <Content Include="modules\css\keyboard.min.css" />
+    <Content Include="modules\css\keycommon.css" />
+    <Content Include="modules\css\layout.css" />
+    <Content Include="modules\css\message.css" />
+    <Content Include="modules\css\need\laydate.css" />
+    <Content Include="modules\css\skins\dahong\icon.png" />
+    <Content Include="modules\css\skins\dahong\laydate.css" />
+    <Content Include="modules\css\skins\danlan\icon.png" />
+    <Content Include="modules\css\skins\danlan\laydate.css" />
+    <Content Include="modules\css\skins\default\icon.png" />
+    <Content Include="modules\css\skins\default\laydate.css" />
+    <Content Include="modules\css\skins\molv\icon.png" />
+    <Content Include="modules\css\skins\molv\laydate.css" />
+    <Content Include="modules\css\skins\qianhuang\icon.png" />
+    <Content Include="modules\css\skins\qianhuang\laydate.css" />
+    <Content Include="modules\css\skins\yahui\icon.png" />
+    <Content Include="modules\css\skins\yahui\laydate.css" />
+    <Content Include="modules\css\skins\yalan\icon.png" />
+    <Content Include="modules\css\skins\yalan\laydate.css" />
+    <Content Include="modules\css\system\role.css" />
+    <Content Include="modules\css\system\system.css" />
+    <Content Include="modules\css\usershared.css" />
+    <Content Include="modules\css\webuploader.css" />
+    <Content Include="modules\datapager\images\next.png" />
+    <Content Include="modules\datapager\images\previous.png" />
+    <Content Include="modules\datapager\images\snext.png" />
+    <Content Include="modules\datapager\images\sprevious.png" />
+    <Content Include="modules\datapager\style.css" />
+    <Content Include="modules\images\11.png" />
+    <Content Include="modules\images\22.png" />
+    <Content Include="modules\images\ball1.png" />
+    <Content Include="modules\images\ball2.png" />
+    <Content Include="modules\images\ball3.png" />
+    <Content Include="modules\images\ball4.png" />
+    <Content Include="modules\images\ball5.png" />
+    <Content Include="modules\images\ballbg.png" />
+    <Content Include="modules\images\bg1.png" />
+    <Content Include="modules\images\close.png" />
+    <Content Include="modules\images\default.png" />
+    <Content Include="modules\images\footer_bg.gif" />
+    <Content Include="modules\images\ico-btnadd.png" />
+    <Content Include="modules\images\ico-check.png" />
+    <Content Include="modules\images\ico-checked.png" />
+    <Content Include="modules\images\ico-checknotall.png" />
+    <Content Include="modules\images\ico-dropdown-white.png" />
+    <Content Include="modules\images\ico-dropdown.png" />
+    <Content Include="modules\images\ico-loading.gif" />
+    <Content Include="modules\images\ico-tree-full.png" />
+    <Content Include="modules\images\ico-tree-last.png" />
+    <Content Include="modules\images\ico-tree-line.png" />
+    <Content Include="modules\images\ico-tree-open.png" />
+    <Content Include="modules\images\ico-tree-pull.png" />
+    <Content Include="modules\images\icondate.png" />
+    <Content Include="modules\images\ico_search.png" />
+    <Content Include="modules\images\ico_searchhover.png" />
+    <Content Include="modules\images\img-noimg.png" />
+    <Content Include="modules\images\minus.png" />
+    <Content Include="modules\images\order.png" />
+    <Content Include="modules\images\plus.png" />
+    <Content Include="modules\images\time.png" />
+    <Content Include="modules\images\tips.png" />
+    <Content Include="modules\images\tips2.png" />
+    <Content Include="modules\img\bg.jpg" />
+    <Content Include="modules\img\browser.png" />
+    <Content Include="modules\img\down-arrow.png" />
+    <Content Include="modules\img\head.jpg" />
+    <Content Include="modules\img\header-bg.png" />
+    <Content Include="modules\img\messagecenter.png" />
+    <Content Include="modules\jedate\jedate.js" />
+    <Content Include="modules\jedate\jedate.min.js" />
+    <Content Include="modules\jedate\skin\jedate.css" />
+    <Content Include="modules\datapager\paginate.js" />
+    <Content Include="modules\plug\city.js" />
+    <Content Include="modules\plug\datapager\images\next.png" />
+    <Content Include="modules\plug\datapager\images\previous.png" />
+    <Content Include="modules\plug\datapager\images\snext.png" />
+    <Content Include="modules\plug\datapager\images\sprevious.png" />
+    <Content Include="modules\plug\datapager\paginate.js" />
+    <Content Include="modules\plug\datapager\style.css" />
+    <Content Include="modules\plug\daterangepicker\daterangepicker.css" />
+    <Content Include="modules\plug\daterangepicker\daterangepicker.js" />
+    <Content Include="modules\plug\daterangepicker\moment.js" />
+    <Content Include="modules\plug\doT.js" />
+    <Content Include="modules\plug\dropdown\dropdown.js" />
+    <Content Include="modules\plug\dropdown\style.css" />
+    <Content Include="modules\plug\easydialog\easydialog.css" />
+    <Content Include="modules\plug\easydialog\easydialog.js" />
+    <Content Include="modules\plug\easydialog\ico-close-hover.png" />
+    <Content Include="modules\plug\easydialog\ico-close.png" />
+    <Content Include="modules\plug\laydate\demo.html" />
+    <Content Include="modules\plug\laydate\laydate.js" />
+    <Content Include="modules\plug\laydate\need\laydate.css" />
+    <Content Include="modules\plug\laydate\skins\dahong\icon.png" />
+    <Content Include="modules\plug\laydate\skins\dahong\laydate.css" />
+    <Content Include="modules\plug\laydate\skins\default\icon.png" />
+    <Content Include="modules\plug\laydate\skins\default\laydate.css" />
+    <Content Include="modules\plug\laydate\skins\molv\icon.png" />
+    <Content Include="modules\plug\laydate\skins\molv\laydate.css" />
+    <Content Include="modules\plug\seach_keys\seach_keys.js" />
+    <Content Include="modules\plug\seach_keys\style.css" />
+    <Content Include="modules\plug\switch\style.css" />
+    <Content Include="modules\plug\switch\switch.js" />
+    <Content Include="modules\plug\upload\jquery.form.js" />
+    <Content Include="modules\plug\upload\upload.js" />
+    <Content Include="modules\plug\verify.js" />
+    <Content Include="modules\scripts\global.js" />
+    <Content Include="modules\scripts\home.js" />
+    <Content Include="modules\scripts\imgbox.js" />
+    <Content Include="modules\scripts\layout.js" />
+    <Content Include="modules\scripts\lottery\chongqingssc.js" />
+    <Content Include="modules\scripts\lottery\lotteryrecord.js" />
+    <Content Include="modules\scripts\lottery\shiyiyun.js" />
+    <Content Include="modules\scripts\lottery\bettautorecord.js" />
+    <Content Include="modules\scripts\lottery\tianjinssc.js" />
+    <Content Include="modules\scripts\register\forget.js" />
+    <Content Include="modules\scripts\register\register.js" />
+    <Content Include="modules\scripts\register\partregister.js" />
+    <Content Include="modules\scripts\report\reportlist.js" />
+    <Content Include="modules\scripts\report\reportsee.js" />
+    <Content Include="modules\scripts\report\reportprofit.js" />
+    <Content Include="modules\scripts\rfriend\recommend.js" />
+    <Content Include="modules\scripts\rfriend\rfriend.js" />
+    <Content Include="modules\scripts\lottery\shanghaissl.js" />
+    <Content Include="modules\scripts\sysset\banks.js" />
+    <Content Include="modules\scripts\sysset\feedback.js" />
+    <Content Include="modules\scripts\sysset\ordersaudit.js" />
+    <Content Include="modules\scripts\sysset\roles.js" />
+    <Content Include="modules\scripts\sysset\users.js" />
+    <Content Include="modules\scripts\sysset\webusers.js" />
+    <Content Include="modules\scripts\sysset\active.js" />
+    <Content Include="modules\scripts\sysset\lottery.js" />
+    <Content Include="modules\scripts\uploadcreate.js" />
+    <Content Include="modules\scripts\userinfo\userinfo.js" />
+    <Content Include="modules\scripts\userinfo\usermsg.js" />
+    <Content Include="modules\template\faudit\imglist.html" />
+    <Content Include="modules\template\sysset\feedback-list.html" />
+    <Content Include="modules\template\sysset\orderlist.html" />
+    <Content Include="modules\template\sysset\permissions.html" />
+    <Content Include="modules\template\sysset\role-detail.html" />
+    <Content Include="modules\template\sysset\roles.html" />
+    <Content Include="modules\template\sysset\setuserrole.html" />
+    <Content Include="modules\template\sysset\user-detail.html" />
+    <Content Include="modules\template\sysset\users.html" />
+    <Content Include="modules\template\sysset\webusers.html" />
+    <Content Include="modules\template\sysset\active.html" />
+    <Content Include="modules\template\sysset\banks.html" />
+    <Content Include="modules\template\sysset\bank-detail.html" />
+    <Content Include="modules\template\sysset\order-detail.html" />
+    <Content Include="modules\template\sysset\lottery-detail.html" />
+    <Content Include="modules\template\sysset\lottery.html" />
+    <Content Include="modules\template\sysset\plays.html" />
+    <Content Include="modules\webuploader\bootstrap.min.css" />
+    <Content Include="modules\webuploader\uploader.css" />
+    <Content Include="modules\webuploader\Uploader.swf" />
+    <Content Include="modules\webuploader\webuploader.css" />
+    <Content Include="modules\webuploader\webuploader.js" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\date.js" />
+    <Content Include="Scripts\DateForm.js" />
+    <Content Include="Scripts\diyUpload.js" />
+    <Content Include="Scripts\jquery-1.11.1.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery.keyboard.extension-scramble.min.js" />
+    <Content Include="Scripts\jquery.metadata.js" />
+    <Content Include="Scripts\jquery.mousewheel.min.js" />
+    <Content Include="Scripts\jquery.simplemodal.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.keyboard.min.js" />
+    <Content Include="Scripts\laydate.js" />
+    <Content Include="modules\scripts\message.js" />
+    <Content Include="Scripts\PCASClass.js" />
+    <Content Include="Scripts\sea-config.js" />
+    <Content Include="Scripts\sea.js" />
+    <Content Include="Scripts\webuploader.html5only.min.js" />
+    <Content Include="modules\scripts\withdraw.js" />
+    <Content Include="Scripts\yzm.js" />
+    <Content Include="Web.config" />
+    <Content Include="webshop\css\owl.carousel.css" />
+    <Content Include="webshop\css\productviewgallery.css" />
+    <Content Include="webshop\css\slider.css" />
+    <Content Include="webshop\css\style.css" />
+    <Content Include="webshop\images\0001-1.jpg" />
+    <Content Include="webshop\images\0001-2.jpg" />
+    <Content Include="webshop\images\0001-3.jpg" />
+    <Content Include="webshop\images\0001-4.jpg" />
+    <Content Include="webshop\images\0001-5.jpg" />
+    <Content Include="webshop\images\arrow-next.png" />
+    <Content Include="webshop\images\arrow-prev.png" />
+    <Content Include="webshop\images\arrow.png" />
+    <Content Include="webshop\images\arrows.png" />
+    <Content Include="webshop\images\art.png" />
+    <Content Include="webshop\images\c-arrows.png" />
+    <Content Include="webshop\images\c1.jpg" />
+    <Content Include="webshop\images\c2.jpg" />
+    <Content Include="webshop\images\c3.jpg" />
+    <Content Include="webshop\images\cart.png" />
+    <Content Include="webshop\images\close.png" />
+    <Content Include="webshop\images\delivery.png" />
+    <Content Include="webshop\images\det_pic.jpg" />
+    <Content Include="webshop\images\det_pic1.jpg" />
+    <Content Include="webshop\images\det_pic2.jpg" />
+    <Content Include="webshop\images\det_pic3.jpg" />
+    <Content Include="webshop\images\down_arrow.png" />
+    <Content Include="webshop\images\facebook.png" />
+    <Content Include="webshop\images\gpluse.png" />
+    <Content Include="webshop\images\icon1.png" />
+    <Content Include="webshop\images\icon2.png" />
+    <Content Include="webshop\images\icon3.png" />
+    <Content Include="webshop\images\icon4.png" />
+    <Content Include="webshop\images\icon5.png" />
+    <Content Include="webshop\images\icon6.png" />
+    <Content Include="webshop\images\large\0001-1.jpg" />
+    <Content Include="webshop\images\large\0001-2.jpg" />
+    <Content Include="webshop\images\large\0001-3.jpg" />
+    <Content Include="webshop\images\large\0001-4.jpg" />
+    <Content Include="webshop\images\large\0001-5.jpg" />
+    <Content Include="webshop\images\logo.png" />
+    <Content Include="webshop\images\nav_icon.png" />
+    <Content Include="webshop\images\pic1.jpg" />
+    <Content Include="webshop\images\pic2.jpg" />
+    <Content Include="webshop\images\pic3.jpg" />
+    <Content Include="webshop\images\pic4.jpg" />
+    <Content Include="webshop\images\pic5.jpg" />
+    <Content Include="webshop\images\pic6.jpg" />
+    <Content Include="webshop\images\rss.png" />
+    <Content Include="webshop\images\sale_pic1.jpg" />
+    <Content Include="webshop\images\sale_pic10.jpg" />
+    <Content Include="webshop\images\sale_pic11.jpg" />
+    <Content Include="webshop\images\sale_pic12.jpg" />
+    <Content Include="webshop\images\sale_pic2.jpg" />
+    <Content Include="webshop\images\sale_pic3.jpg" />
+    <Content Include="webshop\images\sale_pic4.jpg" />
+    <Content Include="webshop\images\sale_pic5.jpg" />
+    <Content Include="webshop\images\sale_pic6.jpg" />
+    <Content Include="webshop\images\sale_pic7.jpg" />
+    <Content Include="webshop\images\sale_pic8.jpg" />
+    <Content Include="webshop\images\sale_pic9.jpg" />
+    <Content Include="webshop\images\search.png" />
+    <Content Include="webshop\images\search_h.png" />
+    <Content Include="webshop\images\shoe_pic1.jpg" />
+    <Content Include="webshop\images\shoe_pic2.jpg" />
+    <Content Include="webshop\images\shoe_pic3.jpg" />
+    <Content Include="webshop\images\shoe_pic4.jpg" />
+    <Content Include="webshop\images\shoe_pic5.jpg" />
+    <Content Include="webshop\images\shoe_pic6.jpg" />
+    <Content Include="webshop\images\slider1.png" />
+    <Content Include="webshop\images\slider2.png" />
+    <Content Include="webshop\images\slider3.png" />
+    <Content Include="webshop\images\slider4.png" />
+    <Content Include="webshop\images\slider5.png" />
+    <Content Include="webshop\images\slider_bg.jpg" />
+    <Content Include="webshop\images\small\0001-1.jpg" />
+    <Content Include="webshop\images\small\0001-2.jpg" />
+    <Content Include="webshop\images\small\0001-3.jpg" />
+    <Content Include="webshop\images\small\0001-4.jpg" />
+    <Content Include="webshop\images\small\0001-5.jpg" />
+    <Content Include="webshop\images\top_move.png" />
+    <Content Include="webshop\images\twitter.png" />
+    <Content Include="webshop\images\up_arrow.png" />
+    <Content Include="webshop\images\w_pic1.jpg" />
+    <Content Include="webshop\images\w_pic2.jpg" />
+    <Content Include="webshop\images\w_pic3.jpg" />
+    <Content Include="webshop\images\w_pic4.jpg" />
+    <Content Include="webshop\images\w_pic5.jpg" />
+    <Content Include="webshop\images\w_pic6.jpg" />
+    <Content Include="webshop\js\cloud-zoom.1.0.3.min.js" />
+    <Content Include="webshop\js\easing.js" />
+    <Content Include="webshop\js\fliplightbox.min.js" />
+    <Content Include="webshop\js\jquery.cslider.js" />
+    <Content Include="webshop\js\jquery.easing.min.js" />
+    <Content Include="webshop\js\jquery.fancybox-buttons.js" />
+    <Content Include="webshop\js\jquery.fancybox-thumbs.js" />
+    <Content Include="webshop\js\jquery.fancybox.pack.js" />
+    <Content Include="webshop\js\jquery.min.js" />
+    <Content Include="webshop\js\jquery.mixitup.min.js" />
+    <Content Include="webshop\js\modernizr.custom.28468.js" />
+    <Content Include="webshop\js\move-top.js" />
+    <Content Include="webshop\js\owl.carousel.js" />
+    <Content Include="webshop\js\productviewgallery.js" />
+    <Content Include="webshop\js\responsive.menu.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\tempfile\" />
+    <Folder Include="Content\UploadFiles\" />
+    <Folder Include="Models\" />
+    <Folder Include="Upload\Active\" />
+    <Folder Include="Upload\image\" />
+    <Folder Include="Upload\UserAvatar\" />
+    <Folder Include="Views\RFriend\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="modules\css\iconfont\iconfont.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="modules\css\iconfont\iconfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="modules\css\iconfont\iconfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\UserList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\UserMsg.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Register2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Help\Forget.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="modules\img\proxy.properties" />
+    <None Include="Properties\PublishProfiles\发布.pubxml" />
+    <Content Include="Views\Help\Security.cshtml" />
+    <Content Include="Views\User\UserAdd.cshtml" />
+    <Content Include="Views\User\UserEdit.cshtml" />
+    <Content Include="Views\SysSet\Users.cshtml" />
+    <Content Include="Views\SysSet\Role.cshtml" />
+    <Content Include="Views\SysSet\Active.cshtml" />
+    <Content Include="Views\SysSet\Orders.cshtml" />
+    <Content Include="Views\SysSet\FeedBack.cshtml" />
+    <Content Include="Views\SysSet\RolePermission.cshtml" />
+    <Content Include="Views\Help\Active.cshtml" />
+    <Content Include="Views\SysSet\ActiveAdd.cshtml" />
+    <Content Include="Views\SysSet\ActiveDetail.cshtml" />
+    <Content Include="Views\Account\AccountSafe.cshtml" />
+    <Content Include="Views\Account\MyCard.cshtml" />
+    <Content Include="Views\Account\Banks.cshtml" />
+    <Content Include="Views\Help\FuncInfo.cshtml" />
+    <Content Include="Views\Help\PlayInfo.cshtml" />
+    <Content Include="Views\Help\General.cshtml" />
+    <Content Include="Views\User\UserReward.cshtml" />
+    <Content Include="Views\SysSet\FeedDetail.cshtml" />
+    <Content Include="Views\SysSet\Lottery.cshtml" />
+    <Content Include="Views\SysSet\LotteryPlays.cshtml" />
+    <Content Include="Views\Lottery\Index.cshtml" />
+    <Content Include="Views\Lottery\LotteryRecord.cshtml" />
+    <Content Include="Views\Lottery\BettAutoRecord.cshtml" />
+    <Content Include="Views\Lottery\HighLottery.cshtml" />
+    <Content Include="Views\Lottery\SSC3D.cshtml" />
+    <Content Include="Views\Report\ReportList.cshtml" />
+    <Content Include="Views\Report\ReportSee.cshtml" />
+    <Content Include="Views\Report\ReportToday.cshtml" />
+    <Content Include="Views\Report\ReportProfit.cshtml" />
+    <Content Include="Views\User\UserSpread.cshtml" />
+    <Content Include="Views\Lottery\CQLottery.cshtml" />
+    <Content Include="webshop\fonts\Amble-Regular-webfont.ttf" />
+    <Content Include="webshop\fonts\BebasNeue-webfont.ttf" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Home\Service.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\baidumap.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProBusiness\ProBusiness.csproj">
+      <Project>{4ba7be5b-94b2-4f79-b333-c5fe5429424a}</Project>
+      <Name>ProBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProDAL\ProDAL.csproj">
+      <Project>{6559e42c-832c-4ab3-8e7d-52d03af86b5b}</Project>
+      <Name>ProDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProEntity\ProEntity.csproj">
+      <Project>{4c47b989-57a6-4602-b33b-0957c32a0930}</Project>
+      <Name>ProEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProEnum\ProEnum.csproj">
+      <Project>{b2f2671d-7f9b-4e3e-b5e1-fe8acbf1976f}</Project>
+      <Name>ProEnum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProTools\ProTools.csproj">
+      <Project>{898a9502-a35e-4032-a90c-42708b2b9c82}</Project>
+      <Name>ProTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>19626</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:6333/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

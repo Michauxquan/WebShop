@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "ReportSee";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta charset="UTF-8">
+		<title>游戏平台 - 报表查询</title>
+		<link rel="stylesheet" type="text/css" href="/modules/css/help.css" />
+		<link rel="stylesheet" type="text/css" href="/modules/css/active.css" />
+		<link rel="stylesheet" type="text/css" href="/modules/css/need/laydate.css" />
+	    <link rel="stylesheet" type="text/css" href="/modules/css/skins/dahong/laydate.css"/>
+	    <link rel="stylesheet" type="text/css" href="/modules/datapager/style.css"/>
+         <script type="text/javascript" src="/Scripts/jquery-1.11.3.min.js"></script> 
+		<script type="text/javascript" src="/Scripts/laydate.js"></script>
+	    <script type="text/javascript" src="/Scripts/date.js"></script>
+        <script type="text/javascript" src="/modules/datapager/paginate.js"></script>
+	    <script type="text/javascript" src="/Scripts/DateForm.js"></script>
+         <script  type="text/javascript" src="/modules/scripts/report/reportsee.js"></script>
+		<style>
+			div,p,span,dl,dt,dd,a,table,tr,td,thead,th,tbody{margin: 0;padding: 0;list-style: none;}
+		    body{margin: 10px 0 0 0;}
+			a{text-decoration: none;color: black;}
+		</style>
+	</head>
+	<body>
+		<div class="p-header">
+			<p class="current-location">
+				<span>当前位置：</span><span> &gt; 报表查询</span>
+			</p>
+		</div>
+		<div class="chooseRecords">
+			<div class="filter">
+				<form action method="get">
+					<input type="hidden" name="isrequery" value="1" />
+					<label for="starttime">
+						<span class="text-middle-input">时间：</span>
+						<input type="text" class="start-time input laydate-icon"  id="btime" value="" style="width: 210px;" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})"/> 
+						<span class="text-middle-input">&nbsp;至&nbsp;</span>
+						<input type="text" class="endtime input laydate-icon"  id="etime" value="" style="width: 200px;"onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" /> 
+					</label> 
+					<label for="gameuser">
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<span style="color: #FF7E00;">温馨提示：报表查询一次只能查询开始到截止时间共24小时的数据</span>
+					</label>
+					<div class="filter-button-box">
+						<div class="search">搜索</div>
+						<a href="/Report/ReportSee" target="_self" style="color: white;">
+							<div class="clear">清空</div>
+						</a>
+					</div>
+				</form>
+			</div>
+			<div class="content">
+			    <div class="data">
+			    	<table class="data-table" cellspacing="0">
+			    		<thead>
+			    			<tr>
+			    				<th class="th-1" style="width: 13%;">用户名</th> 
+			    				<th class="th-3" style="width: 14%;">返点级别</th>
+			    				<th class="th-5" style="width: 14%;">投注总额</th>
+			    				<th class="th-6" style="width: 14%;">返点总额</th>
+			    				<th class="th-7" style="width: 14%;">派奖总额</th>
+			    				<th class="th-8" style="width: 15%;">盈亏结算</th>
+			    			</tr>
+			    		</thead>
+			    		<tbody> 
+			    			<tr>
+			    				<td height="37" colspan="6" style="text-align: center;" class="needq">
+			    					<span>请选择查询条件之后进行查询</span>
+			    				</td>
+			    			</tr>
+			    		</tbody>
+			    		<tfoot>
+			    			<tr>
+						        <td colspan="6" style="text-align: center;">
+						             <div class="spana" id="pager"></div>
+						        </td>
+			    			</tr>
+			    		</tfoot>
+			    	</table>
+			    </div>	
+			</div>
+		</div>
+	</body>
+</html>
+

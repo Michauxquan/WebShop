@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "权限设置";
+    Layout = null;
+    var menus = (List<ProEntity.Plays>)ViewBag.Menus;
+    var cmenus = (List<ProEntity.Plays>)ViewBag.CMenus;
+    var tmenus = (List<ProEntity.Plays>)ViewBag.TMenus;
+    var model = (List<ProEntity.Plays>)ViewBag.Model;
+}
+
+<html>
+<head>
+    <link href="/modules/css/base.css" rel="stylesheet" />
+    <link href="/modules/css/layout.css" rel="stylesheet" />
+    <link href="/modules/css/iconfont/iconfont.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/modules/css/system/role.css" />
+    <script src="/Scripts/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/Scripts/sea.js"></script>
+    <script type="text/javascript" src="/Scripts/sea-config.js"></script>
+    <script type="text/javascript">
+        seajs.use(["scripts/sysset/lottery"], function (obj) {
+            obj.initPermission('@(ViewBag.CPCode)', '@Html.ToJSONString(menus)', '@Html.ToJSONString(model)', '@Html.ToJSONString(cmenus)', '@Html.ToJSONString(tmenus)');
+        });
+    </script>
+</head>
+<body>
+    <div class="main-body">
+        <div class="main-content">
+            <div class="header-box">
+                <span class="header-title left">当前位置-玩法设置</span>
+                <a class="back right" href="javascript:if(history.length>1){ history.go(-1);} else{}">
+                    <i class="iconfont blue">&#xe62d;</i> 返回
+                </a>
+            </div>
+            <div class="content-body">
+                <h1 class="font16">@(ViewBag.CPName)-玩法设置</h1>
+                <div id="rolePermission" class="menulist mTop10">
+                </div>
+                <div class="mTop20">
+                    <div class="btn " id="savePermission">保存</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

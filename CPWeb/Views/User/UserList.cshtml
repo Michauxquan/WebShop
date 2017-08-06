@@ -1,0 +1,230 @@
+﻿@using ProEntity.Manage
+@{ 
+    ViewBag.Title = "会员中心";
+    Layout = null;
+}
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8"/>
+
+    <meta charset="UTF-8">
+    <title>游戏平台 - 用户列表</title>
+    <link rel="stylesheet" type="text/css" href="/modules/css/help.css"/>
+    <link rel="stylesheet" type="text/css" href="/modules/datapager/style.css" />
+    <script type="text/javascript" src="/Scripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/Scripts/DateForm.js"></script>
+    <script type="text/javascript" src="/modules/datapager/paginate.js"></script> 
+    <style> 
+        .b_header{color: #fff;background-color: rgb(207, 27, 28);height: 30px;line-height: 30px; margin:0 auto;text-align: center;}
+        .b_header ul{    display: block;list-style-type: disc;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 40px;}
+        .b_box ,.b_box ul{ list-style: none;margin: 0;padding: 0;float: left;background-color: #e3f5ff;width: 100%;}
+        .b_box li {line-height: 22px;width: 100%;text-align: left;float: left;border-top: 1px solid #f5fcff;border-bottom: 1px solid #c6e2f2;color: #666;font: 9px "宋体","sans-serif", "Arial", "Verdana";}
+        .b_box li>a {color: #666;}
+        .b_box li.on, li.on>a {border: none;color:rgb(207, 27, 28);font-weight: bold;}
+        .n {background-color: #797979 !important;}
+        .n, .n_links {margin: 4px 3px 1px 0px;float: right;background-color: #ff7e00;color: #FFF;border-radius: 2px;min-width: 12px;text-align: center;line-height: 14px;padding: 0px 3px 2px 3px;}
+        .b_box li.on>a::before {top: -3px;margin: 0 6px;transform: rotateZ(0deg);}
+        .b_box li a::before {content: '';display: inline-block;width: 5px;height: 3px;margin: 0 5px;position: relative;top: -3px;background: url(/modules/img/down-arrow.png);transform: rotateZ(-90deg);}
+        .b_box li a.no-icon::before {background: url();}
+        .b_box li.on>.n_links { background-color: #ff7e00;}
+        .b_box.n_links {cursor: pointer;}
+        .b_box li:last-child {border-bottom: none;}
+        .b_box li:hover{background-color: #fff;}
+        .b_box .n,.b_box .n_links {margin: 4px 3px 1px 0px;float: right;background-color: #ff7e00;color: #FFF;border-radius: 2px;min-width: 12px;text-align: center;line-height: 14px;padding: 0px 3px 2px 3px;}
+        #ext {background-color: #f1faff;border-top: 1px solid #7eadcb;border-bottom: 1px solid #7eadcb;}
+        #ext>li:first-child {}
+        #ext li {}
+         .black_overlay {
+             position: fixed;
+             top: 0%;
+             left: 0%;
+             bottom: 0%;
+             width: 100%;
+             height: 100%;
+             z-index: 60000;
+             opacity: .20;
+             filter: alpha(opacity=20);
+             BACKGROUND-COLOR: #000;
+         }
+
+        .layer {
+            position: absolute;
+            width: 400px;
+            height: 250px;
+            margin: 0 auto;
+            top: 100px;
+            left: 300px;
+            z-index: 60001;
+            BACKGROUND-COLOR: #f7f7f7;
+        }
+
+        .layer1 {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            margin: 0 auto;
+            top: 0px;
+            z-index: 60002;
+            line-height: 40px;
+        }
+
+        .layer2 {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            margin: 10px auto;
+            z-index: 60002;
+        }
+
+        .layer3 {
+            position: relative;
+            width: 100px;
+            height: 30px;
+            margin: 0 auto;
+            z-index: 60002;
+            line-height: 30px;
+            border-radius: 2px;
+            display: block;
+            cursor: pointer;
+        }
+
+        .layer1, .layer3 {
+            color: #fff;
+            background-color: #CE1E1E;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .closea {
+            height: 40px;
+            width: 80px;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 20px;
+        }
+
+        .al {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="p-header">
+        <p class="current-location">
+            <span>当前位置：</span><span> &gt; 用户列表</span>
+        </p>
+    </div>
+<div class="chooseRecords">
+    <div style="float: left; width: 162px; padding-left: 20px;" id="leftcontent">
+        <div class="b_header">&nbsp;全部下级</div>
+        <div>
+            <ul class="b_box" data-id="">
+            </ul>
+        </div>
+    </div>
+    <div style="float: left; width: 85%;" id="rightcontent">
+        <div class="filter">
+            <input type="hidden" name="isgetdate" value="1"/>
+            <label for="username">
+                <span class="text-middle-input">用户名：</span>
+                <input type="text" class="start-time input" id="username" value=""/>
+            </label>
+            <label for="bank_min">
+                <span class="text-middle-input">账户余额：</span>
+                <input type="text" class="start-time input" id="accountmin" value=""/>
+                <span class="text-middle-input">&nbsp;至&nbsp;</span>
+                <input type="text" class="endtime input" id="accountmax" value=""/>
+            </label>
+            <label>
+                <span class="text-middle-input">排序：</span>
+                <select class="input state" id="sortby" style="width: 100px;">
+                    <option value="" selected="selected">默认排序</option>
+                    <option value="a.username">用户名</option>
+                    <option value="b.accountfee">账户余额</option>
+                    <option value="a.rebate">返点级别</option>
+                </select>
+                <label>
+                    <input type="checkbox" class="checkbox" id="sortbymax" value="1"/>从大到小</label>
+            </label>
+            <label>
+                <span class="text-middle-input">用户级别：</span>
+                <select class="input" id="type" style="width: 100px;">
+                    <option value="-1" selected="selected">请选择...</option>
+                    <option value="1">代理用户</option>
+                    <option value="0">会员用户</option>
+                </select>
+            </label>
+            <label>
+                <span class="text-middle-input">返点级别：</span>
+                <input type="text" class="start-time input" id="ratemin" value=""/>
+                <span class="text-middle-input">&nbsp;至&nbsp;</span>
+                <input type="text" class="endtime input" id="ratemax" value=""/>
+            </label>
+            <div class="filter-button-box">
+                <div class="search">搜索</div>
+                <a href="javascript:void(0);" id="addUser" style="color: white;">
+                    <div class="clear btn" style="background: #D64242;">增加用户</div>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="data">
+                <table class="data-table" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th class="th-1" style="width: 12%;">用户名</th>
+                        <th class="th-2" style="width: 14%;">用户级别</th>
+                        <th class="th-3" style="width: 10%;">余额</th>
+                        <th class="th-4" style="width: 14%;">返点级别</th>
+                        <th class="th-5" style="width: 14%;">注册时间</th>
+                        <th class="th-6" style="width: 11%;">代充</th>
+                        <th class="th-7" style="width: 14%;">注册方式</th>
+                        <th class="th-8" style="width: 11%;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="usertbody">
+                    <tr>
+                        <td height="37" colspan="13" style="text-align: center;" class="needq">
+                            <span>请选择查询条件之后进行查询</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="pager" style="margin-top: 20px; margin-right: 80px;"></div>
+        </div>
+        <input id="UserID" hidden="hidden" style="display: none;" type="text" value="@ViewBag.UserID"/>
+        <input id="Layers" hidden="hidden" style="display: none;" type="text" value="@ViewBag.Layers"/>
+    </div>
+</div>
+<div class="layer" style="display: none;">
+    <div class="layer1">
+        返点设置
+    </div>
+    <div class="layer2">
+        <div style="width: 340px; margin: 0 auto;">
+            <ul style="font-size: 14px; color: #797979;">
+                <li style="line-height: 24px; height: 24px;"><span>用 户 &nbsp;名:</span>&nbsp;<span id="childuser"></span></li>
+                <li style="line-height: 24px; height: 24px;"><span>返点级别:</span>&nbsp;<span id="childpoint"></span></li>
+                <li style="line-height: 24px; height: 24px;"><span>你的返点:</span>&nbsp;<span id="ablepoint">@(ViewBag.Rebate)</span>&nbsp;[可用返点@(ViewBag.UserPoint)]</li>
+                <li style="line-height: 24px; height: 24px;"><span>保留返点:</span>&nbsp;<input type="text" id="addpoint" style="width: 60px;"/>&nbsp;(0-@ViewBag.UserPoint)</li>
+                <li style="line-height: 24px; height: 24px;"><span>注意事项:</span><span> 例如：您自身返点为0.8， 而您在下面 “保留返点”处选择 0.5，您开设新账户的返点为0.3。</span></li>
+            </ul>
+            <span id="childuserid" style="display: none;"></span>
+        </div>
+
+    </div>
+    <div class="layer3"  id="upduserpoint">确认</div><div class="layer3" style="float: right; margin-top: -30px; margin-right: 10px; background-color: #666666;" onclick="closeLogin()">取消</div>
+</div>
+<div id="fade" class="black_overlay" style="display: none;"></div>
+<script type="text/javascript" src="/modules/scripts/userinfo/userinfo.js"></script>
+<script type="text/javascript">
+    function closeLogin() {
+        $('.fade').hide();
+        $('.layer').hide(); 
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta charset="UTF-8">
+		<title>游戏平台 - 账户安全</title>
+		<link rel="stylesheet" type="text/css" href="/modules/css/message.css" />
+		<script type="text/javascript" src="/Scripts/jquery-1.11.3.min.js"></script>
+	    <script type="text/javascript" src="/modules/scripts/message.js"></script>
+        <script type="text/javascript" src="/Scripts/common.js"></script>
+        <script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+		<style>
+		     html{overflow-x: auto;}
+		    body{margin: 10px 0 0 0;}
+			a{text-decoration: none;color: black;}
+		</style>
+	</head>
+<body>
+<div class="p-header">
+    <p class="current-location">
+        <span>当前位置：</span><span> &gt; 账户安全</span>
+    </p>
+</div>
+<div class="showtime">
+    <table class="stable">
+        <tbody>
+        <tr>
+            <td style="width: 10%;"><img src="/modules/img/head.jpg" width="100" height="100" alt="头像" class="user-head"/></td>
+            <td style="text-align: left; width: 40%; color: #444;">
+                <p>上次登录时间： <span>@ViewBag.LastTime</span></p>
+                <p style="padding-top: 14px;">本次登录位置：<span class="c-ef3552" id="ipaddress"></span> </p>
+            </td>
+            <td style="width: 40%;">
+                <p style="float: right;">安全等级：<span class="score">@ViewBag.SafeLevel</span> 分
+                </p></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="showtime h">
+    <div class="stable po">
+        <label class="head">
+            <i class="locked-img"><img src="/modules/img/litte-icon/锁.png" width="80"height="80"alt="密码锁"/></i>
+            <i class="size">修改密码</i>
+        </label>
+        <label class="mid">
+            登陆密码：<span>已设置</span><i class="ifseted "><img src="/modules/img/litte-icon/对号.png"width="18"height="18"/></i>&nbsp;
+            资金密码：<span>已设置</span><i class="ifseted "><img src="/modules/img/litte-icon/@(ViewBag.HasAccount?"对号.png":"关闭差.png")"width="18"height="18"/></i>
+        </label>
+        <label class="action">
+            <span class="state-edit"><i class="cl-ef3552">立即修改</i></span> 
+            <span class="default"><i class="cl-ef3552">向上收起</i></span>
+        </label>
+    </div> 
+    <div class="mima">
+            <div class="expand-info h">
+                <div >
+                    <span class="pre-actions hover" data-type="0" data-value="True">修改登录密码</span>
+                    <span class="pre-actions" data-type="1" style="margin-left: 20px;" data-value="@ViewBag.HasAccount">修改资金密码</span>
+                </div>
+                <div class="input-box">
+                    <label>
+                        <span class="label-name">旧密码：</span><input type="password" id="oldpwd"/>
+                    </label>
+                </div>
+                <div class="input-box">
+                    <label>
+                        <span class="label-name">新密码：</span><input type="password" id="newpwd"/>
+                        <span style="font-size: 12px;">( 有字母和数字组成6-16个字符；且必须包含数字和字母，不允许连续三位相同 )</span>
+                    </label>
+                </div>
+                <div class="input-box">
+                    <label>
+                        <span class="label-name">确认密码：</span><input type="password" id="define-pwd"/>
+                    </label>
+                </div>
+                <div class="tail-actions">
+                    <div class="basebtn pwdbtn">提交</div>
+                     <div class="clear1">清空</div>
+                </div>
+            </div>
+        </div> 
+</div>
+<div class="showtime h">
+    <div class="stable po1">
+        <label class="head">
+            <i class="locked-img"><img src="/modules/img/litte-icon/手机.png" width="80"height="80"alt="手机"/></i>
+            <i class="size">绑定手机</i>
+        </label>
+        <label class="mid"><span>未设置</span><i class="ifseted "><img src="/modules/img/litte-icon/@(ViewBag.HasMobile?"对号.png":"关闭差.png")"width="18"height="18"/></i></label>
+        <label class="action">
+            <span class="state-edit" style="display: block;"><i class="cl-ef3552">@(ViewBag.HasMobile?"立即修改":"立即绑定")</i></span> 
+            <span class="default"><i class="cl-ef3552">向上收起</i></span>
+        </label>
+    </div>
+    <form id="changepass" method="post">
+        <div class="shouji">
+            <div class="expand-info h">
+                <div class="input-box">
+                    <label>
+                        <span class="label-name">资金密码：</span><input type="password" class="accountpwd"/>
+                    </label>
+                </div>
+                <div class="input-box">
+                    <label>
+                        <span class="label-name">绑定手机：</span><input type="tel" class="account"/>
+                    </label>
+                    <span class="get-code" data-type = "phone">
+		    				<span class="default1">发送验证码</span>
+		    				<span class="inprogress">手机验证码已发送<span class="blue">120</span>秒后重发</span>
+		    			</span>
+                </div>
+                <div class="input-box">
+                    <label>
+                        <span class="label-name">验证码：</span><input type="text" class="code"/>
+                    </label>
+                </div>
+                <div class="tail-actions">
+                    <div class="basebtn btnmobile">提交</div>
+                    <div class="clear1">清空</div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="showtime h">
+    <div class="stable po2" >
+        <label class="head">
+            <i class="locked-img"><img src="/modules/img/litte-icon/邮箱.png" width="80"height="80"alt="邮箱"/></i>
+            <i class="size">绑定邮箱</i>
+        </label>
+        <label class="mid"><span>未设置</span><i class="ifseted "><img src="/modules/img/litte-icon/@(ViewBag.HasEmail?"对号.png":"关闭差.png")" width="18"height="18"/></i></label>
+        <label class="action">
+            <span class="state-edit"style="display: block;"><i class="cl-ef3552">@(ViewBag.HasEmail?"立即修改":"立即绑定")</i></span> 
+            <span class="default"><i class="cl-ef3552">向上收起</i></span>
+        </label>
+    </div>
+    <div class="email" id="email">
+        <div class="expand-info h">
+            <div class="input-box">
+                <label>
+                    <span class="label-name">资金密码：</span><input type="password" class="accountpwd"/>
+                </label>
+            </div>
+            <div class="input-box">
+                <label>
+                    <span class="label-name">绑定邮箱：</span><input type="email" class="account"/>
+                </label>
+                <span class="get-code" data-type = "phone">
+		    				<span class="default1">发送验证码</span>
+		    				<span class="inprogress">邮箱验证码已发送<span class="blue">120</span>秒后重发</span>
+		    			</span>
+            </div>
+            <div class="input-box">
+                <label>
+                    <span class="label-name">验证码：</span><input type="text" class="code"/>
+                </label>
+            </div>
+            <div class="tail-actions">
+                <div class="basebtn btnemail">提交</div>
+                 <div class="clear1">清空</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $(function() {
+        var url = 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=@ViewBag.LastIP';
+        $.getScript(url, function(_result) {
+            var ipinfo = remote_ip_info;
+            if (ipinfo.ret == '1') {
+                $('#ipaddress').html(ipinfo.country + ' ' + ipinfo.province + ' ' + ipinfo.city);
+            } else {
+                $('#ipaddress').html('没有找到匹配的 IP 地址信息');
+            }
+        });
+        $('.pre-actions').each(function(i, v) {
+            $(v).click(function() {
+                if (!$(v).hasClass('hover')) {
+                    $(v).siblings().removeClass('hover');
+                    $(v).addClass('hover');
+                    if ($(v).data('value').toLowerCase() == 'false') {
+                        $('#oldpwd').parent().parent().hide();
+                    } else {
+                        $('#oldpwd').parent().parent().show();
+                    }
+                    $('input[type="password"]').val('');
+                }
+            });
+        });
+
+        $('.pwdbtn').click(function () {
+            var con = false;
+            var oldpwd = $('#oldpwd').val();
+            var newpwd = $('#newpwd').val();
+            var definepwd = $('#define-pwd').val();
+            if ($('.pre-actions.hover').data('value').toLowerCase() == "true") {
+                if (!validateUserPss(oldpwd)) {
+                    con = true;
+                    alert('密码格式输入有误,请重新输入'); 
+                } 
+            }
+            if (newpwd == "" || definepwd == "") {
+                con = true;
+                alert('新密码不能为空'); 
+            }
+            if (newpwd != definepwd) {
+                con = true;
+                alert('密码输入不一致'); 
+            }
+            if (!validateUserPss(newpwd)) {
+                con = true;
+                alert('密码格式输入有误,请重新输入'); 
+            }
+            if (!con) {
+                $.post('/Account/UpdPwd', { type: $('.mima .pre-actions.hover').data('type'), oldpwd: oldpwd, newpwd: newpwd}, function(data) {
+                    if (data.result) {
+                        window.location.href = location.href;
+                    } else {
+                        alert(data.ErrMsg);
+                    }
+                });
+            }
+        });
+        $('.clear1').click(function(){reset();});
+        $('.btnmobile').click(function() {
+            BindAccount('.shouji');
+        });
+        $('.btnemail').click(function() {
+            BindAccount('.email');
+        });
+    });
+
+    function BindAccount(cname) {
+        var con = false;
+        $(cname + ' input').each(function(i, v) {
+            if ($(v).val() == "" || $(v).val() == null) {
+                alert('文本框不能为空');
+                con = true;
+                return false;
+            }
+        });
+     
+        if (!con) { 
+            if (!validateUserPss($(cname + ' input:first').val())) {
+                alert('密码格式输入有误,请重新输入');
+                return false;
+            }
+            var accountpwd = $(cname + ' .accountpwd').val();
+            var account = $(cname + ' .account').val();
+            var code = $(cname + ' .code').val(); 
+            $.post('/Account/BindAccount', { type: cname == ".email"?1:2, accountpwd: accountpwd, account: account, code: code }, function (data) {
+                if (data.result) {
+                    reset();
+                    window.location.href = location.href;
+                } else {
+                    alert(data.ErrMsg);
+                }
+            });
+        }
+    }
+
+    function reset() {
+        $('input').val('');
+    }
+</script>
+  
+</html>

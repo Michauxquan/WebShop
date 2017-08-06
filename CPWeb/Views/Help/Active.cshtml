@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Active";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta charset="UTF-8">
+    <title>活动中心</title>
+    <script type="text/javascript" src="/Scripts/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/modules/css/help.css" />
+    <link rel="stylesheet" type="text/css" href="/modules/css/active.css" />
+    <style type="text/css">
+        body {
+            margin: 10px 0 0 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="p-header">
+        <p class="current-location">
+            <span>当前位置：</span><span> &gt; 活动</span>
+        </p>
+    </div>
+<div class="img-div bg-ac">
+    <div class="img-nm ">
+        <div class="item-img m21">
+            <a href="">
+                <img src="/modules/img/litte-icon/getjf01.jpg" alt="" title=""/></a>
+            <div class="item1">
+                <div class="learn">
+                    <a href="">了解详情</a>
+                </div>
+                <div class="bottom">
+                    <p>投注送积分</p>
+                    <br/>
+                    <p>只要您投注，我们就送，还在等什么，赶快去投注吧</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(function() {
+        $.post('/Help/GetActive', {}, function (data) {
+            var html = "";
+            for (var i = 0; i < data.Items.length; i++) {
+                html += '<div class="item-img m21"><a href=""><img src="'+data.Items[i].Img+'" alt="" title="" /></a><div class="item1">';
+                html += '<div class="learn"><a href="" data-id="'+data.Items[i].AutoID+'">了解详情</a></div><div class="bottom"><p>'+data.Items[i].Title+'</p><br /><p>'+data.Items[i].Tips+'</p></div></div></div> ';
+            }
+            $('.img-nm').html(html);
+        });
+    });
+</script>
+</body>
+</html>

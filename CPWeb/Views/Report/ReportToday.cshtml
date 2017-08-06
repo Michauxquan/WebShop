@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "ReportToday";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta charset="UTF-8">
+		<title>今日报表</title>
+		<link rel="stylesheet" type="text/css" href="/modules/css/help.css" />
+		<style type="text/css"> 
+			a{text-decoration: none;color: black;}
+			.td-info{font-weight: bold;}
+			tr{border-bottom: 1px solid #eee;}
+		</style>
+	</head>
+	<body>
+		<div class="p-header">
+			<p class="current-location">
+				<span>当前位置：</span><span> &gt; 今日报表</span>
+			</p>
+		</div>
+		<div class="chooseRecords">
+				<div class="content">
+			      <div class="data" style="background: #fff;min-height: 500px;">
+			    	<table class="data-table" cellspacing="0" style="table-layout: auto;">
+			    		<thead style="background: #fff;">
+			    			<tr>
+			    				<td class="td-info" style="text-align: right;">我的账号：</td>
+			    				<td style="text-align: left;">@ViewBag.LogName</td>
+			    			</tr>
+			    			<tr>
+			    				<td class="td-info" style="text-align: right;">我的昵称：</td>
+			    				<td style="text-align: left;">@ViewBag.UserName</td>
+			    			</tr>
+			    		@*	<tr>
+			    				<td class="td-info" style="text-align: right;">团队余额：</td>
+			    				<td style="text-align: left;">0.000</td>
+			    			</tr>*@
+			    			<tr>
+			    				<td class="td-info" style="text-align: right;">今日参与游戏：</td>
+			    				<td style="text-align: left;">@ViewBag.TotalPayMent 游戏币</td>
+			    			</tr>
+			    			<tr>
+			    				<td class="td-info" style="text-align: right;">今日中奖：</td>
+			    				<td style="text-align: left;">@ViewBag.TotalWin 游戏币</td>
+			    			</tr>
+			    		</thead>
+			    	</table>
+			    </div>	
+			</div>
+		
+		</div>
+	</body>
+</html>

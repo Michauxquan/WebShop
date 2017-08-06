@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "登录"; 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    	<meta http-equiv="content-type" content="text/html" charset="utf-8"/>
+		<meta charset="UTF-8">
+		<title>娱乐平台-用户登录</title>
+		<meta name="description" content="彩票，娱乐平台" />
+		<meta name="keywords" content="彩票，娱乐平台" />
+		<style>
+			*{list-style: none;padding: 0;margin: 0;}
+			body{font-family: arial,sans-serif,"微软雅黑";}
+			.bg{max-width: 100%;min-width: 960px;}
+			.logo{width: 210px;margin: 0 auto;height: 80px;/*top: 50px;*/position: relative;}
+			.content{max-width: 100%;min-width:960px;height: 470px;background: url(/modules/img/bg.jpg)no-repeat;margin: 0;padding: 0;/*top:50px;*/position: relative;}
+			.enterBg{  background: rgba(23,26,33,0.3);
+			           width: 420px;
+			           height: 310px;
+			           right: 0;
+						position: absolute;
+					    bottom: 70px;
+					    margin-right: 170px;
+			    padding: 20px 5px 10px 5px;
+					    -webkit-box-shadow: 1px 1px 5px #666;
+					    -ms-box-shadow: 1px 1px 5px #666;
+					    -moz-box-shadow: 1px 1px 5px #666;
+					    -o-box-shadow: 1px 1px 5px #666;
+					    box-shadow: 1px 1px 5px #666;
+           			}
+           	.headPicture{width: 140px;height: 140px;margin: 0 auto;}
+           	.login-input,.next{width: 330px;margin: 0 auto;}	
+           	.name li{float: left;margin-top:20px;font-size: 16px;color: white;}
+           	.name-input,.name-input1{width: 220px;height: 20px;background: transparent;border: none;border-bottom: 2px solid white;outline: medium;font-size: 14px;padding-left: 16px;color: #FFFFFF;}
+           	.pw{clear: both;}
+           	.next{clear: both;height:30px;}
+           	.next .next1{width: 50px; height: 20px;border: 2px solid white;border-radius: 4px;background: transparent;
+           	    padding: 3px 45px 3px 50px; color: white;font-weight: 600;font-size: 18px;
+                float: left;margin-right: 10px;cursor: pointer;outline: medium;text-decoration:none;}
+             .next1:hover{border: solid 2px #60e0ec;color: #60e0ec; -webkit-opacity: 0.8;  -moz-opacity: 0.8; opacity: 08;filter:alpha(opacity=80);}
+           	.p{width: 150px;bottom: 10px;right: 20px;position: absolute;color: white;font-size:16px;font-weight: 600;}
+           	footer{max-width:78%;min-width:0px;height:28px;margin: 0 auto;/*margin-top: 50px;*/transform: rotateY(100%);font-size: 12px;position: absolute;left: 0;right: 0;}
+           	.left{float: left;height: 28px;line-height: 30px;color:#555;}
+           	.right{float: right;right: 200px;height: 28px;line-height: 30px;color:#555;}
+		</style>
+</head>
+<body>
+   	<div class="bg">
+			<div class="logo">
+				<img src="/modules/img/litte-icon/logo.png" height="80px" width="190px" alt="logo" title="logo-title" />
+			</div>
+			<div class="content">
+				<div class="enterBg"> 
+					<div class="headPicture">
+						<img src="/modules/img/head.jpg" width="140" height="140" style="border-radius: 50%;" alt="userPicture" title=""/>
+					</div>
+					<div class="login-input" style="height: 110px;">
+						<ul class="name">
+							<li><label for="username">通行证：</label></li>
+							<li><input type="text" name="username" id="username" placeholder="输入用户名" class="name-input" /></li>
+							<li><span for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码：</span></li>
+							<li>
+								<span><input type="password" name="password" id="password" placeholder="游戏密码" class="name-input1"/></span>
+							</li>
+						</ul>
+					</div>
+					<div class="next" >
+					    <a href="javascript:void(0);" class="next1" id="logbtn" style="color: #60e0ec;">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                        <a href="/Home/Register" class="next1">注&nbsp;&nbsp;&nbsp;&nbsp;册</a>
+					</div> 
+				</div>
+			</div>
+			<footer>
+				<div class="left">
+					版权所有Copyright © 2016 千古网络 All Rights Reserved
+				</div>
+				<div class="right">
+					<span>请使用火狐、谷歌、IE10.0浏览器，以达到最佳使用效果</span>
+				</div>
+			</footer>
+		</div>
+		<script src="/Scripts/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+    $(document).on("keypress", function (e) {
+        if (e.keyCode == 13) {
+            $("#logbtn").click();
+        }
+    });
+    $("#logbtn").click(function () {
+        var reg1 = /^[a-zA-Z 0-9]+$/;
+        var reg = /[\da-zA-Z]*\d+[a-zA-Z]+[\da-zA-Z]*/;
+        if ($(".name-input").val() == "" || $(".name-input1").val() == "") {
+            alert('您好！\n*用户名不能为空！或*密码不能为空！');
+            return false;
+        }
+        //else if (!reg.test($(".name-input1").val()) && $(".name-input1").val() !== "") {
+        //    alert("*密码不正确！");
+        //    return false;
+        //}
+        $.post('/Home/UserLogin', { userName: $(".name-input").val(), pwd: $(".name-input1").val() }, function (data) {
+            if (data.result==1) {
+                location.href = "/Home/Index";
+            } else {
+                alert("账户或密码不正确！");
+            }
+        });
+    });
+</script>
+</body>
+</html>
