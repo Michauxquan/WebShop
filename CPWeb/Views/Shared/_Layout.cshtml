@@ -20,6 +20,41 @@
 <script type="text/javascript"src="/Scripts/DateForm.js"></script> 
 <script type="text/javascript" src="/webshop/js/move-top.js"></script>
 <script type="text/javascript" src="/webshop/js/easing.js"></script>
+
+    <div class="shortcut_v2013 alink_v2013">
+        <div class="w">
+                <ul class="fr 1h">
+                <li class="fl"><div class="menu_hd"><a href="/User/Order">我的订单</a></div></li> 
+                <li class="fl"><i class="shortcut_s"></i></li>
+                <li class="fl"><div class="menu_hd"><a href="/User/Default">个人中心</a></div></li>
+                <li class="fl"><i class="shortcut_s"></i></li>
+                <li class="fl"><div class="menu_hd"><a href="#">商家入驻</a></div></li> 
+            </ul>
+            <ul class="fr 1h"> 
+                <li class="fl">
+                    <div class="menu_hd">
+                        @if (CurrentUser != null)
+                        {
+                            <a href="/User/Default">@CurrentUser.UserName</a><a href="/home/Logout">[登出]</a>
+                        }您好，欢迎来到掌上购！
+
+                    </div>
+                </li>
+                @if (CurrentUser == null)
+                {
+                    <li class="fl">
+                        <div class="menu_hd"><a href="/home/login">请登录</a>
+                        </div></li>
+                    <li class="fl">
+                        <div class="menu_hd"><a href="/home/register">免费注册</a>
+                        </div></li>
+                }
+
+            </ul>
+
+            <span class="clr"></span>
+        </div>
+    </div>
 <!-- 头部导航栏 -->
 <header>
     <div class="header_bg">
@@ -45,7 +80,7 @@
                 <div class="h_search">
                     <form>
                         <input type="text" value="">
-                        <input type="submit" value="">
+                        <input type="button" class="submit PTSearch" value="">
                     </form>
                 </div>
                 <div class="clear"></div>
@@ -53,46 +88,44 @@
         </div>
     </div>
 </header>
-    <div class="header_btm">
+<div class="header_btm">
 <div class="wrap">
-	<div class="header_sub">
-		<div class="h_menu">
-			<ul>
-				<li class="active"><a href="/home/index">首页</a></li> |
-				<li><a href="/product/index/sale">拍卖</a></li> |
-				<li><a href="/product/index/handbags">手袋</a></li> |
-				<li><a href="/product/index/accessories">饰品</a></li> |
-				<li><a href="/product/index/wallets">钱包</a></li> |
-				<li><a href="/product/index/dress">服装</a></li> |
-				<li><a href="/product/index/shoes">鞋</a></li> | 
-				<li><a href="/home/service">服务</a></li> |
-				<li><a href="/home/contact">联系我们</a></li>
-			</ul>
+<div class="header_sub">
+	<div class="h_menu">
+		<ul>
+			<li class="active"><a href="/home/index">首页</a></li> |
+			<li><a href="/product/index/sale">拍卖</a></li> | 
+			<li><a href="/product/index/accessories">饰品</a></li> |
+			<li><a href="/product/index/wallets">钱包</a></li> |
+			<li><a href="/product/index/dress">服装</a></li> |
+			<li><a href="/product/index/shoes">鞋</a></li> | 
+			<li><a href="/home/service">服务</a></li> |
+			<li><a href="/home/contact">联系我们</a></li>
+		</ul>
+	</div>
+	<div class="top-nav">
+	        <nav class="nav">	        	
+	    	<a href="#" id="w3-menu-trigger"> </a>
+	                <ul class="nav-list" style="">
+	            	    <li class="nav-item"><a class="active" href="/home/index">首页</a></li>
+						<li class="nav-item"><a href="/product/index/sale">拍卖</a></li> 
+	                    <li class="nav-item"><a href="/product/index/accessories">饰品</a></li>
+                        <li class="nav-item"><a href="/product/index/wallets">箱包</a></li>
+                        <li class="nav-item"><a href="/product/index/dress">服装</a></li>
+						<li class="nav-item"><a href="/product/index/shoes">鞋</a></li>
+						<li class="nav-item"><a href="/home/service">服务</a></li>
+						<li class="nav-item"><a href="/home/contact">联系</a></li>
+	                </ul>
+	        <div class="nav-mobile"></div></nav>
+	            <div class="search_box">
+
+	                <input type="text" value="Search" id="searchnr" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="button" calss="PTSearch" value="">
+			 
 		</div>
-		<div class="top-nav">
-	          <nav class="nav">	        	
-	    	    <a href="#" id="w3-menu-trigger"> </a>
-	                  <ul class="nav-list" style="">
-	            	        <li class="nav-item"><a class="active" href="/home/index">首页</a></li>
-							<li class="nav-item"><a href="/product/index/sale">拍卖</a></li>
-	                        <li class="nav-item"><a href="/product/index/handbags">手袋</a></li>
-	                        <li class="nav-item"><a href="/product/index/accessories">饰品</a></li>
-                            <li class="nav-item"><a href="/product/index/wallets">饰品</a></li>
-                            <li class="nav-item"><a href="/product/index/dress">服装</a></li>
-							<li class="nav-item"><a href="/product/index/shoes">鞋</a></li>
-							<li class="nav-item"><a href="/home/service">服务</a></li>
-							<li class="nav-item"><a href="/home/contact">联系</a></li>
-	                 </ul>
-	           <div class="nav-mobile"></div></nav>
-	             <div class="search_box">
-				<form>
-				   <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
-			    </form>
-			</div>
-	          <div class="clear"> </div>
+	        <div class="clear"> </div>
 	         
-         </div>		  
-	<div class="clear"></div>
+        </div>		  
+<div class="clear"></div>
 </div>
 </div>
 </div>
@@ -105,55 +138,37 @@
             <!-- start grids_of_4 -->
             <div class="grids_of_4">
                 <div class="grid1_of_4">
-                    <h4>特色销售</h4>
+                    <h4>关于我们</h4>
                     <ul class="f_nav">
-                        <li><a href="">亚历克西斯·哈德森</a></li>
-                        <li><a href="">美国服装</a></li>
-                        <li><a href="">本·谢尔曼</a></li>
-                        <li><a href="">大佛</a></li>
-                        <li><a href="">渠道</a></li>
-                        <li><a href="">基督教魔术师</a></li>
-                        <li><a href="">教练</a></li>
-                        <li><a href="">科勒哈恩</a></li>
+                        <li><a href="/home/contact">招聘英才</a></li>
+                        <li><a href="/home/service">公司简介</a></li>
+                        <li><a href="/home/contact">合作洽谈</a></li>
+                        <li><a href="/home/contact">联系我们</a></li> 
                     </ul>
                 </div>
                 <div class="grid1_of_4">
-                    <h4>男装店</h4>
+                    <h4>客服中心</h4>
                     <ul class="f_nav">
-                        <li><a href="">亚历克西斯·哈德森</a></li>
-                        <li><a href="">美国服装</a></li>
-                        <li><a href="">本·谢尔曼</a></li>
-                        <li><a href="">大佛</a></li>
-                        <li><a href="">渠道</a></li>
-                        <li><a href="">基督教魔术师</a></li>
-                        <li><a href="">教练</a></li>
-                        <li><a href="">科勒哈恩</a></li>
+                        <li><a href="">收货地址</a></li>
+                        <li><a href="">个人资料</a></li>
+                        <li><a href="">修改密码</a></li> 
                     </ul>
                 </div>
                 <div class="grid1_of_4">
-                    <h4>女装店</h4>
+                    <h4>售后服务</h4>
                     <ul class="f_nav">
-                        <li><a href="">亚历克西斯·哈德森</a></li>
-                        <li><a href="">美国服装</a></li>
-                        <li><a href="">本·谢尔曼</a></li>
-                        <li><a href="">大佛</a></li>
-                        <li><a href="">渠道</a></li>
-                        <li><a href="">基督教魔术师</a></li>
-                        <li><a href="">教练</a></li>
-                        <li><a href="">科勒哈恩</a></li>
+                        <li><a href="/home/service">退换货政策</a></li>
+                        <li><a href="/home/service">退款说明</a></li>
+                        <li><a href="/home/contact">联系卖家</a></li> 
                     </ul>
                 </div>
                 <div class="grid1_of_4">
-                    <h4>快速链接</h4>
+                    <h4>帮助中心</h4>
                     <ul class="f_nav">
-                        <li><a href="">亚历克西斯·哈德森</a></li>
-                        <li><a href="">美国服装</a></li>
-                        <li><a href="">本·谢尔曼</a></li>
-                        <li><a href="">大佛</a></li>
-                        <li><a href="">渠道</a></li>
-                        <li><a href="">基督教魔术师</a></li>
-                        <li><a href="">教练</a></li>
-                        <li><a href="">科勒哈恩</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">积分兑换</a></li>
+                        <li><a href="">积分细则</a></li>
+                        <li><a href="">已购商品</a></li> 
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -167,18 +182,24 @@
             <!-- scroll_top_btn -->
 
             <a href="#" id="toTop" style="display: none;"><span id="toTopHover"></span><span id="toTopHover" style="opacity: 1;"></span></a>
-                 <script type="text/javascript">
-                     $(document).ready(function () {
+            <script type="text/javascript">
+                var $ = jQuery;
+                $(document).ready(function () {
 
-                         var defaults = {
-                             containerID: 'toTop', // fading element id
-                             containerHoverID: 'toTopHover', // fading element hover id
-                             scrollSpeed: 1200,
-                             easingType: 'linear'
-                         };
-                         $().UItoTop({ easingType: 'easeOutQuart' });
-
-                     });
+                    var defaults = {
+                        containerID: 'toTop', // fading element id
+                        containerHoverID: 'toTopHover', // fading element hover id
+                        scrollSpeed: 1200,
+                        easingType: 'linear'
+                    }; 
+                    if(typeof($().UItoTop)=="function"){
+                        $().UItoTop({ easingType: 'easeOutQuart' });
+                    }
+                    $('.PTSearch').click(function () {
+                        var _this = $(this); 
+                        window.location.href = '/product/index?pname=' + _this.prev().val();
+                    });
+                });
             </script>
             <!--end scroll_top_btn -->
             <div class="copy">

@@ -1,16 +1,94 @@
 ﻿@{
-    ViewBag.Title = "产品详情";
+    ViewBag.Title = "产品详情"; 
+    ProEntity.Manage.M_Users CurrentUser = (ProEntity.Manage.M_Users)Session["Manager"];
 }
 @section css{
     <link rel="stylesheet" type="text/css" href="/webshop/css/productviewgallery.css" media="all" />
 }
- 
+ @section scripts{
+     <script type="text/javascript">
+         var pid = 0;
+         (function($) {
+             $.post('/Product/GetProductList', {}, function(data) {
+                 var html = "";
+                 for (var i = 0; i < data.items.length; i++) {
+                     html += '<li><a href="/product/detail/' + data.items[i].AutoID + '">' + data.items[i].ProductName + '</a></li>';
+                 }
+                 $('#xsph').html(html);
+             });
+
+             $.post('/Product/GetProductDetail', { id: @ViewBag.ID }, function(data) {
+
+                 if (data.item != null) {
+                     pid = data.item.AutoID;
+                     $('.content-1').find('p').text(data.item.Remark);
+                     $('.content-2').find('p').text(data.item.Content);
+                     $('.content-3').find('p').text(data.item.SJSContent);
+                     $('#ptjianjie').text(data.item.Tips);
+                     $('#salePrice').html('$' + data.item.SalePrice);
+                     var skus = '', sizes = '', skuarr = data.item.Skus.split(','), sizearr = data.item.Size.split(',');
+                     for (var k = 0; k < skuarr.length; k++) {
+                         skus += '<option value="' + skuarr[k] + '">' + skuarr[k] + '</option>';
+                     }
+                     $('#psku').html(skus);
+                     for (var k = 0; k < sizearr.length; k++) {
+                         sizes += '<option value="' + sizearr[k] + '">' + sizearr[k] + '</option>';
+                     }
+                     $('#psize').html(sizes);
+                     var ss = '{"prod_1":{"main":{"orig":"' + data.item.Img + '","main":"' + data.item.Img + '","thumb":"' + data.item.Img + '","label":""},"gallery":{';
+                     var imgarr = data.item.Imgs.split('', '');
+                     for (var k = 0; k < imgarr.length; k++) {
+                         ss += '"item_' + k + '":{"orig": "' + imgarr[k] + '","main": "' + imgarr[k] + '","thumb": "' + imgarr[k] + '","label": ""}';
+                     }
+                     ss += '},"type":"simple","video":false}}';
+
+                     //var prodGallery = jQblvg.parseJSON('{"prod_1":{"main":{"orig":"/webshop/images/0001-2.jpg","main":"/webshop/images/large/0001-2.jpg","thumb":"/webshop/images/small/0001-2.jpg","label":""},"gallery":{"item_0":{"orig":"/webshop/images/0001-2.jpg","main":"/webshop/images/large/0001-2.jpg","thumb":"/webshop/images/small/0001-2.jpg","label":""},"item_1":{"orig":"/webshop/images/0001-1.jpg","main":"/webshop/images/large/0001-1.jpg","thumb":"/webshop/images/small/0001-1.jpg","label":""},"item_2":{"orig":"/webshop/images/0001-5.jpg","main":"/webshop/images/large/0001-5.jpg","thumb":"/webshop/images/small/0001-5.jpg","label":""},"item_3":{"orig":"/webshop/images/0001-3.jpg","main":"/webshop/images/large/0001-3.jpg","thumb":"/webshop/images/small/0001-3.jpg","label":""},"item_4":{"orig":"/webshop/images/0001-4.jpg","main":"/webshop/images/large/0001-4.jpg","thumb":"/webshop/images/small/0001-4.jpg","label":""}},"type":"simple","video":false}}'),
+                     var prodGallery = jQblvg.parseJSON(ss);
+                     gallery_elmnt = jQblvg('.product-img-box'),
+                         galleryObj = new Object(),
+                         gallery_conf = new Object();
+                     gallery_conf.moreviewitem = '<a class="cs-fancybox-thumbs" data-fancybox-group="thumb" style="width:64px;height:85px;" href=""  title="" alt=""><img src="" src_main="" width="64" height="85" title="" alt="" /></a>';
+                     gallery_conf.animspeed = 200;
+                     jQblvg(document).ready(function() {
+                         galleryObj[1] = new prodViewGalleryForm(prodGallery, 'prod_1', gallery_elmnt, gallery_conf, '.product-image', '.more-views', 'http:');
+                         jQblvg('.product-image .cs-fancybox-thumbs').absoluteClick();
+                         jQblvg('.cs-fancybox-thumbs').fancybox({
+                             prevEffect: 'none',
+                             nextEffect: 'none',
+                             closeBtn: true,
+                             arrows: true,
+                             nextClick: true,
+                             helpers: {
+                                 thumbs: {
+                                     width: 64,
+                                     height: 85,
+                                     position: 'bottom'
+                                 }
+                             }
+                         });
+                         jQblvg('#wrap').css('z-index', '100');
+                         jQblvg('.more-views-container').elScroll({ type: 'vertical', elqty: 4, btn_pos: 'border', scroll_speed: 400 });
+
+                     });
+                 }
+             });
+             $('#addcart').click(function() {
+                 window.location.href ='/product/balanceorder?baseinfo='+pid+','+$('#psku').val()+','+ $('#psize').val()+','+$('#pnum').val();
+             });
+
+         })(jQuery);
+
+         function initGallery(a, b, element) {
+             galleryObj[a] = new prodViewGalleryForm(prods, b, gallery_elmnt, gallery_conf, '.product-image', '.more-views', '');
+         };
+     </script>
+ }
     <script type="text/javascript" src="/webshop/js/cloud-zoom.1.0.3.min.js"></script>
 <script type="text/javascript" src="/webshop/js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="/webshop/js/jquery.fancybox-buttons.js"></script>
 <script type="text/javascript" src="/webshop/js/jquery.fancybox-thumbs.js"></script>
 <script type="text/javascript" src="/webshop/js/productviewgallery.js"></script>
- 
+ 	
 <div class="main_bg">
 <div class="wrap">	
 	<div class="main">
@@ -51,40 +129,13 @@
 				    </div>
 				    <div class="product-image"> 
 				        <a class="cs-fancybox-thumbs cloud-zoom" rel="adjustX:30,adjustY:0,position:'right',tint:'#202020',tintOpacity:0.5,smoothMove:2,showTitle:true,titleOpacity:0.5" data-fancybox-group="thumb" href="/webshop/images/0001-2.jpg" title="Women Shorts" alt="Women Shorts">
-				           	<img src="/webshop/images/0001-2.jpg" alt="Women Shorts" title="Women Shorts" />
+				           	<img src="/modules/images/img-noimg.png" alt="Women Shorts" title="Women Shorts" />
 				        </a>
 				   </div>
 					<script type="text/javascript">
-						var prodGallery = jQblvg.parseJSON('{"prod_1":{"main":{"orig":"/webshop/images/0001-2.jpg","main":"/webshop/images/large/0001-2.jpg","thumb":"/webshop/images/small/0001-2.jpg","label":""},"gallery":{"item_0":{"orig":"/webshop/images/0001-2.jpg","main":"/webshop/images/large/0001-2.jpg","thumb":"/webshop/images/small/0001-2.jpg","label":""},"item_1":{"orig":"/webshop/images/0001-1.jpg","main":"/webshop/images/large/0001-1.jpg","thumb":"/webshop/images/small/0001-1.jpg","label":""},"item_2":{"orig":"/webshop/images/0001-5.jpg","main":"/webshop/images/large/0001-5.jpg","thumb":"/webshop/images/small/0001-5.jpg","label":""},"item_3":{"orig":"/webshop/images/0001-3.jpg","main":"/webshop/images/large/0001-3.jpg","thumb":"/webshop/images/small/0001-3.jpg","label":""},"item_4":{"orig":"/webshop/images/0001-4.jpg","main":"/webshop/images/large/0001-4.jpg","thumb":"/webshop/images/small/0001-4.jpg","label":""}},"type":"simple","video":false}}'),
-						    gallery_elmnt = jQblvg('.product-img-box'),
-						    galleryObj = new Object(),
-						    gallery_conf = new Object();
-						    gallery_conf.moreviewitem = '<a class="cs-fancybox-thumbs" data-fancybox-group="thumb" style="width:64px;height:85px;" href=""  title="" alt=""><img src="" src_main="" width="64" height="85" title="" alt="" /></a>';
-						    gallery_conf.animspeed = 200;
-						jQblvg(document).ready(function() {
-						    galleryObj[1] = new prodViewGalleryForm(prodGallery, 'prod_1', gallery_elmnt, gallery_conf, '.product-image', '.more-views', 'http:');
-						        jQblvg('.product-image .cs-fancybox-thumbs').absoluteClick();
-						    jQblvg('.cs-fancybox-thumbs').fancybox({ prevEffect : 'none', 
-						                             nextEffect : 'none',
-						                             closeBtn : true,
-						                             arrows : true,
-						                             nextClick : true, 
-						                             helpers: {
-						                               thumbs : {
-						                                   width: 64,
-						                                   height: 85,
-						                                   position: 'bottom'
-						                               }
-						                             }
-						                             });
-						    jQblvg('#wrap').css('z-index', '100');
-						            jQblvg('.more-views-container').elScroll({type: 'vertical', elqty: 4, btn_pos: 'border', scroll_speed: 400 });
-						        
-						});
+					   
 						
-						function initGallery(a,b,element) {
-						    galleryObj[a] = new prodViewGalleryForm(prods, b, gallery_elmnt, gallery_conf, '.product-image', '.more-views', '');
-						};
+					  
 					</script>
 				</div>
 				</div>
@@ -95,42 +146,33 @@
 			<div class="span1_of_1_des">
 				  <div class="desc1">
 				    <h3> 湖蓝史努比个性T恤</h3>
-					<p title="产品简介">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-					<h5>$ 399 <a href="#">click for offer</a></h5>
+					<p title="产品简介" id="ptjianjie"></p>
+					<h5 id="salePrice"><a href="#">click for offer</a></h5>
 					<div class="available">
 						<h4>产品属性 :</h4>
 						<ul>
 							<li>颜色:
-								<select>
-								<option>银</option>
-								<option>黑</option>
-								<option>深灰</option>
-								<option>红</option>
-							</select></li>
+								<select id="psku"> </select></li>
 							<li>尺码:
-								<select>
-									<option>L</option>
-									<option>XL</option>
-									<option>S</option>
-									<option>M</option>
+							    <select id="psize"> 
 								</select>
 							</li>
 							<li>数量:
-								<select>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+								<select id="pnum">
+								    <option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
 								</select>
 							</li>
 						</ul>
 						<div class="btn_form">
 							<form>
-								<input type="submit" value="添加到购物车" title="" />
+								<input type="button" class="submit" id="addcart" value="添加到购物车" title="" />
 							</form>
 						</div>
-						<span class="span_right"><a href="#">登陆保存到购物车中 </a></span>
+						<span class="span_right"style="display:@(CurrentUser!=null?"none":"block")" ><a href="/home/login">登陆保存到购物车中 </a></span>
 						<div class="clear"></div>
 					</div>
 					<div class="share-desc">
@@ -163,35 +205,21 @@
 					
 			        <div class="content">
 				        <div class="content-1">
-				        	<p class="para top"><span>LOREM IPSUM</span> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
-							<ul>
-								<li>Research</li>
-								<li>Design and Development</li>
-								<li>Porting and Optimization</li>
-								<li>System integration</li>
-								<li>Verification, Validation and Testing</li>
-								<li>Maintenance and Support</li>
-							</ul>
+				            <p class="para top">
+				                
+				            </p>
 							<div class="clear"></div>
 						</div>
 				        <div class="content-2">
-							<p class="para"><span>WELCOME </span> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections </p>
-							<ul class="qua_nav">
-								<li>Multimedia Systems</li>
-								<li>Digital media adapters</li>
-								<li>Set top boxes for HDTV and IPTV Player applications on various Operating Systems and Hardware Platforms</li>
-							</ul>
+				            <p class="para"> 
+
+				            </p>
+							 
 						</div>
 				        <div class="content-3">
-				        	<p class="para top"><span>LOREM IPSUM</span> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined </p>
-							<ul>
-								<li>Research</li>
-								<li>Design and Development</li>
-								<li>Porting and Optimization</li>
-								<li>System integration</li>
-								<li>Verification, Validation and Testing</li>
-								<li>Maintenance and Support</li>
-							</ul>
+				            <p class="para top"> 
+
+				            </p>
 							<div class="clear"></div>
 						</div>
 			        </div>
@@ -202,23 +230,11 @@
 			 <div class="left_sidebar">
 					<div class="sellers">
 						<h4>热销排行</h4>
-						<div class="single-nav">
-			                <ul>
-			                   <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>			                    
-			                </ul>
-			              </div>
+					    <div class="single-nav">
+					        <ul id="xsph"> 
+					        </ul>
+					    </div>
+				
 						  <div class="banner-wrap bottom_banner color_link">
 								<a href="#" class="main_link">
 								<figure><img src="/webshop/images/delivery.png" alt=""></figure>

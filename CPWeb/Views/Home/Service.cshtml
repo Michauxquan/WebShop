@@ -52,20 +52,7 @@
 					<div class="sellers">
 						<h4>Best Sellers</h4>
 						<div class="single-nav">
-			                <ul>
-			                   <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">The standard chunk of Lorem Ipsum</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>
-			                    <li><a href="#">Always free from repetition</a></li>			                    
+			                <ul id="xsph"> 		                    
 			                </ul>
 			              </div>
 					</div>
@@ -74,4 +61,16 @@
 			</div>
 	</div>
 </div>
-</div>	
+
+</div>
+<script type="text/javascript">
+    (function($) {
+        $.post('/Product/GetProductList', {}, function(data) {
+            var html = "";
+            for (var i = 0; i < data.items.length; i++) {
+                html += '<li><a href="/product/detail/' + data.items[i].AutoID + '">' + data.items[i].ProductName + '</a></li>';
+            }
+            $('#xsph').html(html);
+        });
+    })(jQuery);
+</script>

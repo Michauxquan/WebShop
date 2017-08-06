@@ -233,6 +233,7 @@
     <Content Include="modules\images\ico_search.png" />
     <Content Include="modules\images\ico_searchhover.png" />
     <Content Include="modules\images\img-noimg.png" />
+    <Content Include="modules\images\logo.png" />
     <Content Include="modules\images\minus.png" />
     <Content Include="modules\images\order.png" />
     <Content Include="modules\images\plus.png" />
@@ -354,8 +355,12 @@
     <Content Include="modules\scripts\withdraw.js" />
     <Content Include="Scripts\yzm.js" />
     <Content Include="Web.config" />
+    <Content Include="webshop\css\base.css" />
+    <Content Include="webshop\css\buyConfirm.css" />
+    <Content Include="webshop\css\checkOut.css" />
     <Content Include="webshop\css\owl.carousel.css" />
     <Content Include="webshop\css\productviewgallery.css" />
+    <Content Include="webshop\css\public.css" />
     <Content Include="webshop\css\slider.css" />
     <Content Include="webshop\css\style.css" />
     <Content Include="webshop\images\0001-1.jpg" />
@@ -363,6 +368,7 @@
     <Content Include="webshop\images\0001-3.jpg" />
     <Content Include="webshop\images\0001-4.jpg" />
     <Content Include="webshop\images\0001-5.jpg" />
+    <Content Include="webshop\images\add_cart.png" />
     <Content Include="webshop\images\arrow-next.png" />
     <Content Include="webshop\images\arrow-prev.png" />
     <Content Include="webshop\images\arrow.png" />
@@ -442,6 +448,9 @@
     <Content Include="webshop\images\w_pic4.jpg" />
     <Content Include="webshop\images\w_pic5.jpg" />
     <Content Include="webshop\images\w_pic6.jpg" />
+    <Content Include="webshop\js\address_all.js" />
+    <Content Include="webshop\js\base.min.js" />
+    <Content Include="webshop\js\checkout.min.js" />
     <Content Include="webshop\js\cloud-zoom.1.0.3.min.js" />
     <Content Include="webshop\js\easing.js" />
     <Content Include="webshop\js\fliplightbox.min.js" />
@@ -452,6 +461,7 @@
     <Content Include="webshop\js\jquery.fancybox.pack.js" />
     <Content Include="webshop\js\jquery.min.js" />
     <Content Include="webshop\js\jquery.mixitup.min.js" />
+    <Content Include="webshop\js\jquery_cart.js" />
     <Content Include="webshop\js\modernizr.custom.28468.js" />
     <Content Include="webshop\js\move-top.js" />
     <Content Include="webshop\js\owl.carousel.js" />
@@ -556,6 +566,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\baidumap.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\Product\BalanceOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

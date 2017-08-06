@@ -58,6 +58,7 @@
     <Compile Include="Common\Lottery.cs" />
     <Compile Include="Common\Plays.cs" />
     <Compile Include="Common\Menu.cs" />
+    <Compile Include="Common\Product.cs" />
     <Compile Include="ExpandFillData.cs" />
     <Compile Include="Lottery\LotteryResult.cs" />
     <Compile Include="Lottery\LotteryOrder.cs" />

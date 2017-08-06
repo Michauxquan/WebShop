@@ -37,6 +37,38 @@ body {
 	background:#ffffff;
 	font-size: 100%;
 }
+/*顶部快捷菜单的样式*/
+.shortcut_v2013{width: 100%; background-color: #f5f5f5; border-bottom: 1px solid #d8d8d8;}
+.shortcut_v2013 .w{height: 30px; line-height: 30px;color: #663;}
+.shortcut_v2013  a{ color: #3CC395;}
+.shortcut_v2013 .menu{height: 24px; line-height: 24px; margin-top: 2px;position: relative;}
+.shortcut_v2013 .menu_hd{padding: 1px 12px 0 12px;position: relative;}
+.shortcut_v2013 .hover{}
+.shortcut_v2013 .hover .menu_hd{padding: 0 11px;border: 1px solid #ddd; border-bottom: 0; background: #fff;z-index: 2; }
+.shortcut_v2013 .li_m5 li{padding: 0 2px 0 3px;}
+.shortcut_v2013 .menu_hd b{display: inline-block;width:8px;height:8px;overflow:hidden;margin-left:5px;line-height:10px;
+    -webkit-transition: -webkit-transform .2s ease-in;
+    -webkit-backface-visibility: hidden;
+    -moz-transition: -moz-transform .2s ease-in;
+    -o-transition: -o-transform .2s ease-in;
+    transition: transform .2s ease-in;}
+.shortcut_v2013 .hover b{
+    border-color:#323030 transparent transparent;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.shortcut_v2013 b em{display: inline-block;width: 0;height: 0;border-style:solid dashed dashed;border-width:4px;border-color: #323030 transparent transparent;overflow: hidden;zoom: 1;font-size: 0;}
+.shortcut_s{border-right: 1px solid #bababa;}
+.menu_bd{display: none;border: 1px solid #ddd; position: absolute; top:24px;left:-1px; background: #fff; z-index: 10;padding:5px 10px;width: 100px;}
+.menu_bd_spw{width: 360px;}
+.shortcut_v2013 .hover  .menu_bd{display: block;}
+.fl{float:left}
+.fr{float:right}
+.clearfix:after{clear: both;content: "";display: block;height: 0;line-height: 0;visibility: hidden;}
+
 .wrap{
 	margin:0 auto;
 	width:80%;
@@ -87,7 +119,22 @@ body {
 	position: absolute;
 	right: 0px;
 }
+.h_search .submit{
+	-webkit-appearance: none;
+	background: url('../images/search.png') no-repeat 10px 5px;
+	padding: 6px 0px;
+	border: none;
+	cursor: pointer;
+	width: 8.33%;
+	line-height: 1.5em;
+	outline: none;
+	position: absolute;
+	right: 0px;
+}
 .h_search input[type="submit"]:hover {
+	background: url('../images/search_h.png') no-repeat 10px 5px;
+}
+.h_search .submit:hover {
 	background: url('../images/search_h.png') no-repeat 10px 5px;
 }
 /*------start-top-nav------*/
@@ -168,7 +215,23 @@ body {
 	-o-transition: 0.5s ease;
 	-webkit-transition: 0.5s ease;
 }
+.top-nav-right .submit{
+	background: url(../images/search-icon.png) no-repeat 42% 50% #bd7f1c;
+	padding:10px 20px;
+	border: none;
+	display: block;
+	float: left;
+	margin:0;
+	outline:none;
+	cursor:pointer;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
 .top-nav-right input[type="submit"]:hover{
+	background: url(../images/search-icon.png) no-repeat 42% 50% #996004;
+}
+.top-nav-right .submit:hover{
 	background: url(../images/search-icon.png) no-repeat 42% 50% #996004;
 }
 .top-nav-right input[type="text"]{
@@ -205,6 +268,18 @@ body {
 	text-transform: capitalize;
 }
 .search_box form input[type="submit"] {
+	-webkit-appearance: none;
+	background: url('../images/search.png') no-repeat 10px 5px;
+	padding: 6px 0px;
+	border: none;
+	cursor: pointer;
+	width: 20.33%;
+	line-height: 1.5em;
+	outline: none;
+	position: absolute;
+	right: 0px;
+}
+.search_box form .submit {
 	-webkit-appearance: none;
 	background: url('../images/search.png') no-repeat 10px 5px;
 	padding: 6px 0px;
@@ -848,7 +923,29 @@ p.para{
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+.contact-form .submit{
+	margin-top:10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	-webkit-appearance: none;
+	cursor:pointer;
+	color: #ffffff;
+	background: #3CC395;
+	border:none;
+	outline:none;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 12px 38px;
+	font-size: 0.875em;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
 .contact-form input[type="submit"]:hover{
+	background: #555555;
+	color: #ffffff;
+}
+.contact-form .submit:hover{
 	background: #555555;
 	color: #ffffff;
 }
@@ -1008,7 +1105,26 @@ p.para{
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
+.btn_form form .submit{
+	font-family: 'Source Sans Pro', sans-serif;
+	cursor:pointer;
+	border:none;
+	outline:none;
+	display: inline-block;
+	font-size: 1em;
+	padding: 10px 34px;
+	background: #555555;
+	color:#fff;
+	text-transform: capitalize;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
 .btn_form form input[type="submit"]:hover{
+	background: #3CC395;
+}
+.btn_form form .submit:hover{
 	background: #3CC395;
 }
 .span_right{

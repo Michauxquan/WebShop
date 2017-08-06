@@ -2,40 +2,54 @@
     ViewBag.Title = "产品列表";
 }
 @section scripts{
-     
+
     <script type="text/javascript" src="/webshop/js/jquery.mixitup.min.js"></script>
     <script type="text/javascript" src="/webshop/js/fliplightbox.min.js"></script>
-<script type="text/javascript">$('body').flipLightBox()</script>
-	<script type="text/javascript">
-	    $(function () {
-	        var filterList = {
-	            init: function () {
-	                $('#portfoliolist').mixitup({
-	                    targetSelector: '.portfolio',
-	                    filterSelector: '.filter',
-	                    effects: ['fade'],
-	                    easing: 'snap',
-	                    onMixEnd: filterList.hoverEffect()
-	                });
-	            },
+    <script type="text/javascript">$('body').flipLightBox()</script>
+    <script type="text/javascript">
+        $(function() {
 
-	            hoverEffect: function () {
-	                $('#portfoliolist .portfolio').hover(
-                        function () {
-                            $(this).find('.label').stop().animate({ bottom: 0 }, 200, 'easeOutQuad');
-                            $(this).find('img').stop().animate({ top: -30 }, 500, 'easeOutQuad');
-                        },
-                        function () {
-                            $(this).find('.label').stop().animate({ bottom: -40 }, 200, 'easeInQuad');
-                            $(this).find('img').stop().animate({ top: 0 }, 300, 'easeOutQuad');
-                        }
-                    );
-	            }
-	        };
-	        filterList.init();
-	    });
-	</script>
-	
+            $.post('/Product/GetProductList', { id: '@ViewBag.ID', pname: '@ViewBag.PName ' }, function (data) {
+                var html = "";
+                for (var i = 0; i < data.items.length; i++) {
+                    html += '<div class="portfolio ' + data.items[i].Sex + ' mix_all" data-cat="' + data.items[i].Sex + '" style="display: inline-block;  opacity: 1;"><div class="portfolio-wrapper">' +
+                        '<a href="/product/detail/' + data.items[i].AutoID + '"><img src="' + data.items[i].Img + '" alt="Image 2" style="top: 0px;">' +
+                        '</a><div class="label" style="bottom: -40px;"><div class="label-text"><a class="text-title">' + data.items[i].ProductName+ '</a>' +
+                        '<span class="text-category">$' + data.items[i].SalePrice + ' indulge</span></div><div class="label-bg"></div></div></div></div>	';
+
+                }
+                $('#portfoliolist').html(html);
+                var filterList = {
+                    init: function () {
+                        $('#portfoliolist').mixitup({
+                            targetSelector: '.portfolio',
+                            filterSelector: '.filter',
+                            effects: ['fade'],
+                            easing: 'snap',
+                            onMixEnd: filterList.hoverEffect()
+                        });
+                    },
+
+                    hoverEffect: function () {
+                        $('#portfoliolist .portfolio').hover(
+                            function () {
+                                $(this).find('.label').stop().animate({ bottom: 0 }, 200, 'easeOutQuad');
+                                $(this).find('img').stop().animate({ top: -30 }, 500, 'easeOutQuad');
+                            },
+                            function () {
+                                $(this).find('.label').stop().animate({ bottom: -40 }, 200, 'easeInQuad');
+                                $(this).find('img').stop().animate({ top: 0 }, 300, 'easeOutQuad');
+                            }
+                        );
+                    }
+                };
+                filterList.init();
+            });
+
+           
+        });
+    </script>
+
 }
 <div class="main_bg">
 <div class="wrap">	
@@ -44,9 +58,9 @@
 			<div class="gallery1">
 					<div class="container">
 					<ul id="filters" class="clearfix">
-						<li><span class="filter active" data-filter="app card icon logo web">全部</span></li>
-						<li><span class="filter" data-filter="app card web">男士</span></li>
-						<li><span class="filter" data-filter="icon web card">女士</span></li> 
+						<li><span class="filter active" data-filter="0 1">全部</span></li>
+						<li><span class="filter" data-filter="0">男士</span></li>
+						<li><span class="filter" data-filter="1">女士</span></li> 
 					</ul>
 			<div id="portfoliolist">
 			<div class="portfolio logo1 mix_all" data-cat="logo" style="display: inline-block;  opacity: 1;">
@@ -234,3 +248,4 @@
     <div id="flb-lightbox-text" style="position: fixed; bottom: 0px; width: 90%; padding: 15px 6% 15px 5%; margin-right: auto; margin-left: auto; background-color: rgb(255, 255, 255); opacity: 0.8; font-size: 14px; line-height: 1.4; color: rgb(0, 0, 0); text-align: center; box-sizing: content-box; display: none;"></div>
     <div id="flb-load2" style="position: fixed; top: 40%; left: 0px; width: 100%; text-align: center; font-size: 14px; color: #fff; opacity: 0.3;"></div>
 </div>
+ 

@@ -81,6 +81,7 @@
     <Compile Include="Common\CommonBusiness.cs" />
     <Compile Include="Common\Encrypt.cs" />
     <Compile Include="Common\LogBusiness.cs" />
+    <Compile Include="Common\ProductBusiness.cs" />
     <Compile Include="Lottery\LotteryOrderBusiness.cs" />
     <Compile Include="Manage\FeedBackBusiness.cs" />
     <Compile Include="Manage\ManageSystemBusiness.cs" />
@@ -113,7 +114,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
