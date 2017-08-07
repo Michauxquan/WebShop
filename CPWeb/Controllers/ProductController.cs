@@ -25,7 +25,7 @@ namespace CPiao.Controllers
 
         public ActionResult BalanceOrder(string baseinfo)
         {
-            if (CurrentUser != null)
+            if (CurrentUser == null)
             {
                 return Redirect("/Home/Login");
             }

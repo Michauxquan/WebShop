@@ -1,0 +1,45 @@
+﻿  @{
+      ProEntity.Manage.M_Users CurrentUser = (ProEntity.Manage.M_Users) Session["Manager"];
+  }
+
+<div id="memberL"> 
+    <!--下拉菜单-->
+    <section id="conter">
+        <section id="help-left">
+            <div id="uinfobox">
+
+                <div id="imgbox">
+                    <img src="/modules/img/head.jpg"/>
+                </div>
+
+                <div id="infobox">
+                    <ul style="margin-top: 5px;">
+                        <li class="cblock"> 您好，@CurrentUser.UserName</li>
+                       @* <li style="width: 143px;"><span style="float: left">元宝：</span><span id="usertotalmoney" style="float: left;width:107px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;" class="usertotalmoney Fred bold font10">0.00</span> <span class="clear"></span></li>
+                        <li style="width: 143px;"><span style="float: left">银行：</span><span id="banktotalmoney" style="float: left;width:107px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;" class="banktotalmoney Fred bold font10">0</span><span class="clear"></span></li>*@
+                    </ul>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <details class="menu" open>
+                <summary>会员信息</summary>
+                <ul>
+                    <li><a href="@Url.Action("userinfo","User")">我的资料</a></li>
+                    <li><a href="@Url.Action("AccountSafe","Account")">密码修改</a></li>
+                    <li><a href="@Url.Action("userbank","User")">收货地址</a></li> 
+                </ul>
+            </details> 
+            <details class="menu" open>
+                <summary>订单管理</summary>
+                <ul>
+                    <li><a href="@Url.Action("Order","User")">我的订单</a></li>
+                    <li><a href="@Url.Action("AccountChange","User")">帐变记录</a></li> 
+                </ul>
+            </details>
+          
+        </section>
+        <div class="clearfix"></div>
+        <section id="help-right"></section>
+    </section>
+</div>

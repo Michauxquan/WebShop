@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "基本资料";
+    ProEntity.Manage.M_Users CurrentUser = (ProEntity.Manage.M_Users)Session["Manager"];
+}
+@section css{
+    <link href="/modules/css/system/system.css" rel="stylesheet" type="text/css" />
+    <link href="/webshop/css/ucenter.css" rel="stylesheet" type="text/css" />}
+<div class="bigBox" id="member">
+<div class="box">
+@Html.Partial("_menu")
+<div id="memberR">
+    <div style="border-bottom: solid 2px #ccc; padding-bottom:5px;">
+        <div class="left">
+            <img src="/modules/baseimg/banner.png"/>
+        </div>
+        <div class="left pLeft10">
+            <h2 id="memberRT" class="cblock">我的资料</h2>
+            <span class="font10">管理个人资料</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <form name="userInfoForm" action="">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table-list font10"> 
+
+          <tr>
+            <th width="100" align="right">昵称：</th>
+            <td><input type="text" name="nickName" value="@CurrentUser.UserName" class="text" maxlength="15" style="width:200px" />@*<span class="tip">这里是提示信息</span>*@</td>
+          </tr>  
+          <tr>
+            <th width="100" align="right">性别：</th>
+            <td>
+             <label class="radio"><input type="radio" name="gender" value="1" @{if (CurrentUser.Gender == 1)
+                                                                                {<text>checked="checked"</text>}} />男</label>
+             <label class="radio"><input type="radio" name="gender" value="2" @{if (CurrentUser.Gender == 2)
+                                                                                {<text>checked="checked"</text>}} />女</label>
+             <label class="radio"><input type="radio" name="gender" value="0" @{if (CurrentUser.Gender == 0)
+                                                                                {<text>checked="checked"</text>}} />未知</label>
+             </td>
+          </tr>
+              <tr>
+           <th width="100" align="right">手机：</th>
+            <td><input type="text" style="border: none;width:200px" value="@(string.IsNullOrEmpty(CurrentUser.MobilePhone)?"":CurrentUser.MobilePhone)" class="text" @(string.IsNullOrEmpty(CurrentUser.MobilePhone)?"":"readonly=true") maxlength="18" style="width:200px" /> </td>
+          </tr>
+          <tr>
+            <th width="100" align="right">邮箱：</th>
+            <td><input type="text"  style="border: none;width:200px" value="@(string.IsNullOrEmpty(CurrentUser.Email)?"":CurrentUser.Email)" class="text" @(string.IsNullOrEmpty(CurrentUser.Email)?"":"readonly=true") maxlength="18" style="width:200px" /> @(string.IsNullOrEmpty(CurrentUser.Email)?"未绑定":"已绑定")</td>
+          </tr>
+
+          <tr>
+            <th width="100" align="right">收款人：</th>
+            <td><input type="text" name="realName" value="@(string.IsNullOrEmpty(CurrentUser.TrueName)?"":CurrentUser.TrueName)" @(string.IsNullOrEmpty(CurrentUser.TrueName)?"":"readonly=true") class="text" maxlength="15" style="width:200px" /><span class="tip">必须与支付宝的收款姓名一致,填后不可修改</span></td>
+          </tr> 
+        <tr>
+           
+          <tr>
+            <th width="100" align="right">&nbsp;</th>
+            <td><a href="#" class="greenBT" style="font-size:14px; padding:3px 20px;" onclick="editUser()">提交</a></td>
+          </tr>
+        </table>
+    </form> 
+</div>
+
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+

@@ -36,6 +36,9 @@ namespace ProEntity.Manage
 	    /// </summary>
 	    public string UserID { get; set; }
 
+        public int Gender { get; set; }
+        public string TrueName { get; set; }
+
 	    /// 
 		public int AutoID{ get; set; } 
 		/// <summary>

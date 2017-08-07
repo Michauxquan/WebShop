@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "UserDefault";
+    ProEntity.Manage.M_Users CurrentUser = (ProEntity.Manage.M_Users)Session["Manager"];
+}
+@section css{ <link href="/webshop/css/ucenter.css" rel="stylesheet" type="text/css" />}
+<div class="bigBox" id="member">
+<div class="box">
+@Html.Partial("_menu")
+<div id="memberR">
+    
+    <form name="userInfoForm" action="">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="memberTable" style=" padding: 5px 10px 20px 20px; ">
+            <tr>
+                <td id="memberRT" style="width: 370px;  color: #000;padding-bottom:10px;"> <h4 style=" float: left;">您好，@CurrentUser.UserName </h4> <span class="Fred left"> &nbsp;(ID:@CurrentUser.AutoID &nbsp; 账号:@CurrentUser.Email)</span></td>
+                <td style="padding-bottom:10px;">
+
+                    <div style="border: solid 1px #ddd; padding: 2px 3px;   height: 18px; width: 42px; float: left;">
+                        <img src="/modules/baseimg/mobile.png" style="width: 18px; height: 18px; display: none;"/>
+                        <img src="/modules/baseimg/@(string.IsNullOrEmpty(CurrentUser.MobilePhone ) ? "error" : "ok")).png" style="width: 18px; height: 18px; display: none;"/>
+                        <img src="/modules/baseimg/email.png" style="width: 18px; height: 18px;"/>
+                        <img src="/modules/baseimg/@(string.IsNullOrEmpty(CurrentUser.Email )? "error" : "ok").png" style="width: 18px; height: 18px;"/>
+                    </div>
+                    <div style="float: left; margin-left: 10px;"><a href="@Url.Action("Logout", "home")" alt="">[退出]</a>
+                    </div>
+                    <div class="clear"></div>
+                </td>
+            </tr>
+          
+
+          <tr style="background: #fff7f0; ">
+            <td align="right" style="width:370px;padding-top:10px;text-indent: 24px;height:26px; line-height: 24px;">您当前余额：  <span  class="usertotalmoney Fred bold" >0</span>  <a href="/User/AccountChange" style="color: #FF6B6B;">消费明细</a></td> 
+            <td width="240">最后一次登录时间：<span value="@(CurrentUser.UpdateTime)"  style="width:200px" /></td>
+          </tr>
+  
+          <tr style="background: #fff7f0;">
+              <td width="370" align="right"  style="padding-bottom:10px;text-indent: 24px;height:26px; line-height: 24px;">待收货： <span  class="banktotalmoney Fred bold" >0</span> &nbsp;当前经验： <span   >0</span></td>
+            <td width="240" align="right">最后一次登录IP： <span style="width:120px" >@CurrentUser.LastLoginIP</span></td>
+          </tr> 
+        </table>
+    </form>
+    
+</div>
+
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>

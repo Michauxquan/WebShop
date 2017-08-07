@@ -169,6 +169,22 @@
     <Content Include="modules\assets\jquery.pwstabs.css" />
     <Content Include="modules\assets\jquery.pwstabs.min.css" />
     <Content Include="modules\assets\styles.css" />
+    <Content Include="modules\baseimg\banner.png" />
+    <Content Include="modules\baseimg\db1.jpg" />
+    <Content Include="modules\baseimg\db2.jpg" />
+    <Content Include="modules\baseimg\email.png" />
+    <Content Include="modules\baseimg\error.png" />
+    <Content Include="modules\baseimg\fw.png" />
+    <Content Include="modules\baseimg\hb2.jpg" />
+    <Content Include="modules\baseimg\liebiao.png" />
+    <Content Include="modules\baseimg\mobile.png" />
+    <Content Include="modules\baseimg\msgbgl.png" />
+    <Content Include="modules\baseimg\ok.png" />
+    <Content Include="modules\baseimg\tb_1.jpg" />
+    <Content Include="modules\baseimg\tb_2.jpg" />
+    <Content Include="modules\baseimg\tb_3.jpg" />
+    <Content Include="modules\baseimg\tb_4.jpg" />
+    <Content Include="modules\baseimg\toutu.jpg" />
     <Content Include="modules\css\base.css" />
     <Content Include="modules\css\diyUpload.css" />
     <Content Include="modules\css\head.css" />
@@ -245,6 +261,34 @@
     <Content Include="modules\img\down-arrow.png" />
     <Content Include="modules\img\head.jpg" />
     <Content Include="modules\img\header-bg.png" />
+    <Content Include="modules\img\litte-icon\1.png" />
+    <Content Include="modules\img\litte-icon\11.png" />
+    <Content Include="modules\img\litte-icon\account-safe.png" />
+    <Content Include="modules\img\litte-icon\coupon.png" />
+    <Content Include="modules\img\litte-icon\getjf01.jpg" />
+    <Content Include="modules\img\litte-icon\getjf02.jpg" />
+    <Content Include="modules\img\litte-icon\jfen.png" />
+    <Content Include="modules\img\litte-icon\logo.png" />
+    <Content Include="modules\img\litte-icon\logo0.png" />
+    <Content Include="modules\img\litte-icon\logo1.png" />
+    <Content Include="modules\img\litte-icon\logo3.png" />
+    <Content Include="modules\img\litte-icon\record.png" />
+    <Content Include="modules\img\litte-icon\三角 %282%29.png" />
+    <Content Include="modules\img\litte-icon\三角.png" />
+    <Content Include="modules\img\litte-icon\优惠券.png" />
+    <Content Include="modules\img\litte-icon\关闭差.png" />
+    <Content Include="modules\img\litte-icon\对号.png" />
+    <Content Include="modules\img\litte-icon\尖括号-粗大-右.png" />
+    <Content Include="modules\img\litte-icon\手机.png" />
+    <Content Include="modules\img\litte-icon\时钟.png" />
+    <Content Include="modules\img\litte-icon\游戏.png" />
+    <Content Include="modules\img\litte-icon\游戏1.png" />
+    <Content Include="modules\img\litte-icon\积分.png" />
+    <Content Include="modules\img\litte-icon\记录.png" />
+    <Content Include="modules\img\litte-icon\账户安全a.png" />
+    <Content Include="modules\img\litte-icon\资金安全a.png" />
+    <Content Include="modules\img\litte-icon\邮箱.png" />
+    <Content Include="modules\img\litte-icon\锁.png" />
     <Content Include="modules\img\messagecenter.png" />
     <Content Include="modules\jedate\jedate.js" />
     <Content Include="modules\jedate\jedate.min.js" />
@@ -363,6 +407,7 @@
     <Content Include="webshop\css\public.css" />
     <Content Include="webshop\css\slider.css" />
     <Content Include="webshop\css\style.css" />
+    <Content Include="webshop\css\ucenter.css" />
     <Content Include="webshop\images\0001-1.jpg" />
     <Content Include="webshop\images\0001-2.jpg" />
     <Content Include="webshop\images\0001-3.jpg" />
@@ -525,6 +570,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="modules\img\proxy.properties" />
+    <Content Include="modules\img\litte-icon\img.sprite" />
     <None Include="Properties\PublishProfiles\发布.pubxml" />
     <Content Include="Views\Help\Security.cshtml" />
     <Content Include="Views\User\UserAdd.cshtml" />
@@ -567,6 +613,11 @@
     <Content Include="Views\Home\baidumap.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Product\BalanceOrder.cshtml" />
+    <Content Include="Views\User\Default.cshtml" />
+    <Content Include="Views\User\Order.cshtml" />
+    <Content Include="Views\Shared\_menu.cshtml" />
+    <Content Include="Views\User\AccountChange.cshtml" />
+    <Content Include="Views\User\UserInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
