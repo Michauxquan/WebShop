@@ -142,9 +142,14 @@ namespace CPiao.Common
                 signSrc = signSrc + "extra_return_param=" + returnparam + "&";
             }
             dc.Add("input_charset", "UTF-8");
-            dc.Add("interface_version", "V3.0");
-            dc.Add("merchant_code", partner); 
-            signSrc = signSrc + "input_charset=UTF-8&interface_version=V3.0&";  
+            var version = "V3.0";
+            if (paytype.IndexOf("scan") > -1)
+            {
+                version = "V3.1";
+            }  
+            dc.Add("interface_version", version);
+            dc.Add("merchant_code", partner);
+            signSrc = signSrc + "input_charset=UTF-8&interface_version=" + version + "&";  
             signSrc = signSrc + "merchant_code=" + partner + "&";
             dc.Add("notify_url", hrefbackurl); 
             if (hrefbackurl != "")
@@ -207,8 +212,84 @@ namespace CPiao.Common
             dc.Add("sign_type", "RSA-S");
             return dc;
             //return httppost(apiurl, signSrc, "UTF-8");
-        } 
+        }
 
+        public static Dictionary<string, string> onLinePay2(string ip, string returnparam, string hrefbackurl, decimal payfee, string orderno, string ordertime
+    , string paytype, string pdtname, int num, string username, string returnurl)
+        {
+            string signSrc = "";
+            Dictionary<string, string> dc = new Dictionary<string, string>();
+            dc.Add("client_ip", ip);
+            //组织订单信息 
+            //if (ip != "")
+            //{
+            //    signSrc = signSrc + "client_ip=" + ip + "&";
+            //}
+            dc.Add("extend_param", "");
+            if (!string.IsNullOrEmpty(username))
+            {
+                dc["extend_param"] = "customer_name^" + returnparam + "|ship_to_name^" + returnparam;
+                signSrc = signSrc + "extend_param=customer_name^" + returnparam + "|ship_to_name^" + returnparam + "&";
+            }
+            dc.Add("extra_return_param", returnparam);
+            if (returnparam != "")
+            {
+                signSrc = signSrc + "extra_return_param=" + returnparam + "&";
+            } 
+            dc.Add("interface_version", "V3.1");
+            dc.Add("merchant_code", partner);
+            signSrc = signSrc + "interface_version=V3.1&";
+            signSrc = signSrc + "merchant_code=" + partner + "&";
+            dc.Add("notify_url", hrefbackurl);
+            if (hrefbackurl != "")
+            {
+                signSrc = signSrc + "notify_url=" + hrefbackurl + "&";
+            }
+            dc.Add("order_amount", payfee.ToString("n2"));
+            if (payfee > 0)
+            {
+                signSrc = signSrc + "order_amount=" + payfee.ToString("n2") + "&";
+            }
+            dc.Add("order_no", orderno);
+            if (orderno != "")
+            {
+                signSrc = signSrc + "order_no=" + orderno + "&";
+            }
+            dc.Add("order_time", ordertime);
+            if (ordertime != "")
+            {
+                signSrc = signSrc + "order_time=" + ordertime + "&";
+            } 
+            dc.Add("product_name", pdtname);
+            if (pdtname != "")
+            {
+                signSrc = signSrc + "product_name=" + pdtname + "&";
+            }
+            dc.Add("product_num", num.ToString());
+            if (num > 0)
+            {
+                signSrc = signSrc + "product_num=" + num + "&";
+            } 
+            dc.Add("service_type", paytype);
+            signSrc = signSrc + "service_type=" + paytype;
+
+
+            /**  merchant_private_key，商户私钥，商户按照《密钥对获取工具说明》操作并获取商户私钥。获取商户私钥的同时，也要
+                获取商户公钥（merchant_public_key）并且将商户公钥上传到智汇付商家后台"公钥管理"（如何获取和上传请看《密钥对获取工具说明》），
+                不上传商户公钥会导致调试的时候报错“签名错误”。
+            */
+
+            string merchant_private_key = key;
+            //私钥转换成C#专用私钥
+            merchant_private_key = RSAPrivateKeyJava2DotNet(merchant_private_key);
+            //签名
+            string signData = RSASign(signSrc, merchant_private_key);
+            signSrc = signSrc + "&sign=" + signData + "&sign_type=RSA-S";
+            dc.Add("sign", signData);
+            dc.Add("sign_type", "RSA-S");
+            return dc;
+            //return httppost(apiurl, signSrc, "UTF-8");
+        } 
         //商户私钥签名
         public static string RSASign(string signStr, string privateKey)
         {

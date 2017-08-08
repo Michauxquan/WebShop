@@ -106,31 +106,60 @@ namespace CPiao.Controllers
         }
 
 
-        public ActionResult GoOnlinePay(int type, decimal money, string ordercode)
-        { 
-            Dictionary<string, string> dc = ZHFPayTools.onLinePay("", "",  "http://www.wancaiba000.com/Home/ZHFNotify", money, ordercode, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "", "FENHONGDABUWAWA", 1, "", "");
+        public ActionResult GoOnlinePay(int type, decimal money, string ordercode,int xl=1)
+        {
+            string paytype = "";
+            if (type == 3)
+            {
+                paytype = "weixin_scan";
+            }
+            else if(type == 1)
+            {
+                paytype = "alipay_scan";
+            }
+            else if (type == 4)
+            {
+                paytype = "tenpay_scan";
+            }
+            Dictionary<string, string> dc =new Dictionary<string, string>();
 
+            if (xl == 1)
+            {
+                dc = ZHFPayTools.onLinePay(OperateIP, "", "http://www.wancaiba000.com/Home/ZHFNotify", money, ordercode,
+                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), paytype, "FENHONGDABUWAWA", 1, "", "");
+                ViewBag.redo_flag = dc["redo_flag"];
+                ViewBag.return_url = dc["return_url"];
+                ViewBag.input_charset = dc["input_charset"];
+                ViewBag.bank_code = "";
+                ViewBag.pay_type = dc["pay_type"];
+            }
+            else
+            {
+                dc = ZHFPayTools.onLinePay2(OperateIP, "", "http://www.wancaiba000.com/Home/ZHFNotify", money, ordercode,
+                  DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), paytype, "FENHONGDABUWAWA", 1, "", "");
+                ViewBag.redo_flag = "";
+                ViewBag.return_url = "";
+                ViewBag.input_charset = "";
+                ViewBag.bank_code = "";
+                ViewBag.pay_type = "";
+            }
             ViewBag.client_ip = dc["client_ip"];
-            ViewBag.bank_code = "";
             ViewBag.extend_param = dc["extend_param"];
             ViewBag.extra_return_param = dc["extra_return_param"];
-            ViewBag.input_charset = dc["input_charset"];
             ViewBag.interface_version = dc["interface_version"];
             ViewBag.merchant_code = dc["merchant_code"];
             ViewBag.notify_url = dc["notify_url"];
             ViewBag.order_amount = dc["order_amount"];
             ViewBag.order_no = dc["order_no"];
             ViewBag.order_time = dc["order_time"];
-            ViewBag.pay_type = dc["pay_type"];
             ViewBag.product_name = dc["product_name"];
             ViewBag.product_num = dc["product_num"];
-            ViewBag.redo_flag = dc["redo_flag"];
-            ViewBag.return_url = dc["return_url"];
             ViewBag.service_type = dc["service_type"];
             ViewBag.sign = dc["sign"];
-            ViewBag.sign_type = dc["sign_type"]; 
+            ViewBag.sign_type = dc["sign_type"];
+            ViewBag.xl = xl;
 
-
+            ViewBag.url = xl== 2 ? "https://api.zhihpay.com/gateway/api/scanpay" : "https://pay.zhihpay.com/gateway?input_charset=UTF-8";
             return View(); 
         }
         /// <summary>

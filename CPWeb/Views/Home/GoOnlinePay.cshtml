@@ -12,7 +12,7 @@
 <body>
 <script src="/Scripts/jquery-1.11.1.js"></script>
 
-  <form action="https://pay.zhihpay.com/gateway?input_charset=UTF-8" id="payForm" name="payForm" method="POST" runat="server" >
+  <form action="@ViewBag.url" id="payForm" name="payForm" method="POST" runat="server" >
 
             <input type="hidden" name="sign" id="sign"  value="@ViewBag.sign" />
 
@@ -55,9 +55,16 @@
 
              <input type="hidden" name="pay_type" id="pay_type" value="@ViewBag.pay_type" />
 
-            <script type="text/javascript">
-                document.getElementById("payForm").submit();
-            </script>
+      <script type="text/javascript">
+          if ('@ViewBag.xl'=='2'){
+              $('#bank_code').remove();
+              $('#input_charset').remove();
+              $('#return_url').remove();
+              $('#redo_flag').remove();
+              $('#pay_type').remove();
+          }
+          document.getElementById("payForm").submit();
+      </script>
     </form>
     </body>
 </html>
