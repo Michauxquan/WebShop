@@ -92,6 +92,16 @@ namespace CPiao.Controllers
             }
             return View();
         }
+
+        public ActionResult UserBank()
+        {
+            if (CurrentUser == null)
+            {
+                return Redirect("/Home/Login");
+            }
+            return View();
+        }
+
         #region Ajax
 
         public JsonResult UserInfoList(int type, bool orderby, string username, string userid, string accountmin, string accountmax, string clumon, string rebatemin, string rebatemax, int pageIndex, int pageSize, bool mytype=false)

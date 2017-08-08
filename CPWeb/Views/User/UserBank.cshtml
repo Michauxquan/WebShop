@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "收货地址";
+    ProEntity.Manage.M_Users CurrentUser = (ProEntity.Manage.M_Users)Session["Manager"];
+}
+@section css{
+    <link href="/webshop/css/ucenter.css" rel="stylesheet" type="text/css" />
+    
+<link href="/modules/plug/citypicker/css/city-picker.css" rel="stylesheet" />
+<link href="/modules/plug/citypicker/css/main.css" rel="stylesheet" />
+    }
+<div class="bigBox" id="member">
+<div class="box">
+@Html.Partial("_menu")
+<div id="memberR">
+    <div style="border-bottom: solid 2px #ccc; padding-bottom:5px;">
+        <div class="left">
+            <img src="/modules/baseimg/banner.png"/>
+        </div>
+        <div class="left pLeft10">
+            <h2 id="memberRT" class="cblock">收货地址</h2>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <form name="userInfoForm" action="">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table-list font10"> 
+
+          <tr>
+            <th width="100" align="right">所在地区：</th>
+            <td><div style="position: relative;z-index:9999;">
+    <!-- container -->
+    <input readonly type="text" data-toggle="city-picker" placeholder="点击从下拉面板中选择省/市/区">
+</div></td>
+          </tr> 
+            <tr>
+                <th width="100" align="right" style="vertical-align:top;">详细地址：</th>
+                <td><textarea id="address" cols="50" rows="5"  class="text" style="resize:none;"></textarea></td>
+            </tr> 
+          <tr>
+            <th width="100" align="right">邮政编码：</th>
+            <td>
+             <input type="text" placeholder="" id="postcode" /> 
+
+             </td>
+          </tr>
+            <tr>
+                <th width="100" align="right">收货人姓名：</th>
+                <td><input type="text" name="reciveName"  class="text" maxlength="15" style="width:200px" /></td>
+            </tr> 
+              <tr>
+           <th width="100" align="right">手机：</th>
+            <td><input id="phone" type="text" style="width:200px" 
+                       value="@(string.IsNullOrEmpty(CurrentUser.MobilePhone)?"":CurrentUser.MobilePhone)" 
+                       class="text" @(string.IsNullOrEmpty(CurrentUser.MobilePhone)?"":"readonly=true") maxlength="18" /> </td>
+          </tr>
+          
+        <tr>
+           
+          <tr>
+            <th width="100" align="right">&nbsp;</th>
+            <td><a href="#" class="greenBT" style="font-size:14px; padding:3px 20px;" onclick="editUser()">保存</a></td>
+          </tr>
+        </table>
+    </form> 
+    <div class="memberTableBorder">
+        <table class="data-table" cellspacing="0">
+            <thead>
+                <tr>
+                    <th class="th" style="width: 80px;">收货人</th>
+                    <th class="th" style="width: 180px;">所在地区</th>
+                    <th class="th" style="width: 240px;">详细地址</th>
+                    <th class="th" style="width: 80px;">邮编</th>
+                    <th class="th" style="width: 80px;">手机号</th>
+                    <th class="th" style="width: 80px;">操作</th>
+                </tr>
+            </thead>
+            <tbody id="usertbody">
+                <tr>
+                    <td height="37" colspan="6" style="text-align: center;" class="needq"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+@section scripts{
+    
+<script src="/Scripts/jquery-1.11.1.js"></script>
+<script src="/modules/plug/citypicker/js/city-picker.data.js"></script>
+<script src="/modules/plug/citypicker/js/city-picker.js"></script>
+<script src="/modules/plug/citypicker/js/main.js"></script>
+    }
+
