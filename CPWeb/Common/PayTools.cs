@@ -1,14 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.XPath;
 using Org.BouncyCastle;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
+using ThoughtWorks.QRCode.Codec;
 
 namespace CPiao.Common
 {
@@ -126,10 +132,10 @@ namespace CPiao.Common
             Dictionary<string,string> dc=new Dictionary<string, string>();
             dc.Add("client_ip", ip);
             //组织订单信息 
-            //if (ip != "")
-            //{
-            //    signSrc = signSrc + "client_ip=" + ip + "&";
-            //}
+            if (ip != "")
+            {
+                signSrc = signSrc + "client_ip=" + ip + "&";
+            }
             dc.Add("extend_param", "");
             if (!string.IsNullOrEmpty(username))
             {
@@ -156,10 +162,10 @@ namespace CPiao.Common
             {
                 signSrc = signSrc + "notify_url=" + hrefbackurl + "&";
             }
-            dc.Add("order_amount", payfee.ToString("n2")); 
+            dc.Add("order_amount", payfee.ToString("#0.00")); 
             if (payfee >0)
             {
-                signSrc = signSrc + "order_amount=" + payfee.ToString("n2") + "&";
+                signSrc = signSrc + "order_amount=" + payfee.ToString("#0.00") + "&";
             }
             dc.Add("order_no", orderno); 
             if (orderno != "")
@@ -221,10 +227,10 @@ namespace CPiao.Common
             Dictionary<string, string> dc = new Dictionary<string, string>();
             dc.Add("client_ip", ip);
             //组织订单信息 
-            //if (ip != "")
-            //{
-            //    signSrc = signSrc + "client_ip=" + ip + "&";
-            //}
+            if (ip != "")
+            {
+                signSrc = signSrc + "client_ip=" + ip + "&";
+            }
             dc.Add("extend_param", "");
             if (!string.IsNullOrEmpty(username))
             {
@@ -245,10 +251,10 @@ namespace CPiao.Common
             {
                 signSrc = signSrc + "notify_url=" + hrefbackurl + "&";
             }
-            dc.Add("order_amount", payfee.ToString("n2"));
+            dc.Add("order_amount", payfee.ToString("#0.00"));
             if (payfee > 0)
             {
-                signSrc = signSrc + "order_amount=" + payfee.ToString("n2") + "&";
+                signSrc = signSrc + "order_amount=" + payfee.ToString("#0.00") + "&";
             }
             dc.Add("order_no", orderno);
             if (orderno != "")
@@ -284,9 +290,61 @@ namespace CPiao.Common
             merchant_private_key = RSAPrivateKeyJava2DotNet(merchant_private_key);
             //签名
             string signData = RSASign(signSrc, merchant_private_key);
-            signSrc = signSrc + "&sign=" + signData + "&sign_type=RSA-S";
+            signData = HttpUtility.UrlEncode(signData);
+            signSrc = signSrc +  "&sign_type=RSA-S&sign=" + signData;
             dc.Add("sign", signData);
             dc.Add("sign_type", "RSA-S");
+            string _xml = HttpPostContent("https://api.zhihpay.com/gateway/api/scanpay", signSrc);
+
+            //get data from XML
+            var el = XElement.Load(new StringReader(_xml));
+            LogHelper.Info("UpdateStatus", "TaskBase", "_xml" + _xml);
+            //get Qrcode
+            var qrcode1 = el.XPathSelectElement("/response/qrcode");
+            if (qrcode1 == null)
+            {
+                dc.Add("msg", _xml);
+                dc.Add("img", "");
+                dc.Add("qrcodeurl", ""); 
+            }
+            else
+            {
+
+                dc.Add("msg", "");
+                dc.Add("img", "");
+                string qrcode = "";
+                XmlDocument xmldoc = new XmlDocument();
+                xmldoc.Load(new StringReader(_xml));  //读取xml文件 filepath为xml文件路径，自行获取
+                XmlNode xNode = null;
+                xNode = xmldoc.SelectSingleNode("dinpay/response/isRedirect");
+                string isRedirect = "n";
+                if (xNode != null)
+                {
+                    isRedirect = xNode.InnerText;
+                }
+                if (isRedirect == "n")
+                {
+                    qrcode = Regex.Match(qrcode1.ToString(), "(?<=>).*?(?=<)").Value; //qrcode
+                    qrcode = HttpUtility.HtmlDecode(qrcode);
+                    Bitmap bmp = QRCodeHelper.GetQRCodeBmp(qrcode);
+                    dc["img"] = ImgToBase64String(bmp);
+                }
+                else
+                {
+                    xNode = xmldoc.SelectSingleNode("dinpay/response/qrcode");
+
+                    if (xNode != null && xNode.InnerText != "")
+                    {
+                        LogHelper.Info("UpdateStatus", "TaskBase", "xNode.InnerText:" + xNode.InnerText);
+                        qrcode = xNode.InnerText.ToString();
+                        //qrcode = qrcode.Replace("&amp;", "&");
+                    }
+
+                    LogHelper.Info("UpdateStatus", "TaskBase", "qrcode:" + qrcode);
+                    dc.Add("qrcodeurl", qrcode); 
+                }
+
+            }
             return dc;
             //return httppost(apiurl, signSrc, "UTF-8");
         } 
@@ -350,7 +408,76 @@ namespace CPiao.Common
                 Convert.ToBase64String(publicKeyParam.Exponent.ToByteArrayUnsigned())
             );
         }
+        /// <summary>
+        /// 图片转bitmap
+        /// </summary>
+        /// <param name="Imagefilename"></param>
+        /// <returns></returns>
+        protected static string ImgToBase64String(Bitmap bmp)
+        {
+            try
+            { 
+                MemoryStream ms = new MemoryStream();
+                bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                byte[] arr = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(arr, 0, (int)ms.Length);
+                ms.Close();
+                return Convert.ToBase64String(arr);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }  
+        /// <summary>
+        /// 图片转bitmap
+        /// </summary>
+        /// <param name="Imagefilename">图片路径</param>
+        /// <returns></returns>
+        protected static string ImgToBase64String(string Imagefilename)
+        {
+            try
+            {
+                Bitmap bmp = new Bitmap(Imagefilename);
+                MemoryStream ms = new MemoryStream();
+                bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                byte[] arr = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(arr, 0, (int)ms.Length);
+                ms.Close();
+                return Convert.ToBase64String(arr);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }  
+        /// <summary>
+        /// 二维码生成
+        /// </summary>
+        public class QRCodeHelper
+        {
+            #region 根据链接获取二维码
+            /// <summary>
+            /// 根据链接获取二维码
+            /// </summary>
+            /// <param name="link">链接</param>
+            /// <returns>返回二维码图片</returns>
+            public static Bitmap GetQRCodeBmp(string link)
+            {
+                QRCodeEncoder qrCodeEncoder = new QRCodeEncoder();
+                qrCodeEncoder.QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.BYTE;
+                qrCodeEncoder.QRCodeScale = 4;
+                qrCodeEncoder.QRCodeVersion = 0;
+                qrCodeEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.M;
+                Bitmap bmp = qrCodeEncoder.Encode(link);
 
+                return bmp;
+            }
+            #endregion
+
+        }
         /// <summary>
         /// post请求到指定地址并获取返回的信息内容
         /// </summary>
@@ -374,7 +501,35 @@ namespace CPiao.Common
                 return reader.ReadToEnd();
             }
         }
+        /// <summary>
+        /// post请求到指定地址并获取返回的信息内容
+        /// </summary>
+        /// <param name="url">请求地址</param>
+        /// <param name="postData">请求参数</param>
+        /// <param name="encodeType">编码类型如：UTF-8</param>
+        /// <returns>返回响应内容</returns>
+        public static string HttpPostContent(string POSTURL, string PostData)
+        {
+            //发送请求的数据
+            WebRequest myHttpWebRequest = WebRequest.Create(POSTURL);
+            myHttpWebRequest.Method = "POST";
+            UTF8Encoding encoding = new UTF8Encoding();
+            byte[] byte1 = encoding.GetBytes(PostData);
+            myHttpWebRequest.ContentType = "application/x-www-form-urlencoded";
+            myHttpWebRequest.ContentLength = byte1.Length;
+            Stream newStream = myHttpWebRequest.GetRequestStream();
+            newStream.Write(byte1, 0, byte1.Length);
+            newStream.Close();
 
+            //发送成功后接收返回的XML信息
+            HttpWebResponse response = (HttpWebResponse)myHttpWebRequest.GetResponse();
+            string lcHtml = string.Empty;
+            Encoding enc = Encoding.GetEncoding("UTF-8");
+            Stream stream = response.GetResponseStream();
+            StreamReader streamReader = new StreamReader(stream, enc);
+            lcHtml = streamReader.ReadToEnd();
+            return lcHtml;
+        } 
         /// <summary>
         /// 以GET方式抓取远程页面内容
         /// </summary>

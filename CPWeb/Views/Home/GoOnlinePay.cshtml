@@ -7,9 +7,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head value="@ViewBag.">
-    <title></title>
+    <title>在线支付</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
-<body>
+<body style="background-color: #ccc;" >
 <script src="/Scripts/jquery-1.11.1.js"></script>
 
   <form action="@ViewBag.url" id="payForm" name="payForm" method="POST" runat="server" >
@@ -48,22 +49,35 @@
 
             <input type="hidden" name="product_num" id="product_num" value="@ViewBag.product_num" />
 
-            <input type="hidden" name="return_url" id="return_url" value="@ViewBag.return_url" />
-       
+      <input type="hidden" name="return_url" id="return_url" value="@ViewBag.return_url"/>
 
-            <input type="hidden" name="redo_flag" id="redo_flag" value="@ViewBag.redo_flag" />
+      <input type="hidden" name="redo_flag" id="redo_flag" value="@ViewBag.redo_flag" />
 
-             <input type="hidden" name="pay_type" id="pay_type" value="@ViewBag.pay_type" />
-
+      <input type="hidden" name="pay_type" id="pay_type" value="@ViewBag.pay_type"/>
+      <div class="xl" style="margin: 50px auto 0px; display: none;">
+          <p style="text-align: center;">@(!string.IsNullOrEmpty(ViewBag.msg)?ViewBag.msg:("请使用"+ViewBag.type+"扫描下图二维码进行付款"))</p>
+      </div>
+      <div class="xl" style="margin: 50px auto 0px; display: none;width:100%;text-align:center;">
+          <img src="data:image/jpg;base64,@ViewBag.img" height="200px;" style=" margin:0px auto;" width="height:200px"/>
+      </div>
+      
       <script type="text/javascript">
-          if ('@ViewBag.xl'=='2'){
+          if ('@ViewBag.xl' == '2') {
+              //$("input[type = 'hidden']").val('');
               $('#bank_code').remove();
               $('#input_charset').remove();
               $('#return_url').remove();
               $('#redo_flag').remove();
               $('#pay_type').remove();
+              if ('@ViewBag.qrcodeurl' == '') {
+                  $('.xl').show();
+              } else {
+                  window.location.href=decodeURIComponent('@ViewBag.qrcodeurl');
+              }
+
+          } else {
+              document.getElementById("payForm").submit();
           }
-          document.getElementById("payForm").submit();
       </script>
     </form>
     </body>

@@ -113,7 +113,7 @@ namespace CPiao.Controllers
             {
                 paytype = "weixin_scan";
             }
-            else if(type == 1)
+            else if(type == 0)
             {
                 paytype = "alipay_scan";
             }
@@ -132,6 +132,23 @@ namespace CPiao.Controllers
                 ViewBag.input_charset = dc["input_charset"];
                 ViewBag.bank_code = "";
                 ViewBag.pay_type = dc["pay_type"];
+                ViewBag.msg ="";
+                ViewBag.img = "";
+                ViewBag.client_ip = dc["client_ip"];
+                ViewBag.extend_param = dc["extend_param"];
+                ViewBag.extra_return_param = dc["extra_return_param"];
+                ViewBag.interface_version = dc["interface_version"];
+                ViewBag.merchant_code = dc["merchant_code"];
+                ViewBag.notify_url = dc["notify_url"];
+                ViewBag.order_amount = dc["order_amount"];
+                ViewBag.order_no = dc["order_no"];
+                ViewBag.order_time = dc["order_time"];
+                ViewBag.product_name = dc["product_name"];
+                ViewBag.product_num = dc["product_num"];
+                ViewBag.service_type = dc["service_type"];
+                ViewBag.sign = dc["sign"];
+                ViewBag.sign_type = dc["sign_type"];
+                ViewBag.qrcodeurl = "";
             }
             else
             {
@@ -142,21 +159,26 @@ namespace CPiao.Controllers
                 ViewBag.input_charset = "";
                 ViewBag.bank_code = "";
                 ViewBag.pay_type = "";
+                ViewBag.msg = dc["msg"];
+                ViewBag.img = dc["img"];
+                ViewBag.client_ip ="";
+                ViewBag.extend_param = "";
+                ViewBag.extra_return_param ="";
+                ViewBag.interface_version = "";
+                ViewBag.merchant_code ="";
+                ViewBag.notify_url ="";
+                ViewBag.order_amount = dc["order_amount"];
+                ViewBag.order_no ="";
+                ViewBag.order_time = "";
+                ViewBag.product_name ="";
+                ViewBag.product_num ="";
+                ViewBag.service_type = "";
+                ViewBag.sign ="";
+                ViewBag.sign_type ="";
+                ViewBag.qrcodeurl = dc["qrcodeurl"];
+                LogHelper.Info("UpdateStatus", "TaskBase", "qrcode111:" + ViewBag.qrcodeurl);
             }
-            ViewBag.client_ip = dc["client_ip"];
-            ViewBag.extend_param = dc["extend_param"];
-            ViewBag.extra_return_param = dc["extra_return_param"];
-            ViewBag.interface_version = dc["interface_version"];
-            ViewBag.merchant_code = dc["merchant_code"];
-            ViewBag.notify_url = dc["notify_url"];
-            ViewBag.order_amount = dc["order_amount"];
-            ViewBag.order_no = dc["order_no"];
-            ViewBag.order_time = dc["order_time"];
-            ViewBag.product_name = dc["product_name"];
-            ViewBag.product_num = dc["product_num"];
-            ViewBag.service_type = dc["service_type"];
-            ViewBag.sign = dc["sign"];
-            ViewBag.sign_type = dc["sign_type"];
+            ViewBag.type = type == 0 ? "支付宝" : type == 3 ? "微信" : type == 4 ? "QQ扫码" : "网银";
             ViewBag.xl = xl;
 
             ViewBag.url = xl== 2 ? "https://api.zhihpay.com/gateway/api/scanpay" : "https://pay.zhihpay.com/gateway?input_charset=UTF-8";

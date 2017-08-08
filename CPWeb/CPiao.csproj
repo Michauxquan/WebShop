@@ -143,9 +143,13 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>DLL\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\ExpandClass.cs" />
+    <Compile Include="Common\LogHelper.cs" />
     <Compile Include="Common\PayTools.cs" />
     <Compile Include="Common\UserAuthorize.cs" />
     <Compile Include="Controllers\AccountController.cs" />
