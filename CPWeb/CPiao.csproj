@@ -43,6 +43,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>DLL\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="FluentScheduler, Version=5.1.0.0, Culture=neutral, PublicKeyToken=b76503528a14ebd1, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentScheduler.5.1.0\lib\net40\FluentScheduler.dll</HintPath>
       <Private>True</Private>
@@ -143,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\ExpandClass.cs" />
+    <Compile Include="Common\PayTools.cs" />
     <Compile Include="Common\UserAuthorize.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
@@ -618,6 +622,7 @@
     <Content Include="Views\Shared\_menu.cshtml" />
     <Content Include="Views\User\AccountChange.cshtml" />
     <Content Include="Views\User\UserInfo.cshtml" />
+    <Content Include="Views\Home\GoOnlinePay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

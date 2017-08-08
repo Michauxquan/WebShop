@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "在线支付";
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head value="@ViewBag.">
+    <title></title>
+</head>
+<body>
+<script src="/Scripts/jquery-1.11.1.js"></script>
+
+  <form action="https://pay.zhihpay.com/gateway?input_charset=UTF-8" id="payForm" name="payForm" method="POST" runat="server" >
+
+            <input type="hidden" name="sign" id="sign"  value="@ViewBag.sign" />
+
+            <input type="hidden" name="merchant_code" id="merchant_code" value="@ViewBag.merchant_code" />
+
+            <input type="hidden" name="bank_code" id="bank_code" value="@ViewBag.bank_code" />
+
+            <input type="hidden" name="order_no" id="order_no" value="@ViewBag.order_no" />
+
+            <input type="hidden" name="order_amount" id="order_amount" value="@ViewBag.order_amount" />
+
+            <input type="hidden" name="service_type" id="service_type" value="@ViewBag.service_type" />
+
+            <input type="hidden" name="input_charset" id="input_charset" value="@ViewBag.input_charset" />
+
+            <input type="hidden" name="notify_url" id="notify_url" value="@ViewBag.notify_url" />
+
+            <input type="hidden" name="interface_version" id="interface_version" value="@ViewBag.interface_version" />
+
+            <input type="hidden" name="sign_type" id="sign_type" value="@ViewBag.sign_type" />
+
+            <input type="hidden" name="order_time" id="order_time" value="@ViewBag.order_time" />
+
+            <input type="hidden" name="product_name" id="product_name" value="@ViewBag.product_name"  />
+
+            <input type="hidden" name="client_ip_check" id="client_ip_check" value="@ViewBag.client_ip_check"  />
+
+            <input type="hidden" name="client_ip" id="client_ip" value="@ViewBag.client_ip" />
+
+            <input type="hidden" name="extend_param" id="extend_param" value="@ViewBag.extend_param" />
+
+            <input type="hidden" name="extra_return_param" id="extra_return_param"  value="@ViewBag.extra_return_param" /> 
+
+            <input type="hidden" name="product_num" id="product_num" value="@ViewBag.product_num" />
+
+            <input type="hidden" name="return_url" id="return_url" value="@ViewBag.return_url" />
+       
+
+            <input type="hidden" name="redo_flag" id="redo_flag" value="@ViewBag.redo_flag" />
+
+             <input type="hidden" name="pay_type" id="pay_type" value="@ViewBag.pay_type" />
+
+            <script type="text/javascript">
+                document.getElementById("payForm").submit();
+            </script>
+    </form>
+    </body>
+</html>

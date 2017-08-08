@@ -4,11 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
+using CPiao.Common;
 using ProBusiness;
 using ProBusiness.Common;
 using ProBusiness.UserAttrs;
 using ProEntity;
 using ProEntity.Manage;
+using ProTools;
 
 namespace CPiao.Controllers
 {
@@ -49,7 +51,7 @@ namespace CPiao.Controllers
                 return Redirect("MyCard");
             }
         }
-            
+      
 
         #region Ajax
 
