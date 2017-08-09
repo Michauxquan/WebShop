@@ -323,11 +323,12 @@ namespace CPiao.Common
                     isRedirect = xNode.InnerText;
                 }
                 if (isRedirect == "n")
-                {
+                { 
                     qrcode = Regex.Match(qrcode1.ToString(), "(?<=>).*?(?=<)").Value; //qrcode
                     qrcode = HttpUtility.HtmlDecode(qrcode);
                     Bitmap bmp = QRCodeHelper.GetQRCodeBmp(qrcode);
                     dc["img"] = ImgToBase64String(bmp);
+                    dc.Add("qrcodeurl", ""); 
                 }
                 else
                 {
