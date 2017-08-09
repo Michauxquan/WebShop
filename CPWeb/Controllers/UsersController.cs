@@ -9,6 +9,8 @@ using ProBusiness.Common;
 using ProBusiness.UserAttrs;
 using ProEntity;
 using ProEntity.Manage;
+using System.Data;
+using ProEntity.UserAttr;
 
 namespace CPiao.Controllers
 {
@@ -18,25 +20,25 @@ namespace CPiao.Controllers
         //
         // GET: /User/
 
-        public ActionResult UserList(string id="")
+        public ActionResult UserList(string id = "")
         {
-            ViewBag.UserID = id; 
+            ViewBag.UserID = id;
             ViewBag.Layers = CurrentUser.Layers;
             return View();
         }
 
         public ActionResult UserAdd()
         {
-            var model = M_UsersBusiness.GetUserDetail(CurrentUser.UserID); 
+            var model = M_UsersBusiness.GetUserDetail(CurrentUser.UserID);
             return View();
         }
         public ActionResult UserEdit()
         {
             var model = M_UsersBusiness.GetUserDetail(CurrentUser.UserID);
-            var  logmd=LogBusiness.GetLogsByUserID(CurrentUser.UserID,2);
+            var logmd = LogBusiness.GetLogsByUserID(CurrentUser.UserID, 2);
             ViewBag.UserName = model.UserName;
-            ViewBag.LastIP = model.LastLoginIP == "::1"?"127.0.0.1":model.LastLoginIP ; 
-            ViewBag.LastTime = logmd.CreateTime.ToString("yyyy-MM-dd HH:mm:ss"); 
+            ViewBag.LastIP = model.LastLoginIP == "::1" ? "127.0.0.1" : model.LastLoginIP;
+            ViewBag.LastTime = logmd.CreateTime.ToString("yyyy-MM-dd HH:mm:ss");
             return View();
         }
         public ActionResult UserMsg()
@@ -49,15 +51,15 @@ namespace CPiao.Controllers
         }
 
         public ActionResult UserReward()
-        { 
+        {
             ViewBag.LoginName = CurrentUser.LoginName;
-            ViewBag.UserName = CurrentUser.UserName; 
+            ViewBag.UserName = CurrentUser.UserName;
             return View();
         }
 
         public ActionResult UserSpread()
         {
-            ViewBag.ID = CurrentUser.UserID; 
+            ViewBag.ID = CurrentUser.UserID;
             return View();
         }
         public ActionResult UserInfo()
@@ -73,7 +75,7 @@ namespace CPiao.Controllers
             if (CurrentUser == null)
             {
                 return Redirect("/Home/Login");
-            } 
+            }
             return View();
         }
         public ActionResult Order()
@@ -93,23 +95,36 @@ namespace CPiao.Controllers
             return View();
         }
 
-        public ActionResult UserBank()
+        public ActionResult UserAddress(int id = -1)
         {
             if (CurrentUser == null)
             {
                 return Redirect("/Home/Login");
             }
+            UserAddress dt = new UserAddress(); List<UserAddress> dtall = new List<UserAddress>();
+            if (id > 0)
+            {
+                List<UserAddress> dtlist = UserBanksBusiness.GetAddress(" WHERE auotid=" + id.ToString());
+                if (dtlist.Count > 0)
+                    dt = dtlist[0];
+            }
+            else
+            { 
+             dtall=UserBanksBusiness.GetAddress("");
+            }
+            ViewData["editadd"] = dt;
+            ViewData["address"] =dtall ;
             return View();
         }
 
         #region Ajax
 
-        public JsonResult UserInfoList(int type, bool orderby, string username, string userid, string accountmin, string accountmax, string clumon, string rebatemin, string rebatemax, int pageIndex, int pageSize, bool mytype=false)
+        public JsonResult UserInfoList(int type, bool orderby, string username, string userid, string accountmin, string accountmax, string clumon, string rebatemin, string rebatemax, int pageIndex, int pageSize, bool mytype = false)
         {
             int total = 0;
             int pageCount = 0;
-            var list = M_UsersBusiness.GetUsersRelationList(pageSize, pageIndex, ref total, ref pageCount, string.IsNullOrEmpty(userid)?CurrentUser.UserID:userid, type, -1, username, clumon, orderby, rebatemin, rebatemax, accountmin, accountmax, mytype);
-            
+            var list = M_UsersBusiness.GetUsersRelationList(pageSize, pageIndex, ref total, ref pageCount, string.IsNullOrEmpty(userid) ? CurrentUser.UserID : userid, type, -1, username, clumon, orderby, rebatemin, rebatemax, accountmin, accountmax, mytype);
+
             JsonDictionary.Add("items", list);
             JsonDictionary.Add("totalCount", total);
             JsonDictionary.Add("pageCount", pageCount);
@@ -123,15 +138,15 @@ namespace CPiao.Controllers
         public JsonResult UserAdd(int type, string username, string loginpwd, string loginname, decimal rebate)
         {
             string Errmsg = "";
-            M_Users user=new M_Users()
+            M_Users user = new M_Users()
             {
                 Type = type,
-                SourceType = 0, 
+                SourceType = 0,
                 UserName = username,
                 LoginName = loginname,
                 LoginPwd = loginpwd,
-                Description="用户新增", 
-                RoleID=(type==1?"dd87ca0a-b425-4e1e-b7ec-7a1e02dad0f8":"48eb0491-d92c-4664-ab27-37320ac7de38")
+                Description = "用户新增",
+                RoleID = (type == 1 ? "dd87ca0a-b425-4e1e-b7ec-7a1e02dad0f8" : "48eb0491-d92c-4664-ab27-37320ac7de38")
             };
             var result = M_UsersBusiness.CreateM_User(user, ref Errmsg);
             JsonDictionary.Add("result", result);
@@ -145,7 +160,7 @@ namespace CPiao.Controllers
         [HttpPost]
         public JsonResult UserEdit(string username)
         {
-            string Errmsg = ""; 
+            string Errmsg = "";
             var result = M_UsersBusiness.UpdateM_UserName(CurrentUser.UserID, username);
             if (result)
             {
@@ -153,7 +168,7 @@ namespace CPiao.Controllers
                 model.UserName = username;
                 Session["Manage"] = model;
             }
-            JsonDictionary.Add("result", result); 
+            JsonDictionary.Add("result", result);
             return new JsonResult
             {
                 Data = JsonDictionary,
@@ -163,9 +178,9 @@ namespace CPiao.Controllers
         [HttpPost]
         public JsonResult UserDelete(string id)
         {
-            var result = M_UsersBusiness.DeleteM_User(id,9);
+            var result = M_UsersBusiness.DeleteM_User(id, 9);
             JsonDictionary.Add("result", result);
-            JsonDictionary.Add("ErrMsg", result?"":"删除失败,请稍后再试");
+            JsonDictionary.Add("ErrMsg", result ? "" : "删除失败,请稍后再试");
             return new JsonResult
             {
                 Data = JsonDictionary,
@@ -174,12 +189,12 @@ namespace CPiao.Controllers
         }
 
         [HttpPost]
-        public JsonResult UserUpdPoint(string id,decimal addpoint)
+        public JsonResult UserUpdPoint(string id, decimal addpoint)
         {
             var result = M_UsersBusiness.UpdateM_UserRebate(id, CurrentUser.UserID, addpoint);
             if (result)
             {
-                var model = CurrentUser; 
+                var model = CurrentUser;
                 Session["Manage"] = model;
             }
             JsonDictionary.Add("result", result);
@@ -192,9 +207,9 @@ namespace CPiao.Controllers
         }
 
         [HttpPost]
-        public JsonResult GetChildList(string userid="",bool type=false)
+        public JsonResult GetChildList(string userid = "", bool type = false)
         {
-            var list=M_UsersBusiness.GetUsersRelationList(userid==""?CurrentUser.UserID:userid, type);
+            var list = M_UsersBusiness.GetUsersRelationList(userid == "" ? CurrentUser.UserID : userid, type);
             JsonDictionary.Add("items", list);
             return new JsonResult
             {
@@ -214,7 +229,7 @@ namespace CPiao.Controllers
             };
         }
 
-        public JsonResult GetMsgList(int type,int pageIndex)
+        public JsonResult GetMsgList(int type, int pageIndex)
         {
             int total = 0;
             int pageCount = 0;
@@ -234,11 +249,11 @@ namespace CPiao.Controllers
         public JsonResult SaveReply(string entity)
         {
             var result = false;
-            string msg = "提交失败，请稍后再试！"; 
-            UserReply model = JsonConvert.DeserializeObject<UserReply>(entity); 
+            string msg = "提交失败，请稍后再试！";
+            UserReply model = JsonConvert.DeserializeObject<UserReply>(entity);
             model.FromReplyID = string.IsNullOrEmpty(model.FromReplyID) ? "" : model.FromReplyID;
             model.FromReplyUserID = string.IsNullOrEmpty(model.FromReplyUserID) ? "" : model.FromReplyUserID;
-            result = UserReplyBusiness.CreateUserReply(model.GUID.Replace("ZSXJ,",""), model.Content,model.Title, CurrentUser.UserID, model.FromReplyID, model.FromReplyUserID, model.Type, model.GUID.IndexOf("ZSXJ,"), ref msg); 
+            result = UserReplyBusiness.CreateUserReply(model.GUID.Replace("ZSXJ,", ""), model.Content, model.Title, CurrentUser.UserID, model.FromReplyID, model.FromReplyUserID, model.Type, model.GUID.IndexOf("ZSXJ,"), ref msg);
             JsonDictionary.Add("result", result);
             JsonDictionary.Add("ErrMsg", msg);
             return new JsonResult
@@ -248,11 +263,11 @@ namespace CPiao.Controllers
             };
         }
 
-        public JsonResult UpdStatus(string ids,int status)
+        public JsonResult UpdStatus(string ids, int status)
         {
             var result = false;
             string msg = "提交失败，请稍后再试！";
-            result=UserReplyBusiness.UpdateReplyStatus(ids.TrimEnd(',').Replace(",","','"), status);
+            result = UserReplyBusiness.UpdateReplyStatus(ids.TrimEnd(',').Replace(",", "','"), status);
             JsonDictionary.Add("result", result);
             JsonDictionary.Add("ErrMsg", msg);
             return new JsonResult
@@ -265,12 +280,71 @@ namespace CPiao.Controllers
         public JsonResult ReplyDetail(string id)
         {
             var model = UserReplyBusiness.GetReplyDetail(id);
-            JsonDictionary.Add("Item", model); 
+            JsonDictionary.Add("Item", model);
             return new JsonResult
             {
                 Data = JsonDictionary,
                 JsonRequestBehavior = JsonRequestBehavior.AllowGet
             };
+        }
+
+        public JsonResult AddAddress(UserAddress model)
+        {
+
+
+            var result = false;
+            string msg = "提交失败，请稍后再试！";
+            if (validate(model.City, model.Postcode, model.Address, model.Phone, model.Revicename))
+            {
+                result = UserBanksBusiness.Add(CurrentUser.UserID, model.City, model.Postcode, model.Address, model.Phone, model.Revicename);
+            }
+            JsonDictionary.Add("result", result);
+            JsonDictionary.Add("ErrMsg", msg);
+            return new JsonResult
+            {
+                Data = JsonDictionary,
+                JsonRequestBehavior = JsonRequestBehavior.AllowGet
+            };
+        }
+        public JsonResult EditAddress(UserAddress model)
+        {
+
+            var result = false;
+            string msg = "提交失败，请稍后再试！";
+            if (validate(model.City, model.Postcode, model.Address, model.Phone, model.Revicename))
+            {
+                result = UserBanksBusiness.Edit(CurrentUser.UserID, model.Autoid, model.City, model.Postcode, model.Address, model.Phone, model.Revicename);
+
+            }
+            JsonDictionary.Add("result", result);
+            JsonDictionary.Add("ErrMsg", msg);
+            return new JsonResult
+            {
+                Data = JsonDictionary,
+                JsonRequestBehavior = JsonRequestBehavior.AllowGet
+            };
+        }
+        public JsonResult DelAddress(int autoid)
+        {
+            var result = false;
+            string msg = "删除失败，请稍后再试！";
+            result = UserBanksBusiness.Del(autoid);
+            JsonDictionary.Add("result", result);
+            JsonDictionary.Add("ErrMsg", msg);
+            return new JsonResult
+            {
+                Data = JsonDictionary,
+                JsonRequestBehavior = JsonRequestBehavior.AllowGet
+            };
+        }
+        
+        public bool validate(string city, string postcode, string address, string phone, string reciveName)
+        {
+            if (city == "" || postcode == "" || reciveName == "" || address == "" || phone == "")
+            {
+                return false;
+            }
+            return true;
         }
 
         #endregion

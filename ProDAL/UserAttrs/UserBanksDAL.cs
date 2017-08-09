@@ -50,5 +50,81 @@ namespace ProDAL.UserAttrs
             return ExecuteNonQuery("update UserBanks set Status=@Status where AutoID =@AutoID", paras, CommandType.Text) > 0;
 
         }
+        /// <summary>
+        /// 收货地址
+        /// </summary>
+        
+        public bool Add(string userid,string city, string postcode, string address, string phone, string reciveName)
+        {
+
+            SqlParameter[] paras =
+           {
+               new SqlParameter("@userid", userid),
+               new SqlParameter("@city", city),
+               new SqlParameter("@address", address),
+               new SqlParameter("@postcode", postcode),
+               new SqlParameter("@revicename", reciveName),
+               new SqlParameter("@phone", phone)
+               
+           };
+            string sql = string.Format(@"INSERT INTO [dbo].[UserDelAddress]
+           ([userid]
+           ,[city]
+           ,[address]
+           ,[postcode]
+           ,[revicename]
+           ,[phone]
+           ,[isdefault])
+     VALUES
+           (@userid
+           ,@city
+           ,@address
+           ,@postcode
+           ,@revicename
+           ,@phone
+           ,0
+           )");
+            return ExecuteNonQuery(sql, paras, CommandType.Text) > 0;
+        }
+
+        /// <summary>
+        /// 收货地址
+        /// </summary>
+       
+        public bool Edit(string userid,int auotid, string city, string postcode, string address, string phone, string reciveName)
+        {
+
+            SqlParameter[] paras =
+           {
+               new SqlParameter("@userid", userid),
+               new SqlParameter("@auotid", auotid),
+               new SqlParameter("@city", city),
+               new SqlParameter("@address", address),
+               new SqlParameter("@postcode", postcode),
+               new SqlParameter("@revicename", reciveName),
+               new SqlParameter("@phone", phone)
+               
+           };
+            string sql = string.Format(@"UPDATE [dbo].[UserDelAddress]
+   SET [city] = @city
+      ,[address] = @address
+      ,[postcode] = @postcode
+      ,[revicename] = @revicename
+      ,[phone] = @phone
+ WHERE auotid=@auotid");
+            return ExecuteNonQuery(sql, paras, CommandType.Text) > 0;
+        }
+
+        public bool Del(int autoid)
+        {
+            string sql = string.Format(@"delete a from [dbo].[UserDelAddress] a WHERE auotid=@auotid");
+            return ExecuteNonQuery(sql) > 0;
+        }
+        public DataTable GetAddress(string condition = "")
+        {
+            string sql = string.Format(@"select * from UserDelAddress {0}",condition);
+            return GetDataTable(sql);
+            
+        }
     }
 }

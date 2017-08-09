@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using ProDAL.UserAttrs;
 using ProEntity;
+using ProEntity.UserAttr;
 
 namespace ProBusiness.UserAttrs
 {
@@ -15,19 +16,19 @@ namespace ProBusiness.UserAttrs
         /// 获取日志
         /// </summary>
         /// <returns></returns>
-        public static List<UserBanks> GetBanks(string type, string userid,int pageSize, int pageIndex, ref int totalCount, ref int pageCount)
+        public static List<UserBanks> GetBanks(string type, string userid, int pageSize, int pageIndex, ref int totalCount, ref int pageCount)
         {
             string tablename = "UserBanks  a ";
 
-            string sqlwhere = " 1=1 "; 
+            string sqlwhere = " 1=1 ";
             if (!string.IsNullOrEmpty(type))
             {
                 sqlwhere += " and a.Type in(" + type + ")";
             }
             if (!string.IsNullOrEmpty(userid))
             {
-                sqlwhere += " and a.userid='"+userid+"' ";
-            }  
+                sqlwhere += " and a.userid='" + userid + "' ";
+            }
             DataTable dt = CommonBusiness.GetPagerData(tablename, "a.* ", sqlwhere, "a.AutoID ", pageSize, pageIndex, out totalCount, out pageCount);
             List<UserBanks> list = new List<UserBanks>();
             foreach (DataRow dr in dt.Rows)
@@ -39,15 +40,15 @@ namespace ProBusiness.UserAttrs
             return list;
         }
 
-        public static bool InsertBanks(UserBanks model,ref string errmsg)
+        public static bool InsertBanks(UserBanks model, ref string errmsg)
         {
             return UserBanksDAL.BaseProvider.Create(model.UserID, model.CardCode, model.BankName, model.BankChild,
                 model.TrueName, model.BankPre, model.BankCity, model.Type, ref errmsg);
         }
 
-        public static int GetCount(string  userid)
+        public static int GetCount(string userid)
         {
-            return Convert.ToInt32(CommonBusiness.Select( "UserBanks","count(1)", " UserID='" + userid + "'"));
+            return Convert.ToInt32(CommonBusiness.Select("UserBanks", "count(1)", " UserID='" + userid + "'"));
         }
 
         public static bool UpdateStatus(string autoids, int status)
@@ -57,6 +58,39 @@ namespace ProBusiness.UserAttrs
         public static bool UpdateStatus(string userid)
         {
             return UserBanksDAL.BaseProvider.UpdateStatus(userid);
+        }
+        #endregion
+
+        #region 收货地址
+        /// <summary>
+        /// 收货地址
+        /// </summary>
+
+        public static bool Add(string userid, string city, string postcode, string address, string phone, string reciveName)
+        {
+
+            return UserBanksDAL.BaseProvider.Add(userid, city, postcode, address, phone, reciveName);
+        }
+
+        /// <summary>
+        /// 收货地址
+        /// </summary>
+
+        public static bool Edit(string userid, int auotid, string city, string postcode, string address, string phone, string reciveName)
+        {
+
+            return UserBanksDAL.BaseProvider.Edit(userid, auotid, city, postcode, address, phone, reciveName);
+        }
+
+        public static bool Del(int autoid)
+        {
+            return UserBanksDAL.BaseProvider.Del(autoid);
+        }
+        public static List<UserAddress> GetAddress(string condition = "")
+        { 
+            DataTable dt= UserBanksDAL.BaseProvider.GetAddress(condition);
+            List<UserAddress> list = (List<UserAddress>)ProTools.ModelConvertHelper<UserAddress>.ConvertToModel(dt);
+            return list;
         }
         #endregion
     }

@@ -73,6 +73,7 @@
     <Compile Include="Manage\M_Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserAttr\UserAccount.cs" />
+    <Compile Include="UserAttr\UserAddress.cs" />
     <Compile Include="UserAttr\UserBanks.cs" />
     <Compile Include="UserAttr\UserImgs.cs" />
     <Compile Include="UserAttr\UserOrders.cs" />

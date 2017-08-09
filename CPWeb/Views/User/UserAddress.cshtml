@@ -1,0 +1,156 @@
+﻿@{
+    ViewBag.Title = "收货地址";
+    List<ProEntity.UserAttr.UserAddress> dt = (List<ProEntity.UserAttr.UserAddress>)ViewData["address"];
+    ProEntity.UserAttr.UserAddress dtedit = (ProEntity.UserAttr.UserAddress)ViewData["editadd"];
+}
+
+<link rel="stylesheet" type="text/css" href="/modules/css/message.css" />
+<link href="/webshop/css/ucenter.css" rel="stylesheet" type="text/css" />
+<link href="/modules/plug/citypicker/css/city-picker.css" rel="stylesheet" />
+<link href="/modules/plug/citypicker/css/main.css" rel="stylesheet" />
+<script src="/Scripts/jquery-1.11.1.js"></script>
+<script src="/Scripts/DateForm.js"></script>
+<script src="/modules/plug/citypicker/js/city-picker.data.js"></script>
+<script src="/modules/plug/citypicker/js/city-picker.js"></script>
+<script src="/modules/plug/citypicker/js/main.js"></script>
+
+<div class="bigBox" id="member">
+<div class="box">
+@Html.Partial("_menu")
+<div id="memberR">
+    <div style="border-bottom: solid 2px #ccc; padding-bottom:5px;">
+        <div class="left">
+            <img src="/modules/baseimg/banner.png"/>
+        </div>
+        <div class="left pLeft10">
+            <h2 id="memberRT" class="cblock">收货地址</h2>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <form name="userInfoForm" action="">
+        <div class="expand-info h">
+           
+            <div class="input-box">
+                    <span class="label-name">所在地区:</span>
+                <div style="margin-left:70px;" ><input readonly type="text" id="city-picker" data-toggle="city-picker" value="@dtedit.City"></div>
+            </div>
+            <div class="input-box" style="height:60px;">
+                <label>
+                    <span class="label-name">详细地址:  </span><input type="text" id="address"  class="text" style="resize:none;height:50px;" value="@dtedit.Address" />
+                </label>
+            </div>
+            <div class="input-box">
+                <label>
+                    <span class="label-name">邮政编码:  </span><input type="text" maxlength="6" placeholder="" id="postcode" value="@dtedit.Postcode" /> 
+                </label>
+            </div>
+            <div class="input-box">
+                <label>
+                    <span class="label-name">收货人姓名:</span><input type="text" maxlength="15" placeholder="" id="reciveName" value="@dtedit.Revicename" />
+                </label>
+            </div>
+            <div class="input-box">
+                <label>
+                    <span class="label-name">手机:</span><input type="text" maxlength="11" placeholder="" id="phone" value="@dtedit.Phone" />
+                </label>
+            </div>
+            <div class="tail-actions">
+                <div class="basebtn pwdbtn">提交</div>
+                <div class="clear1">清空</div>
+            </div>
+        </div>
+    </form> 
+    <div class="memberTableBorder">
+        <table class="data-table" cellspacing="0">
+            <thead>
+                <tr>
+                    <th class="th" style="width: 80px;">收货人</th>
+                    <th class="th" style="width: 180px;">所在地区</th>
+                    <th class="th" style="width: 240px;">详细地址</th>
+                    <th class="th" style="width: 80px;">邮编</th>
+                    <th class="th" style="width: 80px;">手机号</th>
+                    <th class="th" style="width: 80px;">操作</th>
+                </tr>
+            </thead>
+            <tbody id="usertbody">
+               @foreach (ProEntity.UserAttr.UserAddress rw in dt)
+               { 
+                <tr>
+                    <td>@rw.Revicename</td><td>@rw.City</td><td>@rw.Address</td><td>@rw.Postcode</td><td>@rw.Phone</td>
+                    <td><a href="/User/UserAddress/@rw.Autoid">修改</a> | <a href="javascript:del(@rw.Autoid)">删除</a></td>
+                </tr>
+               }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+    <script type="text/javascript">
+    $(function () {
+        $(".pwdbtn").click(function () { save(); });
+        $('.clear1').click(function () { reset(); });
+    })
+    function save() {
+        var city = $("#city-picker").citypicker("gettext").val();
+        var address = $("#address").val();
+        var postcode = $("#postcode").val();
+        var recivename = $("#reciveName").val();
+        var phone = $("#phone").val();
+        validate();
+        if (!isNum(postcode)) {
+            window.alert('邮编无效');
+            return false;
+        }
+        if (!isMobile(phone)) {
+            window.alert('手机号无效');
+            return false;
+        }
+        //"Autoid":autoid,
+        $.post("/User/AddAddress", { "City": city, "Address": address, "Postcode": postcode ,"Recivename":recivename,"Phone":phone}, function (data) {
+            if (data.result) {
+                reset();
+                window.location.href = location.href;
+            }
+            else {
+                alert(data.ErrMsg);
+            }
+        })
+    }
+    function del(id) {
+        $.post("/User/DelAddress", { "id": id }, function (data) {
+            if (data.result) {
+                reset();
+                window.location.href = location.href;
+            } else {
+                alert(data.ErrMsg);
+            }
+        })
+    }
+
+    function validate() {
+        $('input').each(function (i, v) {
+            if ($(this).val() == "" || $(this).val() == null) {
+                alert('文本框不能为空');
+                return false;
+            }
+        });
+    }
+    function reset() {
+        $('input').val('');
+    }
+    function isMobile(val) {
+        var regex = /^[1][0-9][0-9]{9}$/;
+        return regex.test(val);
+    }
+    function isNum(val) {
+        var regex = /^[0-9]{6}$/;
+        return regex.test(val);
+    }
+    </script>
+
+</div>
+
+

@@ -264,7 +264,7 @@
                         $this.close();
                     }
                 }
-            }).on('click', '.city-select-tab a', function () {
+            }).on('mouseover', '.city-select-tab a', function () {
                 if (!$(this).hasClass('active')) {
                     var type = $(this).data('count');
                     $this.tab(type);
@@ -529,7 +529,9 @@
         reset: function () {
             this.$element.val(null).trigger('change');
         },
-
+        setValue: function (address) {  //贵州省/黔东南苗族侗族自治州/天柱县  $("#city-picker3").citypicker("setValue", "贵州省/黔东南苗族侗族自治州/天柱县");
+            this.$element.val(address).trigger('change');
+        }, 
         destroy: function () {
             this.unbind();
             this.$element.removeData(NAMESPACE).removeClass('city-picker-input');
